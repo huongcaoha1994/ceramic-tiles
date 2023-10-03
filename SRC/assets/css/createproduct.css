@@ -1,0 +1,51 @@
+css trang create product
+.nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-link {
+    color: rgb(131, 120, 120);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-link:hover {
+color: #131318;
+}
+ 
+.container-fluid {
+    background-image: url('gach2.jpg');
+    width: 100%;
+  } 
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: 60px;
+    justify-content: center;
+    align-items: flex-end;
+}
+  
+.col-md-8 {
+float: left;
+}
+
+.col-md-4 {
+float: right;
+}
+
+.form-control {
+width: 100%;
+}
+
+.btn {
+width: 100%;
+}

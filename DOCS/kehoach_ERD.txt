@@ -1,0 +1,74 @@
+1 ) yêu cầu :
+- Trang chủ cần được thiết kế với logo phù hợp, thanh header có thể thêm các sản phẩm nội thất đa dạng khác
+- Chứa link chuyển hướng tới các thông tin danh mục khác
+- Site nên hiển thị menu chứa các danh mục loại gạch
+• Wall tiles – Gạch tường
+o Bathroom wall tiles – Gạch nhà vệ sinh	
+o Kitchen wall tiles – Gạch nhà bếp
+o Outdoor wall tiles – Gạch ngoài trời
+o Living room – Gạch phòng khách
+o Bedroom – Gạch phòng ngủ
+o Commercial spaces tiles – Gạch cho mục đích quảng cáo
+• Floor tiles – Gạch sàn
+o Bathroom floor tiles – Gạch nhà vệ sinh	
+o Kitchen floor tiles– Gạch nhà bếp
+o Outdoor floor tiles – Gạch ngoài trời
+o Living room Gạch phòng khách
+o Bedroom– Gạch phòng ngủ
+o Commercial spaces tiles– Gạch cho mục đích quảng cáo
+
+Special tiles – Gạch đặc biệt
+- Có link e-catalogue bấm vào để tải và chưa thông tin các loại gạch
+- Những danh mục được nhắc nên có danh mục con 
+- Bản tóm tắt sản phẩm nên được thể hiện trên website cùng với hình ảnh nhưng chi tiết cụ thể sẽ được chứa ở file Word và có thể tải được
+- Người dung có thể so sách các loại gạch ( như so sánh ở các trang điện thoại )
+Có section tên “ Khu chuyên gia” mà có blog, hướng dẫn dung gạch, video dạy, tính toán diện tích gạch,.. để hỗ trợ người mua
+- Trang “liên hệ” chưa địa chỉ công ty cũng như bản đồ google map ( dùng iframe ) và địa chỉ email …
+
+2 ) tính năng :
+user :
+-xem tất cả sp 
+-tìm kiếm sp
+-đăng ký , đăng nhập
+-giỏ hàng
+-đặt hàng
+-so sánh
+admin:
+-đăng nhập 
+-duyệt đơn hàng 
+-xem danh sách sản phẩm
+-tạo sản phẩm
+-
+khách :
+-xemsp ,tìm kiếm , so sánh 
+3 ) giao diện : tham khảo vigracera.
+
+4 ) kế hoạch ERD :
+  
+
+
+MVC : 
+-model : 
++ database.php
++delete_product.php
++addproduct.php
++......process
+-view :
++home.php
++product_detail.php
++
+
+controller :
++ login,register
++tạo sản phẩm
++thêm sản phẩm
++giỏ hàng 
++đặt hàng
++tìm kiếm sản phẩm
+
+Anh To Hoang7:43 PM
+https://github.com/larbisahli/e-commerce-database-schema/blob/main/db-diagram.png
+Anh To Hoang7:45 PM
+https://fabric.inc/blog/commerce/ecommerce-database-design-example
+northwind database
+
