@@ -43,7 +43,7 @@
 
     <?php 
     
-    $_SESSION['user_id'] = 1 ;
+   
     if(isset($_POST['add_to_cart'])){
         $product_id = htmlspecialchars($_POST['product_id']);
         $quantity = htmlspecialchars($_POST['quantity']);
