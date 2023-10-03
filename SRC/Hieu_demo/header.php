@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../cssfiles/bootstrap.css">
-    <link rel="stylesheet" href="../cssfiles/main.css">
-    <link rel="stylesheet" href="../cssfiles/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <title>Tiles Ceramic</title>
@@ -19,7 +19,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="../image/logo.png" alt="logo" width="100px" height="70px" class="navbar-brand">
+                <img src="../assets/img/homepage/logo.png" alt="logo" width="100px" height="70px" class="navbar-brand">
             </a>
             <div class="navbar-collapse offcanvas-collapse px-2" id="navbarsExampleDefault">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -110,8 +110,8 @@
     </div>
     <!-- offcanvas cart  -->
 
-    <script src="../Project_Aptech_C2303L/TILES-LUXURY/js/headerscript.js"></script>
-    <script src="../Project_Aptech_C2303L/TILES-LUXURY/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/headerscript.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
