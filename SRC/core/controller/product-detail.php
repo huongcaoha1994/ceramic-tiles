@@ -6,9 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include("../../Hieu_demo1/header.php") ; ?>
+   
     <h1>Product Detail</h1>
     <?php
+    session_start();
     include("../model/database.php");
         if(isset($_GET['product_id'])){
             $product_id = htmlspecialchars($_GET['product_id']) ;
@@ -41,7 +42,8 @@
     ?>
 
     <?php 
-    session_start();
+    
+    $_SESSION['user_id'] = 1 ;
     if(isset($_POST['add_to_cart'])){
         $product_id = htmlspecialchars($_POST['product_id']);
         $quantity = htmlspecialchars($_POST['quantity']);
@@ -54,11 +56,11 @@
             $total_money = $quantity * $price ;
             $user_id = $_SESSION['user_id'] ;
             $insert_cart = "insert into carts (product_id,price,quantity,total_money,user_id)
-            values ($product_id,$price,$quantity,$total_money,$user_id]) ;" ;
-            if($insert_cart){
+            values ($product_id,$price,$quantity,$total_money,$user_id) ;" ;
+            if($connect->query($insert_cart)){
                 echo "<script> alert ('thêm giỏ hàng thành công')</script>" ;
-                header("../../view/home.php");
-                exit ;
+                // header("location: ../../view/home.php");
+                // exit ;
             }
             else {
                 echo "<script> alert ('xin vui lòng thử lại !')</script>" ;
