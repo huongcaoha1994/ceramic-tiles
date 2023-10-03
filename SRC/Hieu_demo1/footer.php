@@ -14,7 +14,7 @@
         <footer class="py-3">
             <div class="row">
                 <div class="col-12 text-center col-md-3 mb-3 col-lg-3">
-                    <img src="../Project_Aptech_C2303L/TILES-LUXURY/image/logo.png" alt="logo" height="100px" class="navbar-brand">
+                    <img src="../assets/img/homepage/logo.png" alt="logo" height="100px" class="navbar-brand">
                 </div>
 
                 <div class="col-6 col-md-3 mb-3 col-lg-3">
@@ -49,7 +49,7 @@
         </footer>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src="./TILES-LUXURY/js/footerscript.js"></script>
+    <script src="./assets/js/footerscript.js"></script>
 </body>
 
 </html>
