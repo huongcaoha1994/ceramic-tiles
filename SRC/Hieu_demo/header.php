@@ -67,16 +67,14 @@
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-                </form>
             </div>
             <div class="row flex-nowrap">
                 <div class="col">
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        <i class="fas fa-user">
-                        </i></button>
+                    <a href="../core/model/login.php">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-user">
+                            </i></button>
+                    </a>
                 </div>
                 <div class="col">
                     <a href="">
@@ -88,27 +86,6 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- Modal sign-in  -->
-    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h1 class="modal-title fs-5" id="signupModalLabel">Sign in</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                ....
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- offcanvas cart  -->
 
     <script src="../assets/js/headerscript.js"></script>
     <script src="../assets/js/bootstrap.bundle.js"></script>

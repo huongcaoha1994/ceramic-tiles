@@ -277,30 +277,7 @@
             <div class="hn-tab-item active">
               Wall Ceramic Tiles
             </div>
-            <div class="hn-tab-item">
-              Barthroom Ceramic Tiles
 
-            </div>
-            <div class="hn-tab-item">
-              Kitchen Ceramic Tiles
-
-            </div>
-            <div class="hn-tab-item">
-              Outdoor Ceramic Tiles
-
-            </div>
-            <div class="hn-tab-item">
-              Living Ceramic Tiles
-
-            </div>
-            <div class="hn-tab-item">
-              Bedroom Ceramic Tiles
-
-            </div>
-            <div class="hn-tab-item">
-               Commercial spaces Ceramic Tiles
-
-            </div>
             <div class="hn-tab-item">
               Floor Ceramic Tiles
 
