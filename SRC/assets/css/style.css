@@ -267,7 +267,7 @@ span.carousel-control-prev-icon {
 .hn-tab-pane.active {
   display: block;
 }
-.tab-pane h2 {
+/* .tab-pane h2 {
   font-size: 24px;
   margin-bottom: 8px;
 }
@@ -297,4 +297,4 @@ span.carousel-control-prev-icon {
   .hn-tab-item {
     padding: 4px 5px 3px 5px;
   }
-}
+} */
