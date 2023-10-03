@@ -28,7 +28,7 @@
   ?>
 
   <!-- Banner  -->
-  <img src="../image/banner2.jpg" alt="" class="img-fluid w-100">
+  <img src="../assets/img/homepage/banner2.jpg" alt="" class="img-fluid w-100">
   <!-- category list  -->
   <div class="container">
     <div class="row">
@@ -42,7 +42,7 @@
     <div class="row">
       <div class="col-12 col-md-4 my-2 text-center">
         <div class="card h-100">
-          <img src="../image/wall-ceramic-tiles.jpg" class="card-img-top" alt="wall-tiles" height="300px">
+          <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" alt="wall-tiles" height="300px">
           <div class="card-body">
             <h5 class="card-title">Wall Ceramic Tiles</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -52,7 +52,7 @@
       </div>
       <div class="col-12 col-md-4 my-2 text-center">
         <div class="card h-100">
-          <img src="../image/floor-ceramic-tile.jpg" class="card-img-top" alt="..." height="300px">
+          <img src="../assets/img/homepage/floor-ceramic-tile.jpg" class="card-img-top" alt="..." height="300px">
           <div class="card-body">
             <h5 class="card-title">Floor Ceramic Tiles</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -62,7 +62,7 @@
       </div>
       <div class="col-12 col-md-4 my-2 text-center">
         <div class="card h-100">
-          <img src="../image/special-ceramic-tiles.png" class="card-img-top" alt="..." height="300px">
+          <img src="../assets/img/homepage/special-ceramic-tiles.png" class="card-img-top" alt="..." height="300px">
           <div class="card-body">
             <h5 class="card-title">Special Ceramic Tiles</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -86,7 +86,7 @@
               <div class="carousel-item active">
                 <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100">
-                    <img src="../image/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
@@ -112,7 +112,7 @@
               <div class="carousel-item">
                 <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100">
-                    <img src="../image/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
@@ -138,7 +138,7 @@
               <div class="carousel-item">
                 <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100">
-                    <img src="../image/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
@@ -164,7 +164,7 @@
               <div class="carousel-item">
                 <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100">
-                    <img src="../image/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
@@ -190,7 +190,7 @@
               <div class="carousel-item">
                 <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100">
-                    <img src="../image/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
@@ -216,7 +216,7 @@
               <div class="carousel-item">
                 <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100">
-                    <img src="../image/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
@@ -258,10 +258,10 @@
   <section class="container py-3">
     <div class="row">
       <div class="col-12 my-2 col-md-6">
-        <img src="../image/small_banner1.jpg" alt="" class="rounded-2" width="100%" height="150px">
+        <img src="../assets/img/homepage/small_banner1.jpg" alt="" class="rounded-2" width="100%" height="150px">
       </div>
       <div class="col-12 my-2 col-md-6">
-        <img src="../image/small_banner2.jpg" alt="" class="rounded-2" width="100%" height="150px">
+        <img src="../assets/img/homepage/small_banner2.jpg" alt="" class="rounded-2" width="100%" height="150px">
       </div>
     </div>
   </section>
@@ -320,7 +320,7 @@
                   <div class="col-12">
                     <div class="row">
     <?php 
-    include("../Model/database.php");
+    include("../core/model/database.php");
     $item_per_page = 12 ;
     $select_product = "select count(*) as total from products ;" ;
     $result_total = $connect->query($select_product) ;
@@ -390,7 +390,7 @@
     <div class="row">
       <div class="col">
         <div class="d-flex position-relative">
-          <img src="../image/banner-1.jpg" class="flex-shrink-0 me-3" alt="..." width="150px" height="150px">
+          <img src="../assets/img/homepage/banner-1.jpg" class="flex-shrink-0 me-3" alt="..." width="150px" height="150px">
           <div>
             <h5 class="mt-0">Gạch Ceramic Là Gì? Phân Biệt Với Gạch Granite, Porcelain</h5>
             <p>Nhiều mẫu mã, họa tiết, màu sắc, giá thành phải chăng… gạch ceramic (gạch men) trở thành loại vật liệu ốp lát phổ biến hiện nay. Tuy nhiên, loại gạch này có tốt và bền chắc không, có những ưu nhược điểm gì thì không phải gia chủ nào cũng biết. Để hiểu rõ vấn đề này và tìm ra mẫu gạch ceramic đẹp cũng như phương pháp thi công nâng cao chất lượng cho bề mặt ốp lát, bạn hãy tham khảo bài viết dưới đây..</p>
@@ -400,7 +400,7 @@
       </div>
       <div class="col">
         <div class="d-flex position-relative">
-          <img src="../image/banner-1.jpg" class="flex-shrink-0 me-3" alt="..." width="150px" height="150px">
+          <img src="../assets/img/homepage/banner-1.jpg" class="flex-shrink-0 me-3" alt="..." width="150px" height="150px">
           <div>
             <h5 class="mt-0">Cách tính số lượng gạch cần sử dụng</h5>
             <p>Các hộ gia đình thường khá băn khoăn khi không biết nên mua số lượng gạch bao nhiêu cho không bị thừa hay thiếu khi đưa vào thi công. Để đảm bảo tiết kiệm chi phí cho công trình và không bị gián đoán quá trình thi công, hay tham khảo bài viết dưới đây để xác định được số lượng gạch cần mua chính xác nhất nhé!
