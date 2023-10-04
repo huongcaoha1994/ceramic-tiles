@@ -40,7 +40,7 @@ if ($result_product->num_rows > 0) {
     while ($row = $result_product->fetch_assoc()) {
         ?>
         <div class="container">
-            <img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300">
+            <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id'] ;?>"><img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300"></a>
             <h3><?php echo $row['product_name']; ?></h3>
             <h4>Price : <?php echo $row['price'] ;?></h4>
             <h4>Color : <?php echo $row['color'] ;?></h4>

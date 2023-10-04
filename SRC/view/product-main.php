@@ -20,19 +20,14 @@
   if ($result_product->num_rows > 0 ){
     while($row = $result_product->fetch_assoc()){
       ?>
-        <div class="container">
-            <img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300">
+        <div>
+           <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id'] ;?>"><img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300"></a>
             <h3><?php echo $row['product_name']; ?></h3>
             <h4>Price : <?php echo $row['price'] ;?></h4>
             <h4>Color : <?php echo $row['color'] ;?></h4>
             <h4>Inventory : <?php echo $row['inventory'] ;?></h4>
             <h4>Brand : <?php echo $row['brand'] ;?></h4>
             <h4>Size : <?php echo $row['size'] ;?></h4>
-            <form action="" method="POST">
-                <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ;?>">
-                <input type="number" name="quantity">
-                <input type="submit" name="add_to_cart" value="Add">
-            </form>
         </div>
       <?php
     }

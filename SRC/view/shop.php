@@ -23,6 +23,10 @@
                 </nav>
             </div>
             <div class="col-6">
+            <form action="shop.php" method="POST">
+            <input type="text" name="rs_search">
+            <input type="submit" name="search" value="search">
+        </form>
             </div>
         </div>
     </div>
