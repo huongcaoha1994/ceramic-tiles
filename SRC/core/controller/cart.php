@@ -35,19 +35,20 @@
         while($row = $result_cart->fetch_assoc()){
             ?>
             <div class="product">
-            <img src="<?php 
+            <img src="../../assets/img<?php 
             $select_image = "select image from products where product_id =". $row['product_id'].";" ;
             $result_image = $connect->query($select_image) ;
             if($result_image){
-                $image = $result_image->fetch_assoc() ;
+                $row1 = $result_image->fetch_assoc() ;
+                $image = $row1['image'];
                 echo $image ;
             }
             ?>" alt="Product Image">
-            <p><?php echo $row['price']; ?></p>
-            <p><?php echo $row['quantity']; ?></p>
-            <p><?php echo $row['total_money']; ?></p>
+            <p><?php echo "price:".$row['price']."_____"; ?></p>
+            <p><?php echo "quantity:".$row['quantity']."_____"; ?></p>
+            <p><?php echo "money:".$row['total_money']."_____"; ?></p>
             <?php $total_bill+= $row['total_money'] ; ?>
-            <a href="delete.php?cart_id=<?php echo $row['cart_id']; ?>">delete</a>
+            <a href="delete.php?cart_id=<?php echo $row['cart_id']; ?>">delete</a> | 
             <a href="update.php?cart_id=<?php echo $row['cart_id']; ?>">update</a>
             </div>
             <?php
@@ -55,5 +56,6 @@
         echo "<h3>Tổng tiền : $total_bill </h3>" ;
     }
     ?>
+    <a href="order.php">Thanh toán</a>
 </body>
 </html>
