@@ -6,23 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <title>Ceramic Tiles</title>
-  <style>
-    .container-product {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      /* Căn các div theo khoảng cách bằng nhau */
-    }
-
-    .container-product>.content {
-      width: calc(25% - 20px);
-      /* Sử dụng 25% chiều rộng để có tối đa 4 thẻ div trên một hàng */
-      box-sizing: border-box;
-      padding: 10px;
-      margin-bottom: 20px;
-      /* Khoảng cách giữa các div */
-    }
-  </style>
+ 
 </head>
 
 <body>
@@ -279,15 +263,24 @@
 
           <div class="hn-tabs justify-content-around">
             <div class="hn-tab-item active">
-              <a href="shop.php?category=wall">Wall Ceramic Tiles</a>
+              <form action="" method="POST">
+                <input type="hidden" name="category" value="wall">
+                <input type="submit" name="search" value="Wall Ceramic Tiles">
+              </form>
             </div>
 
             <div class="hn-tab-item">
-              <a href="shop.php?category=floor">Floor Ceramic Tiles</a>
-
+            <form action="" method="POST">
+                <input type="hidden" name="category" value="floor">
+                <input type="submit" name="search" value="Floor Ceramic Tiles">
+              </form>
             </div>
+
             <div class="hn-tab-item">
-             <a href="">Special Ceramic Tiles</a>
+             <form action="" method="POST">
+                <input type="hidden" name="category" value="special">
+                <input type="submit" name="search" value="Special Ceramic Tiles">
+              </form>
 
             </div>
             <div class="line d-none"></div>

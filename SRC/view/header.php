@@ -31,32 +31,32 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Wall tiles</a>
                         
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="#">Bathroom wall tiles</a></li>
-                            <li><a class="dropdown-item " href="#">Kitchen wall tiles</a></li>
-                            <li><a class="dropdown-item " href="#">Outdoor wall tiles</a></li>
-                            <li><a class="dropdown-item " href="#">Living room</a></li>
-                            <li><a class="dropdown-item " href="#">Bedroom</a></li>
-                            <li><a class="dropdown-item " href="#">Commercial spaces tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=bathroom">Bathroom wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=kitchen">Kitchen wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=outdoor">Outdoor wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=living">Living room</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=bedroom">Bedroom</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=commercial">Commercial spaces tiles</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Floor tiles</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="#">Bathroom wall tiles</a></li>
-                            <li><a class="dropdown-item " href="#">Kitchen wall tiles</a></li>
-                            <li><a class="dropdown-item " href="#">Outdoor wall tiles</a></li>
-                            <li><a class="dropdown-item " href="#">Living room</a></li>
-                            <li><a class="dropdown-item " href="#">Bedroom</a></li>
-                            <li><a class="dropdown-item " href="#">Commercial spaces tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=bathroom">Bathroom wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=kitchen">Kitchen wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=outdoor">Outdoor wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=living">Living room</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=bedroom">Bedroom</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=commercial">Commercial spaces tiles</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Special Wall tiles</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="#">Germ free</a></li>
-                            <li><a class="dropdown-item " href="#">Tac</a></li>
-                            <li><a class="dropdown-item " href="#">Anti static</a></li>
-                            <li><a class="dropdown-item " href="#">Cool roof</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=special">Germ free</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=special">Tac</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=special">Anti static</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=special">Cool roof</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -88,7 +88,10 @@
             </div>
         </div>
     </nav>
-
+        <form action="shop.php" method="POST">
+            <input type="text" name="rs_search">
+            <input type="submit" name="search" value="search">
+        </form>
     <script src="../assets/js/headerscript.js"></script>
     <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
