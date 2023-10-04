@@ -10,7 +10,7 @@
       $select_product = "select * from products where category_id = 8 limit 8 ; " ;
     }
     else if ($category == "special"){
-      $select_product = "select * from products limit where category_id = 9 limit 8 ; " ;
+      $select_product = "select * from products where category_id = 9 limit 8 ; " ;
     }
     else {
       $select_product = "select * from products limit 8 ; " ;
