@@ -287,10 +287,7 @@
 
             </div>
             <div class="hn-tab-item">
-              <form action="shop.php" method="POST">
-                <input type="text" name="rs_search">
-                <input type="submit" name="search" value="search">
-              </form>
+             <a href="">Special Ceramic Tiles</a>
 
             </div>
             <div class="line d-none"></div>
