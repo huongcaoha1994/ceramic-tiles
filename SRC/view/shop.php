@@ -13,8 +13,8 @@
     ?>
     <!-- breadcrumb -->
     <div class="container py-3">
-        <div class="row">
-            <div class="col-6">
+        <div class="row align-items-center">
+            <div class="col-12 text-center text-md-start col-md-6">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" class="display-6">Home</a></li>
@@ -22,7 +22,11 @@
                     </ol>
                 </nav>
             </div>
-            <div class="col-6">
+            <div class="col-12 text-center text-md-end col-md-6">
+                <form action="shop.php" method="POST">
+                    <input type="text" name="rs_search">
+                    <input type="submit" name="search" value="search">
+                </form>
             </div>
         </div>
     </div>
@@ -30,7 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-3">
-                
+
             </div>
             <div class="col-9">
                 <div class="row">

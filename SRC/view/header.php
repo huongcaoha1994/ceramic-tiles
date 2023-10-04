@@ -88,10 +88,7 @@
             </div>
         </div>
     </nav>
-        <form action="shop.php" method="POST">
-            <input type="text" name="rs_search">
-            <input type="submit" name="search" value="search">
-        </form>
+        
     <script src="../assets/js/headerscript.js"></script>
     <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
