@@ -26,11 +26,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Wall tiles</a>
+                        
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item " href="#">Bathroom wall tiles</a></li>
                             <li><a class="dropdown-item " href="#">Kitchen wall tiles</a></li>
@@ -62,6 +61,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Expert corner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
