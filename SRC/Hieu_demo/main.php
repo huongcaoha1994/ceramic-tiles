@@ -279,15 +279,18 @@
 
           <div class="hn-tabs justify-content-around">
             <div class="hn-tab-item active">
-              Wall Ceramic Tiles
+              <a href="shop.php?category=wall">Wall Ceramic Tiles</a>
             </div>
 
             <div class="hn-tab-item">
-              Floor Ceramic Tiles
+              <a href="shop.php?category=floor">Floor Ceramic Tiles</a>
 
             </div>
             <div class="hn-tab-item">
-              Special Ceramic Tiles
+              <form action="shop.php" method="POST">
+                <input type="text" name="rs_search">
+                <input type="submit" name="search" value="search">
+              </form>
 
             </div>
             <div class="line d-none"></div>
