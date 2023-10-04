@@ -49,7 +49,6 @@
         </footer>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src="../js/footerscript.js"></script>  ./TILES-LUXURY/js/footerscript.js
+    <script src="../assets/js/footerscript.js"></script> 
 </body>
-
 </html>
