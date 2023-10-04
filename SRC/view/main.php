@@ -303,6 +303,7 @@
                  <?php 
                  include("product-main.php");
                  ?>
+                 
    
   </section>
   <!-- Blog post  -->

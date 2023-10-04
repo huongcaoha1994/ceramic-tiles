@@ -22,6 +22,7 @@
                           ?>
 
                             <div class="col-6 col-lg-3 my-2">
+
                               <div class="card h-100">
                                 <img src="../assets/img<?php echo $row['image']; ?>" class="card-img-top" height="150px" width="150px" alt="Laptop" />
                                 <div class="card-body">
