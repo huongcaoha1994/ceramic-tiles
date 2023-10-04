@@ -14,7 +14,7 @@
         <footer class="py-3">
             <div class="row">
                 <div class="col-12 text-center col-md-3 mb-3 col-lg-3">
-                    <img src="../image/logo.png" alt="logo" height="100px" class="navbar-brand">
+                    <img src="../assets/img/homepage//logo.png" alt="logo" height="100px" class="navbar-brand">
                 </div>
 
                 <div class="col-6 col-md-3 mb-3 col-lg-3">
