@@ -39,7 +39,7 @@
             }
             
         }
-        header("location: cart.php");
+       
         
     ?>
 </body>

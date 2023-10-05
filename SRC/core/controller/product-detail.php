@@ -68,5 +68,6 @@
         }
     }
     ?>
+    <a href="../../view/shop.php">Go to Shop</a>
 </body>
 </html>

@@ -7,17 +7,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <title>Ceramic Tiles</title>
   <script>
-function show_product() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("show-product").innerHTML = this.responseText;
-        }
-      };
-      xhttp.open("POST", "product-main.php", true);
-      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xhttp.send("search=1&category=" + category);
-    }
+
 </script>
 </head>
 
