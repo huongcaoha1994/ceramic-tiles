@@ -76,7 +76,7 @@
               <input type="text" name="username" id="form3Example3" class="form-control form-control-lg" placeholder="Username" />
             </div>
 
-            <!-- Password input -->
+            <!-- Passwords input -->
             <div class="form-outline mb-3">
               <input type="password" id="myInput" name="password" class="form-control form-control-lg" placeholder="Enter password" />
               <i class='bx bxs-low-vision' onclick="myFunction()"></i>
