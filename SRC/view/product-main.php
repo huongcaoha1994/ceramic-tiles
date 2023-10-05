@@ -10,7 +10,7 @@
       $select_product = "select * from products where category_id = 8 limit 8 ; " ;
     }
     else if ($category == "special"){
-      $select_product = "select * from products limit where category_id = 9 limit 8 ; " ;
+      $select_product = "select * from products where category_id = 9 limit 8 ; " ;
     }
     else {
       $select_product = "select * from products limit 8 ; " ;
@@ -53,11 +53,6 @@
             <h4>Inventory : <?php echo $row['inventory'] ;?></h4>
             <h4>Brand : <?php echo $row['brand'] ;?></h4>
             <h4>Size : <?php echo $row['size'] ;?></h4>
-            <form action="" method="POST">
-                <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ;?>">
-                <input type="number" name="quantity">
-                <input type="submit" name="add_to_cart" value="Add">
-            </form>
         </div>
       <?php
     }
