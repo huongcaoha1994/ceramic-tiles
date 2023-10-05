@@ -85,7 +85,7 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
                         <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 
@@ -111,7 +111,7 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="mb-0 me-2 product-view">Asus Notebook</h6>
                         <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 

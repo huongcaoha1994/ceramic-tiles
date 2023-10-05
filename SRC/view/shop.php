@@ -34,18 +34,19 @@
     <!--  -->
     <div class="container">
         <div class="row">
-            <div class="d-none col-lg-3 d-lg-block">
-                <h5>Bộ lọc sản phẩm</h6>
+            <div class="d-none col-lg-3 d-lg-block border rounded-1 p-3">
+                <h4>Bộ lọc sản phẩm</h4>
+                <h5>Colors</h5>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1">
-                        Default radio
+                       Yellow
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                     <label class="form-check-label" for="flexRadioDefault2">
-                        Default checked radio
+                        Red
                     </label>
                 </div>
             </div>
