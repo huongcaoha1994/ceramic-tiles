@@ -8,7 +8,7 @@
   <title>Ceramic Tiles</title>
   <script>
 
-</script>
+  </script>
 </head>
 
 <body>
@@ -259,7 +259,6 @@
   </section>
   <!-- Tab items -->
   <section style="background-color: #eee;" class="py-2">
-
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -267,24 +266,20 @@
 
           <div class="hn-tabs justify-content-around">
             <div class="hn-tab-item active">
-              <form action="" method="POST">
-                <input type="hidden" name="category" value="wall">
-                <button type="submit" name="search" onclick="show_product()">Wall Ceramic Tiles</button>
-              </form>
+              Wall Ceramic Tiles
+
             </div>
 
             <div class="hn-tab-item">
-            <form action="" method="POST">
-                <input type="hidden" name="category" value="floor">
-                <button type="submit" name="search" onclick="show_product()">Floor Ceramic Tiles</button>
-              </form>
+
+              Floor Ceramic Tiles
+
             </div>
 
             <div class="hn-tab-item">
-             <form action="" method="POST">
-                <input type="hidden" name="category" value="special">
-                <button type="submit" name="search" onclick="show_product()">Special Ceramic Tiles</button>
-              </form>
+
+              Special Ceramic Tiles
+
 
             </div>
             <div class="line d-none"></div>
@@ -297,11 +292,16 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="row">
-                 <?php 
-                 include("product-main.php");
-                 ?>
-                 
-   
+                      <?php
+                      include("product-main.php");
+                      ?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
   </section>
   <!-- Blog post  -->
   <h1 class="text-primary text-center py-4">Blog Post</h1>
