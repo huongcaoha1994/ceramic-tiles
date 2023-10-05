@@ -1,9 +1,9 @@
 <?php 
-include '../PHPMailer/src/PHPMailer.php';
-include '../PHPMailer/src/Exception.php';
-include '../PHPMailer/src/OAuthTokenProvider.php';
-include '../PHPMailer/src/POP3.php';
-include '../PHPMailer/src/SMTP.php';
+include '../../assets/PHPMailer/src/PHPMailer.php'; 
+include '../../assets/PHPMailer/src/Exception.php';
+include '../../assets/PHPMailer/src/OAuthTokenProvider.php';
+include '../../assets/PHPMailer/src/POP3.php';
+include '../../assets/PHPMailer/src/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -19,8 +19,8 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
-    <link rel="stylesheet" href="SRC/assets/css/register.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/css/register.css">
     <title>Register</title>
 </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -180,14 +180,16 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
           <div class="card card-registration my-4">
             <div class="row g-0">
               <div class="col-xl-6 d-none d-xl-block">
-                <img src="SRC/assets/img/homepage/logo.png"
+                <img src="../../assets/img/homepage/logo.png"
                   alt="Sample photo" class="img-fluid"
                   style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
               </div>
               <div class="col-xl-6">
                 <div class="card-body p-md-5 text-black">
                   <h3 class="mb-5 text-uppercase text-center">Registration form</h3>
+                  <form action="" method="POST">
 
+                 
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
@@ -235,7 +237,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 
                   <div class="form-outline mb-4">
                     <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg" />
-                            value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>">
+                            <?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>
                         <?php if ($hasErrors) {
                             echo '<span class="error">' . $phoneErr . '</span>';
                         } ?>
@@ -245,8 +247,9 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 
                   <div class="d-flex justify-content-end pt-3">
                     <button type="button" class="btn btn-light btn-lg">Reset all</button>
-                    <button type="button" name="btn" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                    <button type="submit" name="register" class="btn btn-warning btn-lg ms-2">Submit form</button>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>

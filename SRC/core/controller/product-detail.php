@@ -10,11 +10,9 @@
     <h1>Product Detail</h1>
     <?php
     session_start();
-    if(!isset($_SESSION['login'])){
-        header("location: ../model/login.php");
-        exit;
-    }
+    echo "<script>alert('Bạn cần đăng nhập để đặt hàng !')</script>" ;
     include("../model/database.php");
+
         if(isset($_GET['product_id'])){
             $product_id = htmlspecialchars($_GET['product_id']) ;
             $get_product = "select * from products where product_id = $product_id ;" ;
@@ -49,6 +47,12 @@
     
    
     if(isset($_POST['add_to_cart'])){
+       
+        if(!isset($_SESSION['login'])){
+          
+            header("location: ../model/login.php");
+            exit;
+        }
         $product_id = htmlspecialchars($_POST['product_id']);
         $quantity = htmlspecialchars($_POST['quantity']);
         $get_product = "select * from products where product_id = $product_id ;" ;
