@@ -10,6 +10,10 @@
     <h1>Product Detail</h1>
     <?php
     session_start();
+    if(!isset($_SESSION['login'])){
+        header("location: ../model/login.php");
+        exit;
+    }
     include("../model/database.php");
         if(isset($_GET['product_id'])){
             $product_id = htmlspecialchars($_GET['product_id']) ;

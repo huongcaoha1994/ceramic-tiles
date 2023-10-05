@@ -24,6 +24,18 @@
 </style>
 </head>
 <body>
+    <h1>Cart</h1>
+    <br>
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>Image</th>
+            <th>Product Name</th>           
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Money</th>
+        </tr>
+
     <?php 
     session_start() ;
     include("../Model/database.php");
@@ -56,6 +68,7 @@
         echo "<h3>Tổng tiền : $total_bill </h3>" ;
     }
     ?>
+        </table>
     <a href="order.php">Thanh toán</a>
 </body>
 </html>
