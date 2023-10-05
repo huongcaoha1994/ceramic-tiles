@@ -20,8 +20,33 @@
   if ($result_product->num_rows > 0 ){
     while($row = $result_product->fetch_assoc()){
       ?>
-        <div>
-           <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id'] ;?>"><img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300"></a>
+        <div class="container">
+          <div class="row"></div>
+        <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
+                  <div class="card h-100">
+                  <img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300">
+
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                        <p class="small text-danger"><s>$1099</s></p>
+                      </div>
+
+                      <div class="d-flex justify-content-between mb-3">
+                        <h6 class="mb-0 product-view">HP Notebook</h6>
+                        <h6 class="text-dark mb-0 product-view">$9999999</h6>
+                      </div>
+
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <button class="btn btn-primary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             <h3><?php echo $row['product_name']; ?></h3>
             <h4>Price : <?php echo $row['price'] ;?></h4>
             <h4>Color : <?php echo $row['color'] ;?></h4>
