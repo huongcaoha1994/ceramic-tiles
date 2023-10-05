@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="../ceramic-tiles/SRC/css/contact.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
 </head>
@@ -37,7 +37,7 @@
                                 <p>Collaborators: <b>0979 697 715 | 0979 957 815</b></p>
                             </li>
                             <li>
-                                <p>Email: Nguyenvantruc206@gmail.com</p>
+                                <a href="mailto:Nguyenvantruc206@gmail.com">Nguyenvantruc206@gmail.com</a>
                             </li>
                             <li>
                                 <p> Website: https://tilesLuxury.vn</p>
@@ -67,7 +67,15 @@
 
                 </div>
             </div>
-
+            <div class="col-12">
+                <form>
+                    <h5>Our Location</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.940115968208!2d105.8494022744659!3d21.035081980615843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbf5c6e7ce3%3A0xcfa017611623993c!2zMTkwMCBMZSBUaMOpw6J0cmU!5e0!3m2!1svi!2s!4v1695882844641!5m2!1svi!2s"
+                        width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </form>
+            </div>
         </div>
 
         <?php
