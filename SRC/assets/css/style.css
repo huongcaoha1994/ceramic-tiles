@@ -10,6 +10,17 @@
   color: var(--bs-dark);
 }
 
+.btn.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn.btn-outline-primary:hover {
+  color: #fff;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
 /* Text  */
 .text-primary {
   color: var(--primary-color) !important;
@@ -93,7 +104,7 @@
 
 /* Thêm dấu ... vào title với giá khi quá dài */
 .product-view {
-  height: 40px;
+  height: 50px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -298,3 +309,11 @@ span.carousel-control-prev-icon {
     padding: 4px 5px 3px 5px;
   }
 } */
+
+
+/* Set equal card-items */
+.set-equal {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}

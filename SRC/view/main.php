@@ -17,7 +17,7 @@
   ?>
 
   <!-- Banner  -->
-  <img src="../assets/img/homepage/banner2.jpg" alt="" class="img-fluid w-100">
+  <img src="../assets/img/homepage/banner2.jpg" alt="" class="w-100" height="500px">
   <!-- category list  -->
   <div class="container">
     <div class="row">
@@ -83,8 +83,8 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 product-view">HP Notebook</h6>
-                        <h6 class="text-dark mb-0 product-view">$9999999</h6>
+                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 
                       <div class="d-flex justify-content-between mb-2">
@@ -109,8 +109,8 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 product-view">HP Notebook</h6>
-                        <h6 class="text-dark mb-0 product-view">$9999999</h6>
+                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 
                       <div class="d-flex justify-content-between mb-2">
@@ -135,8 +135,8 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 product-view">HP Notebook</h6>
-                        <h6 class="text-dark mb-0 product-view">$9999999</h6>
+                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 
                       <div class="d-flex justify-content-between mb-2">
@@ -161,8 +161,8 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 product-view">HP Notebook</h6>
-                        <h6 class="text-dark mb-0 product-view">$9999999</h6>
+                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 
                       <div class="d-flex justify-content-between mb-2">
@@ -187,8 +187,8 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 product-view">HP Notebook</h6>
-                        <h6 class="text-dark mb-0 product-view">$9999999</h6>
+                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 
                       <div class="d-flex justify-content-between mb-2">
@@ -213,8 +213,8 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 product-view">HP Notebook</h6>
-                        <h6 class="text-dark mb-0 product-view">$9999999</h6>
+                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
+                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
                       </div>
 
                       <div class="d-flex justify-content-between mb-2">
@@ -296,7 +296,7 @@
                   <div class="col-12">
                     <div class="row">
                  <?php 
-                 include("product-main.php");
+                 // include("product-main.php");
                  ?>
                  
    

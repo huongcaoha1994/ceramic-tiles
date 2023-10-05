@@ -40,21 +40,23 @@ if ($result_product->num_rows > 0) {
     while ($row = $result_product->fetch_assoc()) {
 ?>
 
-            <div class="col-6 col-md-3 mb-3 mb-md-3 px-2">
-                <div class="card h-100">
-                    <img src="../assets/img<?php echo $row['image']; ?>" alt="" width="100%" height="100%">
-                    <div class="card-body">
-                        <h3><?php echo $row['product_name']; ?></h3>
-                        <h4>Price : <?php echo $row['price']; ?>$</h4>
-                        <!-- <h4>Color : <?php echo $row['color']; ?></h4> -->
-                        <!-- <h4>Inventory : <?php echo $row['inventory']; ?></h4> -->
-                        <!-- <h4>Brand : <?php echo $row['brand']; ?></h4> -->
-                        <!-- <h4>Size : <?php echo $row['size']; ?></h4> -->
-                        <form action="" method="POST">
+            <div class="col-6 col-md-4 mb-3 mb-md-3 px-2">
+                <div class="card h-100 ">
+                    <a href="#">
+                    <img src="../assets/img<?php echo $row['image']; ?>" alt="" width="100%" height="300px">
+                    </a>
+                    <div class="card-body set-equal">
+                        <h5 class="product-view"><?php echo $row['product_name']; ?></h5>
+                        <h6>Price : <?php echo $row['price']; ?>$</h6>
+                        <h6>Color : <?php echo $row['color']; ?></h6>
+                        <h6>Inventory : <?php echo $row['inventory']; ?></h6>
+                        <h6>Brand : <?php echo $row['brand']; ?></h6>
+                        <h6>Size : <?php echo $row['size']; ?></h6>
+                        <!-- <form action="" method="POST">
                             <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
                             <input type="number" name="quantity">
                             <input type="submit" name="add_to_cart" value="Add">
-                        </form>
+                        </form> -->
                         <div class="d-flex justify-content-between mb-2">
                             <button class="btn btn-primary">Add to cart</button>
                         </div>
