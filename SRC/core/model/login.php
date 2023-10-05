@@ -36,7 +36,7 @@
         <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
       </ul>
-
+    
       <div class="col-md-3 text-end ">
         <button type="button" class="btn btn-warning "><a href="2.php" class="text-dark">Sign-up</a></button>
         <button type="button" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>

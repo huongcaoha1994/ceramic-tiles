@@ -38,6 +38,11 @@
 
     <?php 
     session_start() ;
+    echo "<script>alert('Bạn cần đăng nhập trước khi tới mục này !')</script>" ;
+    if(!isset($_SESSION['login'])){
+        header("../model/login.php");
+        exit;
+    }
     include("../Model/database.php");
     $user_id = $_SESSION['user_id'] ;
     $select_cart = "select * from carts where user_id = $user_id ;" ;
