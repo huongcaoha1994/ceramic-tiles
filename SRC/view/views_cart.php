@@ -32,12 +32,12 @@ require '../core/model/database.php';
         <td><?php echo $each['product_name']; ?></td>
         <td><?php echo $each['price']; ?></td>
         <td>
-            <a href="update_quantity_cart.php?product_id=<?php echo $product_id?>&type=desc"> - </a>
+            <a href="../core/model/update_quantity_cart.php?product_id=<?php echo $product_id?>&type=desc"> - </a>
             <?php echo $quantity; ?>
-            <a href="update_quantity_cart.php?product_id=<?php echo $product_id?>&type=asc"> + </a>
+            <a href="../core/model/update_quantity_cart.php?product_id=<?php echo $product_id?>&type=asc"> + </a>
         </td>
         <td><?php echo $each['price'] * $quantity; ?></td>
-        <td><a href="product_cart_delete.php?product_id=<?php echo $product_id?>">Xóa sản phẩm</a></td>
+        <td><a href="../core/model/product_cart_delete.php?product_id=<?php echo $product_id?>">Xóa sản phẩm</a></td>
     </tr>
         <?php endforeach ?>
 </table>

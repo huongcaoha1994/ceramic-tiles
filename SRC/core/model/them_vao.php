@@ -2,7 +2,7 @@
 session_start();
 // unset($_SESSION['cart']);
 $product_id = $_GET['product_id'];
-include ("../core/model/database.php");
+include ("database.php");
 if (isset($_POST['add_to_cart'])) {
     $user_id = $_SESSION['user_id'];    
     $quantity = $_POST['quantity'];
@@ -30,7 +30,7 @@ if (isset($_POST['add_to_cart'])) {
         }
     }
 
-    header('Location:shop.php');    
+    header('Location: ../../view/shop.php');    
 }
 
 

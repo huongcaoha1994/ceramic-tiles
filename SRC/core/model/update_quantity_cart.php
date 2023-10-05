@@ -15,5 +15,5 @@ if ($type === 'asc') {
     $_SESSION['cart'][$id]++;
 }
 
-header('Location: views_cart.php');
+header('Location: ../../view/views_cart.php');
 ?>
