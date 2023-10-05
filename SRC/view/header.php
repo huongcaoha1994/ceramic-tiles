@@ -79,7 +79,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="">
+                    <a href="views_cart.php">
                         <button class="btn btn-primary">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </button>
