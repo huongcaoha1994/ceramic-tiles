@@ -65,8 +65,8 @@
             <p><?php echo "quantity:".$row['quantity']."_____"; ?></p>
             <p><?php echo "money:".$row['total_money']."_____"; ?></p>
             <?php $total_bill+= $row['total_money'] ; ?>
-            <a href="delete.php?cart_id=<?php echo $row['cart_id']; ?>">delete</a> | 
-            <a href="update.php?cart_id=<?php echo $row['cart_id']; ?>">update</a>
+            <a href="delete-product.php?cart_id=<?php echo $row['cart_id']; ?>">delete</a> | 
+            <a href="update-product+.php?cart_id=<?php echo $row['cart_id']; ?>">update</a>
             </div>
             <?php
         }
