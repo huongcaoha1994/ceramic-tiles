@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" aria-label="Main navigation" id="header">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light " aria-label="Main navigation" id="header">
         <div class="container-fluid">
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,8 +21,8 @@
             <a class="navbar-brand" href="./main.php">
                 <img src="../assets/img/homepage/logo.png" alt="logo" width="100px" height="70px" class="navbar-brand">
             </a>
-            <div class="navbar-collapse offcanvas-collapse px-2" id="navbarsExampleDefault">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="navbar-collapse offcanvas-collapse px-2 text-warning" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-warning">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="./main.php">Home</a>
                     </li>

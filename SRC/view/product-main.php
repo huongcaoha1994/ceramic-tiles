@@ -18,11 +18,11 @@ if ($result_product->num_rows > 0) {
   while ($row = $result_product->fetch_assoc()) {
 ?>
 
-    <div class="col-6 col-lg-3 mb-3 mb-md-3 px-2">
+    <div class="col-6 col-lg-3 mb-3 mb-md-3 px-2 ">
       <div class="card h-100">
         <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id']; ?>"> <img src="../assets/img<?php echo $row['image']; ?>" alt="" width="100%" height="300"></a>
 
-        <div class="card-body">
+        <div class="card-body set-equal">
 
 
           <div class="d-flex justify-content-between mb-3">

@@ -317,3 +317,11 @@ span.carousel-control-prev-icon {
   flex-direction: column !important;
   justify-content: space-between !important;
 }
+
+#header a.nav-link {
+  color: black !important;
+}
+
+#header .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--primary-color) !important;
+}
