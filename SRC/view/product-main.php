@@ -12,9 +12,9 @@
     else if ($category == "special"){
       $select_product = "select * from products where category_id = 9 limit 8 ; " ;
     }
-    else {
-      $select_product = "select * from products limit 8 ; " ;
-    }
+  }
+  else {
+    $select_product = "select * from products limit 8 ; " ;
   }
   $result_product = $connect->query($select_product);
   if ($result_product->num_rows > 0 ){
@@ -24,9 +24,9 @@
           <div class="row"></div>
         <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100">
-                  <img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300">
+                 <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id'] ;?>"> <img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300"></a>
 
-                  <div class="card-body">
+                  <!-- <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
                         <p class="small text-danger"><s>$1099</s></p>
@@ -43,7 +43,7 @@
                       </div>
                       <div class="d-flex justify-content-between mb-2">
                         <button class="btn btn-primary">Add to cart</button>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
