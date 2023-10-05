@@ -6,7 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <title>Ceramic Tiles</title>
- 
+  <script>
+function show_product() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("show-product").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("POST", "product-main.php", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send("search=1&category=" + category);
+    }
+</script>
 </head>
 
 <body>
@@ -265,21 +277,21 @@
             <div class="hn-tab-item active">
               <form action="" method="POST">
                 <input type="hidden" name="category" value="wall">
-                <input type="submit" name="search" value="Wall Ceramic Tiles">
+                <button type="submit" name="search" onclick="show_product()">Wall Ceramic Tiles</button>
               </form>
             </div>
 
             <div class="hn-tab-item">
             <form action="" method="POST">
                 <input type="hidden" name="category" value="floor">
-                <input type="submit" name="search" value="Floor Ceramic Tiles">
+                <button type="submit" name="search" onclick="show_product()">Floor Ceramic Tiles</button>
               </form>
             </div>
 
             <div class="hn-tab-item">
              <form action="" method="POST">
                 <input type="hidden" name="category" value="special">
-                <input type="submit" name="search" value="Special Ceramic Tiles">
+                <button type="submit" name="search" onclick="show_product()">Special Ceramic Tiles</button>
               </form>
 
             </div>

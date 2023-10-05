@@ -12,15 +12,15 @@
     else if ($category == "special"){
       $select_product = "select * from products where category_id = 9 limit 8 ; " ;
     }
-    else {
-      $select_product = "select * from products limit 8 ; " ;
-    }
+  }
+  else {
+    $select_product = "select * from products limit 8 ; " ;
   }
   $result_product = $connect->query($select_product);
   if ($result_product->num_rows > 0 ){
     while($row = $result_product->fetch_assoc()){
       ?>
-        <div>
+        <div id="show-product">
            <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id'] ;?>"><img src="../assets/img<?php echo $row['image'] ;?>" alt="" width="300" height="300"></a>
             <h3><?php echo $row['product_name']; ?></h3>
             <h4>Price : <?php echo $row['price'] ;?></h4>
