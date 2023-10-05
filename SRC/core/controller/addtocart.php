@@ -1,5 +1,9 @@
 <?php 
 session_start();
+if(!isset($_SESSION['login'])){
+    header("location: ../model/login.php");
+    exit;
+}
 include ("../Model/database.php");
 if(isset($_GET['product_id']) && isset($_GET['quantity'])){
     $user_id = $_SESSION['user_id'] ;

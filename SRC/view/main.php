@@ -23,7 +23,7 @@
     <div class="row">
       <div class="col d-flex justify-content-between align-items-center">
         <h1 class="text-primary text-center py-4">Ceramic Tiles Categories</h1>
-        <a href="#">Go to store</a>
+        <a href="shop.php">Go to store</a>
       </div>
     </div>
   </div>
