@@ -256,11 +256,11 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
     </div>
   </section>
   <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-      <!-- Copyright -->
+      <!-- Copright -->
       <div class="text-white mb-3 mb-md-0">
         Ok Bro © 2023. Cera Tiles.
       </div>
-      <!-- Copyright -->
+      <!-- Copight -->
 
       <!-- Right -->
       <div>
