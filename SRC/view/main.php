@@ -24,6 +24,7 @@
       <div class="col d-flex justify-content-between align-items-center">
         <h1 class="text-primary text-center py-4">Ceramic Tiles Categories</h1>
         <a href="shop.php">Go to store</a>
+        <a href="logout.php">Đăng xuất</a>
       </div>
     </div>
   </div>
@@ -296,7 +297,7 @@
                   <div class="col-12">
                     <div class="row">
                  <?php 
-                 // include("product-main.php");
+                 include("product-main.php");
                  ?>
                  
    
