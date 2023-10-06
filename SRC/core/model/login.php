@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
-    <link rel="stylesheet" href="SRC/assets/css/login.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
     <title>Login</title>
 </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -26,7 +26,7 @@
     <div class="container-fluid bg-info text-white">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <img src="SRC/assets/img/homepage/logo.png" alt="" height="50">
+        <img src="../../assets/img/homepage/logo.png" alt="" height="50">
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -38,8 +38,8 @@
       </ul>
 
       <div class="col-md-3 text-end ">
-        <button type="button" class="btn btn-warning "><a href="2.php" class="text-dark">Sign-up</a></button>
-        <button type="button" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
+        <input type="button" class="btn btn-warning "><a href="register.php" class="text-dark">Sign Up</a></input>
+        <input type="button" class="btn btn-warning "><a href="#"></a><i class='bx bx-phone-call'></i></input>
       </div>
     </header>
   </div>
@@ -47,24 +47,24 @@
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-4 col-xl-3">
-        <img src="SRC/assets/img/homepage/logo.png"
+        <img src="../../assets/img/homepage/logo.png"
           class="img-fluid" alt="Sample image">
       </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form>
+          <form action="" method="POST">
             <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
               <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-              <button type="button" class="btn btn-warning btn-floating mx-1">
+              <input type="button" class="btn btn-warning btn-floating mx-1">
               <i class='bx bxl-meta' ></i>
-              </button>
+              </input>
 
-              <button type="button" class="btn btn-warning btn-floating mx-1 ">
+              <input type="button" class="btn btn-warning btn-floating mx-1 ">
                 <i class="fab fa-twitter"></i>
-              </button>
+              </input>
 
-              <button type="button" class="btn btn-warning btn-floating mx-1 ">
+              <input type="button" class="btn btn-warning btn-floating mx-1 ">
                 <i class="fab fa-linkedin-in"></i>
-              </button>
+              </input>
             </div>
 
             <div class="divider d-flex align-items-center my-4">
@@ -94,12 +94,11 @@
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="button" name="btn" class="btn btn-warning btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="2.php"
+              <input type="button" name="btn" class="btn btn-warning btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</input>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.php"
                   class="link-danger">Register</a></p>
             </div>
-
           </form>
         </div>
       </div>
