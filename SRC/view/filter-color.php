@@ -1,33 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Gọi trang PHP bằng JavaScript</title>
-</head>
-<body>
-    <h1>Filter</h1>
-    <label for="filter">gạch đỏ</label>
-  <input type="radio" name="filter" value="gạch đỏ" onclick="filter()">
-  <br>
-  <label for="filter">gạch xanh</label>
-  <input type="radio" name="filter" value="gạch xanh" onclick="filter()">
-  <br>
-  <label for="filter">gạch vàng</label>
-  <input type="radio" name="filter" value="gạch vàng" onclick="filter()">
-  <br>
-
-  <div id="result"></div>
-
-  <script>
-    function filter() {
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          document.getElementById("result").innerHTML = xhr.responseText;
-        }
-      };
-      xhr.open("GET", "demo-onclick.php", true);
-      xhr.send();
+<?php
+session_start();
+include("../core/model/database.php");
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $_SESSION['color'] = $_POST["color"];
+  $color = $_SESSION['color'] ;
+    $select_filter = "select * from products where color = '$color' ;" ;
+    $result_filter = $connect->query($select_filter);
+    if($result_filter->num_rows > 0 ) {
+      while($row = $result_filter->fetch_assoc()){
+        ?>
+          <div>
+            <img src="../assets/img<?php echo $row['image']; ?>" alt="">
+            <h3><?php echo $row['product_name']; ?></h3>
+            <h4><?php echo $row['price']; ?></h4>
+            <h4><?php echo $row['brand']; ?></h4>
+            <h4><?php echo $row['size']; ?></h4>
+            <h4><?php echo $row['color']; ?></h4>
+          </div>
+        <?php
+      }
     }
-  </script>
-</body>
-</html>
+    else {
+      echo "không tìm thấy sản phẩm nào !" ;
+    }
+
+}
+
+?>
