@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
-    <link rel="stylesheet" href="SRC/assets/css/login.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
     <title>Login</title>
 </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,8 +38,8 @@
       </ul>
 
       <div class="col-md-3 text-end ">
-        <button type="button" class="btn btn-warning "><a href="2.php" class="text-dark">Sign-up</a></button>
-        <button type="button" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
+        <input type="button" class="btn btn-warning "><a href="register.php" class="text-dark">Sign-up</a></input>
+        <input type="button" class="btn btn-warning "><i class='bx bx-phone-call'></i></input>
       </div>
     </header>
   </div>
@@ -94,8 +94,8 @@
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="button" name="btn" class="btn btn-warning btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              <input type="button" name="btn" class="btn btn-warning btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</input>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="2.php"
                   class="link-danger">Register</a></p>
             </div>
@@ -175,5 +175,3 @@
     </script>
 </body>
 </html>
-
-/
