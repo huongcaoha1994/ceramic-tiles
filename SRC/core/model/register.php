@@ -12,6 +12,8 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 
 ?>
 
+//
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -151,7 +153,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
       <?php $connect->close();
       ?>
 
-      <div class="container-fluid bg-info text-white">
+      <div class="container-fluid bg-warning text-white">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
           <img src="../../assets/img/homepage/logo.png" alt="" height="50">
@@ -252,7 +254,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
         </div>
       </div>
     </section>
-    <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+    <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-secondary">
         <!-- Copyright -->
         <div class="text-white mb-3 mb-md-0">
           Ok Bro © 2023. Cera Tiles.
