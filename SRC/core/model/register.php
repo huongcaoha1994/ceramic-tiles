@@ -16,17 +16,19 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../assets/css/register.css">
-    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="SRC/assets/css/register.css">
     <title>Register</title>
+</head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <style>
         .error {
             color: orangered;
@@ -34,23 +36,24 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
             padding-left: 30px;
         }
     </style>
-  </head>
-  <body>
-      <?php
-      session_start();
-      include '../model/database.php';
-      $usernameErr = $passwordErr = $full_nameErr = $emailErr = $addressErr = $phoneErr = "";
-      $username = $password = $full_name = $email = $address = $phone = "";
-      $hasErrors = false; // Biến để kiểm tra có lỗi hay không
-      
-      //xử lí dữ liệu nhập vào làm cho nó an toàn hơn
-      function test_input($data)
-      {
-          $data = trim($data);
-          $data = stripslashes($data);
-          $data = htmlspecialchars($data);
-          return $data;
-      }
+</head>
+
+<body>
+    <?php
+    session_start();
+    include 'database.php';
+    $usernameErr = $passwordErr = $full_nameErr = $emailErr = $addressErr = $phoneErr = "";
+    $username = $password = $full_name = $email = $address = $phone = "";
+    $hasErrors = false; // Biến để kiểm tra có lỗi hay không
+    
+    //xử lí dữ liệu nhập vào làm cho nó an toàn hơn
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 
       if (isset($_POST["btn"])) {
           $hasErrors = true; // Đã ấn nút "Đăng ký"
@@ -150,14 +153,13 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
       ?>
 
 
-      <?php $connect->close();
-      ?>
-
-      <div class="container-fluid bg-warning text-white">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-          <img src="../../assets/img/homepage/logo.png" alt="" height="50">
-        </a>
+    <?php $connect->close();
+    ?>
+    <div class="container-fluid bg-info text-white">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img src="SRC/assets/img/homepage/logo.png" alt="" height="50">
+      </a>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
@@ -167,116 +169,118 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
           <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
         </ul>
 
-        <div class="col-md-3 text-end ">
-          <input type="button" class="btn btn-warning"><a href="login.php" class="text-dark" style="text-decoration: none;">Login</a></input>
-          <input type="button" class="btn btn-warning "><a href="#"></a><i class='bx bx-phone-call'></i></input>
-        </div>
-      </header>
-    </div>
-    <section class="h-100 bg-light">
-      <div class="container py-3 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col">
-            <div class="card card-registration my-4">
-              <div class="row g-0">
-                <div class="col-xl-6 d-none d-xl-block">
-                  <img src="../../assets/img/homepage/logo.png"
-                    alt="Sample photo" class="img-fluid"
-                    style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
-                </div>
-                <form action="" method="POST">
-                  <div class="col-xl-6">
-                    <div class="card-body p-md-5 text-black">
-                      <h3 class="mb-5 text-uppercase text-center">Registration form</h3>
+      <div class="col-md-3 text-end ">
+        <button type="button" class="btn btn-warning"><a href="login.php" class="text-dark" style="text-decoration: none;">Login</a></button>
+        <button type="button" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
+      </div>
+    </header>
+  </div>
+  <section class="h-100 bg-light">
+    <div class="container py-3 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="SRC/assets/img/homepage/logo.png"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase text-center">Registration form</h3>
 
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input type="text" name="username" placeholder="Username" id="form3Example1m" class="form-control form-control-lg"
-                                  value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''; ?>">
-                              <?php if ($hasErrors) {
-                                  echo '<span class="error">' . $usernameErr . '</span>';
-                              } ?>
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input type="password" name="password" placeholder="Password" id="form3Example1m" class="form-control form-control-lg"
-                                  value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
-                              <?php if ($hasErrors) {
-                                  echo '<span class="error">' . $passwordErr . '</span>';
-                              } ?>
-                          </div>
-                        </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" name="username" placeholder="Username" id="form3Example1m" class="form-control form-control-lg"
+                              value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''; ?>">
+                          <?php if ($hasErrors) {
+                              echo '<span class="error">' . $usernameErr . '</span>';
+                          } ?>
                       </div>
-
-                      <div class="form-outline mb-4">
-                        <input type="text" name="full_name" placeholder="Full Name" id="form3Example8" class="form-control form-control-lg"
-                                  value="<?php echo isset($_POST['full_name']) ? $_POST['full_name'] : ''; ?>">
-                              <?php if ($hasErrors) {
-                                  echo '<span class="error">' . $full_nameErr . '</span>';
-                              } ?>
-                      </div>
-
-                      <div class="form-outline mb-4">
-                      <input type="text" name="email" placeholder="Email ID" id="form3Example97" class="form-control form-control-lg"
-                                value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
-                            <?php if ($hasErrors) {
-                                echo '<span class="error">' . $emailErr . '</span>';
-                            } ?>
-                      </div>
-
-                      <div class="form-outline mb-4">
-                      <input type="text" name="address" placeholder="Address" id="form3Example9" class="form-control form-control-lg"
-                                value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>">
-                            <?php if ($hasErrors) {
-                                echo '<span class="error">' . $addressErr . '</span>';
-                            } ?>
-                      </div>
-
-                      <div class="form-outline mb-4">
-                        <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg" />
-                                value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>">
-                            <?php if ($hasErrors) {
-                                echo '<span class="error">' . $phoneErr . '</span>';
-                            } ?>
-                      </div>
-                      <div class="d-flex justify-content-end pt-3">
-                        <input type="button" class="btn btn-light btn-lg">Reset all</input>
-                        <input type="button" name="btn" class="btn btn-warning btn-lg ms-2">Submit form</input>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="password" name="password" placeholder="Password" id="form3Example1m" class="form-control form-control-lg"
+                              value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
+                          <?php if ($hasErrors) {
+                              echo '<span class="error">' . $passwordErr . '</span>';
+                          } ?>
                       </div>
                     </div>
                   </div>
-                </form>  
+
+                  <div class="form-outline mb-4">
+                    <input type="text" name="full_name" placeholder="Full Name" id="form3Example8" class="form-control form-control-lg"
+                              value="<?php echo isset($_POST['full_name']) ? $_POST['full_name'] : ''; ?>">
+                          <?php if ($hasErrors) {
+                              echo '<span class="error">' . $full_nameErr . '</span>';
+                          } ?>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                  <input type="text" name="email" placeholder="Email ID" id="form3Example97" class="form-control form-control-lg"
+                            value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
+                        <?php if ($hasErrors) {
+                            echo '<span class="error">' . $emailErr . '</span>';
+                        } ?>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                  <input type="text" name="address" placeholder="Address" id="form3Example9" class="form-control form-control-lg"
+                            value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>">
+                        <?php if ($hasErrors) {
+                            echo '<span class="error">' . $addressErr . '</span>';
+                        } ?>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg" />
+                            value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>">
+                        <?php if ($hasErrors) {
+                            echo '<span class="error">' . $phoneErr . '</span>';
+                        } ?>
+                  </div>
+
+                
+
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                    <button type="button" name="btn" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-secondary">
-        <!-- Copyright -->
-        <div class="text-white mb-3 mb-md-0">
-          Ok Bro © 2023. Cera Tiles.
-        </div>
-        <!-- Copyright -->
-
-        <!-- Right -->
-        <div>
-          <a href="#!" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#!" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#!" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="#!" class="text-white">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <!-- Right -->
+    </div>
+  </section>
+  <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+      <!-- Copyright -->
+      <div class="text-white mb-3 mb-md-0">
+        Ok Bro © 2023. Cera Tiles.
       </div>
-  </body>
+      <!-- Copyright -->
+
+      <!-- Right -->
+      <div>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#!" class="text-white">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </div>
+</body>
+
 </html>
