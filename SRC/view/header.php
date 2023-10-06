@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/headercart.css">
+    <link rel="stylesheet" href="../assets/css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/docs/assets/owl.theme.green.min.cs">
     <title>Tiles Ceramic</title>
 </head>

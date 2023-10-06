@@ -1,0 +1,14 @@
+.element.animate {
+    animation-play-state: running; /* Kích hoạt animation khi có lớp animate */
+  }
+
+/* Fade in left  */
+
+.fade-in-left{animation:fade-in-left 1s cubic-bezier(.39,.575,.565,1.000) both}
+
+@keyframes fade-in-left{0%{transform:translateX(-50px);opacity:0}100%{transform:translateX(0);opacity:1}}
+/* Fade in right  */
+
+.fade-in-right{animation:fade-in-right 1s cubic-bezier(.39,.575,.565,1.000) both}
+
+@keyframes fade-in-right{0%{transform:translateX(50px);opacity:0}100%{transform:translateX(0);opacity:1}}

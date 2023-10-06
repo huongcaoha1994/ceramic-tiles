@@ -30,8 +30,10 @@
       </div>
     </div>
   </div>
+
   <div class="category-list container py-4">
     <div class="row">
+      
       <div class="col-12 col-md-4 my-2 text-center">
         <div class="card h-100">
           <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" alt="wall-tiles" height="300px">
@@ -65,165 +67,165 @@
 
     </div>
   </div>
-  <!-- test -->
 
   <!-- Latest product  -->
   <section style="background-color: #eee;" class="py-2">
     <h1 class="text-primary text-center py-4">Our Latest Product</h1>
     <div class="container">
-    <div class="row">
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
+      <div class="row">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="mb-3 mb-md-3 px-2">
+              <div class="card h-100">
+                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                    <p class="small text-danger"><s>$1099</s></p>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
 
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <button class="btn btn-primary">Add to cart</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
+          <div class="item">
+            <div class="mb-3 mb-md-3 px-2">
+              <div class="card h-100">
+                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                    <p class="small text-danger"><s>$1099</s></p>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
 
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <button class="btn btn-primary">Add to cart</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
+          <div class="item">
+            <div class="mb-3 mb-md-3 px-2">
+              <div class="card h-100">
+                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                    <p class="small text-danger"><s>$1099</s></p>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
 
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <button class="btn btn-primary">Add to cart</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
+          <div class="item">
+            <div class="mb-3 mb-md-3 px-2">
+              <div class="card h-100">
+                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                    <p class="small text-danger"><s>$1099</s></p>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
 
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <button class="btn btn-primary">Add to cart</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
+          <div class="item">
+            <div class="mb-3 mb-md-3 px-2">
+              <div class="card h-100">
+                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                    <p class="small text-danger"><s>$1099</s></p>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
 
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <button class="btn btn-primary">Add to cart</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
+          <div class="item">
+            <div class="mb-3 mb-md-3 px-2">
+              <div class="card h-100">
+                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                    <p class="small text-danger"><s>$1099</s></p>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                  </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
 
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <button class="btn btn-primary">Add to cart</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -231,16 +233,15 @@
         </div>
       </div>
     </div>
-  </div>
   </section>
 
   <!-- Double banner  -->
-  <section class="container py-3">
+  <section class="container py-3 ">
     <div class="row">
-      <div class="col-12 my-2 col-md-6">
+      <div class="col-12 my-2 col-md-6 fade-in-left animation-element animate">
         <img src="../assets/img/homepage/small_banner1.jpg" alt="" class="rounded-2" width="100%" height="150px">
       </div>
-      <div class="col-12 my-2 col-md-6">
+      <div class="col-12 my-2 col-md-6 fade-in-right animation-element animate">
         <img src="../assets/img/homepage/small_banner2.jpg" alt="" class="rounded-2" width="100%" height="150px">
       </div>
     </div>
@@ -317,172 +318,10 @@
       </div>
     </div>
   </div>
-  <!-- Test  -->
-  <div class="container">
-    <div class="row">
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
 
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
-
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
-
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
-
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
-
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
-
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
-
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
-
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
-
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
-
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="mb-3 mb-md-3 px-2">
-            <div class="card h-100">
-              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                  <p class="small text-danger"><s>$1099</s></p>
-                </div>
-
-                <div class="d-flex justify-content-between mb-3">
-                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                </div>
-
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <button class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-        <?php
-        include('./footer.php');
-        ?>
+  <?php
+  include('./footer.php');
+  ?>
 </body>
 
 </html>
