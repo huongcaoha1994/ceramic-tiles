@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/headercart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <title>Tiles Ceramic</title>
@@ -79,16 +80,53 @@
                     </a>
                 </div>
                 <div class="col">
-                    <button class="btn btn-primary position-relative">
+                    <button class="btn btn-primary position-relative btn-cart">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             99+
                             <span class="visually-hidden">unread messages</span>
                         </span>
-                    </button>
-                </div>
+                        <div class="header_cart position-absolute z-2 rounded-1 border">
+                            <div class="header__cart-heading">
+                                <p>Sản phẩm đã thêm</p>
+                            </div>
+                            <div class="header__cart-body">
+                                <!-- Thêm sản phẩm ở đây -->
+                                <p class="text-warning float-left">Xin chào</p>
+                                <p class="text-warning float-left">Xin chào</p>
 
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                                <p class="text-warning float-left">Xin chào</p>
+
+                            </div>
+                            <div class="header__cart-footer py-2">
+                                <div class="d-flex justify-content-around">
+                                    <a href="" class="btn btn-primary">Check cart</a>
+                                    <a href="" class="btn btn-primary">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
             </div>
+            </button>
+        </div>
+
+        </div>
         </div>
     </nav>
 

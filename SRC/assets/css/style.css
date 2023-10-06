@@ -5,9 +5,7 @@
 }
 
 .btn.btn-primary:hover {
-  background-color: var(--secondary-color);
-  border: none;
-  color: var(--bs-dark);
+  background-color: var(--hover-color);
 }
 
 .btn.btn-outline-primary {

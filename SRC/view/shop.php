@@ -12,9 +12,16 @@
     include("header.php");
     ?>
     <!-- breadcrumb -->
-    <div class="container py-3">
+    <div class="container py-3 d-none d-md-block">
         <div class="row align-items-center">
-            <div class="col-12 text-center text-md-start col-md-6">
+        <div class="col-12 rounded-1 " style="background:url(../assets/img/homepage/banner-1.jpg);" >
+            <h1 class="text-center text-primary">Store</h1>
+        </div>
+        </div>
+    </div>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-12 text-center text-md-start col-md-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-3 mb-md-0 justify-content-center justify-content-md-start">
                         <li class="breadcrumb-item"><a href="#" class="fs-6">Home</a></li>
@@ -22,16 +29,21 @@
                     </ol>
                 </nav>
             </div>
-            <div class="col-12 text-center text-md-end col-md-6">
+            <div class="col-12 col-md-4">
+            <h1 class="text-center d-md-none">Store</h1>
+            </div>
+            <div class="col-12 text-center text-md-end col-md-4">
                 <form action="shop.php" method="POST" class="d-flex">
                     <input type="text" name="rs_search" class="form-control rounded">
                     <input type="submit" name="search" value="search" class="btn btn-outline-primary">
                 </form>
 
             </div>
+            </div>
         </div>
-    </div>
-    <!--  -->
+  <!-- Heading -->
+    
+    <!-- Main content -->
     <div class="container">
         <div class="row">
             <div class="d-none col-lg-3 d-lg-block border rounded-1 p-3">
