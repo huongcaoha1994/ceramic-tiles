@@ -25,7 +25,7 @@
       <div class="col d-flex justify-content-between align-items-center">
         <h1 class="text-primary text-center py-4">Ceramic Tiles Categories</h1>
         <a href="shop.php" class="btn btn-primary">
-        <i class="fa-solid fa-bag-shopping"></i>
+          <i class="fa-solid fa-bag-shopping"></i>
           Go to store</a>
       </div>
     </div>
@@ -70,181 +70,168 @@
   <!-- Latest product  -->
   <section style="background-color: #eee;" class="py-2">
     <h1 class="text-primary text-center py-4">Our Latest Product</h1>
-    <div class="container py-1">
-      <div class="row justify-content-between">
-        <div class="d-block col-12">
-          <div id="myCarousel" class="carousel slide container" data-bs-ride="carousel" data-interval="false">
-            <div class="carousel-inner w-100">
-              <div class="carousel-item active">
-                <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
-                  <div class="card h-100">
-                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                        <p class="small text-danger"><s>$1099</s></p>
-                      </div>
+    <div class="container">
+    <div class="row">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
 
-                      <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                      </div>
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
 
-                      <div class="d-flex justify-content-between mb-2">
-                        <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
 
-                      </div>
-                      <div class="d-flex justify-content-between mb-2">
-                        <button class="btn btn-primary">Add to cart</button>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
                 </div>
               </div>
-              <div class="carousel-item">
-                <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
-                  <div class="card h-100">
-                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                        <p class="small text-danger"><s>$1099</s></p>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">Asus Notebook</h6>
-                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-2">
-                        <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                      </div>
-                      <div class="d-flex justify-content-between mb-2">
-                        <button class="btn btn-primary">Add to cart</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
-                  <div class="card h-100">
-                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                        <p class="small text-danger"><s>$1099</s></p>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
-                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-2">
-                        <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                      </div>
-                      <div class="d-flex justify-content-between mb-2">
-                        <button class="btn btn-primary">Add to cart</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
-                  <div class="card h-100">
-                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                        <p class="small text-danger"><s>$1099</s></p>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
-                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-2">
-                        <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                      </div>
-                      <div class="d-flex justify-content-between mb-2">
-                        <button class="btn btn-primary">Add to cart</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
-                  <div class="card h-100">
-                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                        <p class="small text-danger"><s>$1099</s></p>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
-                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-2">
-                        <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                      </div>
-                      <div class="d-flex justify-content-between mb-2">
-                        <button class="btn btn-primary">Add to cart</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-6 col-2-4 mb-3 mb-md-3 px-2">
-                  <div class="card h-100">
-                    <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                        <p class="small text-danger"><s>$1099</s></p>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 me-2 product-view">HP Notebook</h6>
-                        <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-2">
-                        <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                      </div>
-                      <div class="d-flex justify-content-between mb-2">
-                        <button class="btn btn-primary">Add to cart</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
   <!-- Double banner  -->
@@ -254,7 +241,7 @@
         <img src="../assets/img/homepage/small_banner1.jpg" alt="" class="rounded-2" width="100%" height="150px">
       </div>
       <div class="col-12 my-2 col-md-6">
-        <img src="../assets/img/homepage/banner2.jpg" alt="" class="rounded-2" width="100%" height="150px">
+        <img src="../assets/img/homepage/small_banner2.jpg" alt="" class="rounded-2" width="100%" height="150px">
       </div>
     </div>
   </section>
@@ -314,7 +301,7 @@
           <div>
             <h5 class="mt-0">Gạch Ceramic Là Gì? Phân Biệt Với Gạch Granite, Porcelain</h5>
             <p>Nhiều mẫu mã, họa tiết, màu sắc, giá thành phải chăng… gạch ceramic (gạch men) trở thành loại vật liệu ốp lát phổ biến hiện nay. Tuy nhiên, loại gạch này có tốt và bền chắc không, có những ưu nhược điểm gì thì không phải gia chủ nào cũng biết. Để hiểu rõ vấn đề này và tìm ra mẫu gạch ceramic đẹp cũng như phương pháp thi công nâng cao chất lượng cho bề mặt ốp lát, bạn hãy tham khảo bài viết dưới đây..</p>
-            <a href="#" class="stretched-link">Đọc thêm</a>
+            <a href="#" class="stretched-link btn btn-primary">Đọc thêm</a>
           </div>
         </div>
       </div>
@@ -324,150 +311,178 @@
           <div>
             <h5 class="mt-0">Cách tính số lượng gạch cần sử dụng</h5>
             <p>Các hộ gia đình thường khá băn khoăn khi không biết nên mua số lượng gạch bao nhiêu cho không bị thừa hay thiếu khi đưa vào thi công. Để đảm bảo tiết kiệm chi phí cho công trình và không bị gián đoán quá trình thi công, hay tham khảo bài viết dưới đây để xác định được số lượng gạch cần mua chính xác nhất nhé!
-            </p> <a href="#" class="stretched-link">Đọc thêm</a>
+            </p> <a href="#" class="stretched-link btn btn-primary">Đọc thêm</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Test  -->
-
-  <section class="pt-5 pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <h3 class="mb-3">Carousel cards title </h3>
-            </div>
-            <div class="col-6 text-right">
-                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                    <i class="fa fa-arrow-left"></i>
-                </a>
-                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                    <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="col-12">
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <div class="container">
+    <div class="row">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
                 </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mb-3 mb-md-3 px-2">
+            <div class="card h-100">
+              <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
+                  <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-  <?php
-  include('./footer.php');
-  ?>
+  </div>
+        <?php
+        include('./footer.php');
+        ?>
 </body>
 
 </html>

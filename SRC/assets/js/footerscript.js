@@ -1,19 +1,22 @@
 // Function chạy carousel slider
-$(".carousel .carousel-item").each(function () {
-  var minPerSlide = 4;
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(":first");
-  }
-  next.children(":first-child").clone().appendTo($(this));
-
-  for (var i = 0; i < minPerSlide; i++) {
-    next = next.next();
-    if (!next.length) {
-      next = $(this).siblings(":first");
-    }
-    next.children(":first-child").clone().appendTo($(this));
-  }
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    762: {
+      items: 2,
+    },
+    992: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
+    },
+  },
 });
 
 // Function chay tab
@@ -46,28 +49,29 @@ tabs.forEach((tab, index) => {
   };
 });
 
-//Function search bar 
-const searchFocus = document.getElementById('search-focus');
+//Function search bar
+const searchFocus = document.getElementById("search-focus");
 const keys = [
-  { keyCode: 'AltLeft', isTriggered: false },
-  { keyCode: 'ControlLeft', isTriggered: false },
+  { keyCode: "AltLeft", isTriggered: false },
+  { keyCode: "ControlLeft", isTriggered: false },
 ];
 
-window.addEventListener('keydown', (e) => {
+window.addEventListener("keydown", (e) => {
   keys.forEach((obj) => {
     if (obj.keyCode === e.code) {
       obj.isTriggered = true;
     }
   });
 
-  const shortcutTriggered = keys.filter((obj) => obj.isTriggered).length === keys.length;
+  const shortcutTriggered =
+    keys.filter((obj) => obj.isTriggered).length === keys.length;
 
   if (shortcutTriggered) {
     searchFocus.focus();
   }
 });
 
-window.addEventListener('keyup', (e) => {
+window.addEventListener("keyup", (e) => {
   keys.forEach((obj) => {
     if (obj.keyCode === e.code) {
       obj.isTriggered = false;

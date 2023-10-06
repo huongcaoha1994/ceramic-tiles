@@ -88,7 +88,6 @@
   background-color: #6f42c1;
 }
 
-
 /* Sửa font-size menu */
 #header ul.navbar-nav.me-auto.mb-2.mb-lg-0 {
   font-size: 1rem;
@@ -131,88 +130,21 @@
 }
 
 /* CSS carousel sản phẩm */
-button.carousel-control-next,
-button.carousel-control-prev {
-  width: 32px;
+.owl-prev {
+  position: absolute;
+  left: -10px;
+  top: 30%;
 }
 
-button.carousel-control-next {
-  transform: translateX(100px);
+.owl-next {
+  position: absolute;
+  right: -10px;
+  top: 30%;
+}
+.owl-prev span, .owl-next span {
+    font-size: 3rem;
 }
 
-button.carousel-control-prev {
-  transform: translateX(-100px);
-}
-
-@media (min-width: 992px) {
-  .col-2-4 {
-    flex: 1 0 auto;
-    width: 20%;
-  }
-}
-
-span.carousel-control-next-icon,
-span.carousel-control-prev-icon {
-  background-color: #000;
-}
-
-@media (max-width: 768px) {
-  .carousel-inner .carousel-item > div {
-    display: none;
-  }
-
-  .carousel-inner .carousel-item > div:first-child,
-  .carousel-inner .carousel-item > div:nth-child(2) {
-    display: block;
-  }
-
-  button.carousel-control-next {
-    transform: translateX(10px);
-  }
-
-  button.carousel-control-prev {
-    transform: translateX(-10px);
-  }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-start,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-}
-
-@media (min-width: 768px) {
-  .carousel-inner .carousel-item-right.active,
-  .carousel-inner .carousel-item-next,
-  .carousel-item-next:not(.carousel-item-start) {
-    transform: translateX(25%) !important;
-  }
-
-  .carousel-inner .carousel-item-left.active,
-  .carousel-item-prev:not(.carousel-item-end),
-  .active.carousel-item-start,
-  .carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(-25%) !important;
-  }
-
-  .carousel-item-next.carousel-item-start,
-  .active.carousel-item-end {
-    transform: translateX(0) !important;
-  }
-
-  .carousel-inner .carousel-item-prev,
-  .carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(-25%) !important;
-  }
-  button.carousel-control-next {
-    transform: translateX(20px);
-  }
-
-  button.carousel-control-prev {
-    transform: translateX(-20px);
-  }
-}
 
 /* Hover effect card  */
 
@@ -298,7 +230,7 @@ span.carousel-control-prev-icon {
   z-index: 2 !important;
 }
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
   .offcanvas-header {
     display: flex;
     align-items: center;
@@ -309,9 +241,10 @@ span.carousel-control-prev-icon {
     top: 0;
     right: 0;
     width: var(--bs-offcanvas-width);
-    border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    border-left: var(--bs-offcanvas-border-width) solid
+      var(--bs-offcanvas-border-color);
     transform: translateX(100%);
-}
+  }
 }
 .offcanvas-header {
   display: flex;
