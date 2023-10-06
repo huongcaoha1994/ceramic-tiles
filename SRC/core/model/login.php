@@ -38,8 +38,8 @@
       </ul>
 
       <div class="col-md-3 text-end ">
-        <input type="button" class="btn btn-warning "><a href="register.php" class="text-dark">Sign-up</a></input>
-        <input type="button" class="btn btn-warning "><i class='bx bx-phone-call'></i></input>
+        <button type="submit" class="btn btn-warning "><a href="register.php" class="text-dark" style="text-decoration: none;">Sign-up</a></button>
+        <button type="submit" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
       </div>
     </header>
   </div>
@@ -54,17 +54,17 @@
           <form action="" method="POST">
             <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
               <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-              <input type="button" class="btn btn-warning btn-floating mx-1">
+              <button type="button" class="btn btn-warning btn-floating mx-1">
               <i class='bx bxl-meta' ></i>
-              </input>
+              </button>
 
-              <input type="button" class="btn btn-warning btn-floating mx-1 ">
+              <button type="button" class="btn btn-warning btn-floating mx-1 ">
                 <i class="fab fa-twitter"></i>
-              </input>
+              </button>
 
-              <input type="button" class="btn btn-warning btn-floating mx-1 ">
+              <button type="button" class="btn btn-warning btn-floating mx-1 ">
                 <i class="fab fa-linkedin-in"></i>
-              </input>
+              </button>
             </div>
 
             <div class="divider d-flex align-items-center my-4">
@@ -94,9 +94,9 @@
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
-              <input type="button" name="btn" class="btn btn-warning btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</input>
-              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="2.php"
+              <button type="submit" name="btn" class="btn btn-warning btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.php"
                   class="link-danger">Register</a></p>
             </div>
           </form>

@@ -12,8 +12,6 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 
 ?>
 
-//
-
 <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -40,7 +38,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
     <body>
         <?php
         session_start();
-        include 'database.php';
+        //include 'database.php';
         $usernameErr = $passwordErr = $full_nameErr = $emailErr = $addressErr = $phoneErr = "";
         $username = $password = $full_name = $email = $address = $phone = "";
         $hasErrors = false; // Biến để kiểm tra có lỗi hay không
@@ -152,7 +150,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
           ?>
 
 
-        <?php $connect->close();
+        <?php //$connect->close();
         ?>
         <div class="container-fluid bg-warning text-white">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -169,8 +167,8 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
             </ul>
 
           <div class="col-md-3 text-end ">
-            <input type="button" class="btn btn-warning"><a href="login.php" class="text-dark" style="text-decoration: none;">Login</a></input>
-            <input type="button" class="btn btn-warning "><i class='bx bx-phone-call'></i></input>
+            <button type="submit" class="btn btn-warning"><a href="login.php" class="text-dark" style="text-decoration: none;">Login</a></button>
+            <button type="submit" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
           </div>
         </header>
       </div>
@@ -235,18 +233,16 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg" />
+                        <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg"
                                 value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>">
                             <?php if ($hasErrors) {
                                 echo '<span class="error">' . $phoneErr . '</span>';
                             } ?>
                       </div>
 
-                    
-
                       <div class="d-flex justify-content-end pt-3">
-                        <input type="button" class="btn btn-light btn-lg">Reset all</input>
-                        <input type="button" name="btn" class="btn btn-warning btn-lg ms-2">Submit form</input>
+                        <button type="submit" class="btn btn-light btn-lg">Reset all</button>
+                        <button type="submit" name="btn" class="btn btn-warning btn-lg ms-2">Submit form</button>
                       </div>
                     </div>
                   </div>
@@ -256,7 +252,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
           </div>
         </div>
       </section>
-      <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+      <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-secondary">
           <!-- Copyright -->
           <div class="text-white mb-3 mb-md-0">
             Ok Bro © 2023. Cera Tiles.
