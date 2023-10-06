@@ -14,7 +14,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light " aria-label="Main navigation" id="header">
-        <div class="container-fluid">
+        <div class="container-fluid mx-4">
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,7 +29,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Wall tiles</a>
-                        
+
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item " href="shop.php?category=bathroom">Bathroom wall tiles</a></li>
                             <li><a class="dropdown-item " href="shop.php?category=kitchen">Kitchen wall tiles</a></li>
@@ -79,16 +79,19 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../core/controller/cart.php">
-                        <button class="btn btn-primary">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </a>
+                    <button class="btn btn-primary position-relative">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
                 </div>
+
             </div>
         </div>
     </nav>
-       
+
     <script src="../assets/js/headerscript.js"></script>
     <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
