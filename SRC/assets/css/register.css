@@ -28,6 +28,16 @@ background: aliceblue;
 height: calc(100% - 73px);
 }
 
+.bg-light{
+  padding: 0px;
+  margin-top: 2px;
+}
+
+
+.bg-secondary{
+  margin-top: 0;
+}
+
 .row > *{
   border-radius: 1px;
 

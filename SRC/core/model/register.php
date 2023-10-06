@@ -173,7 +173,8 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
         </header>
       </div>
       <section class="h-100 bg-light">
-        <div class="container py-3 h-100">
+        <form action="" method="POST">
+          <div class="container py-3 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
               <div class="card card-registration my-4">
@@ -231,7 +232,6 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
                                 echo '<span class="error">' . $addressErr . '</span>';
                             } ?>
                       </div>
-
                       <div class="form-outline mb-4">
                         <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg"
                                 value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>">
@@ -251,8 +251,11 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
             </div>
           </div>
         </div>
+        </form>
+        
       </section>
-      <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-secondary">
+      <footer>
+        <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-secondary">
           <!-- Copyright -->
           <div class="text-white mb-3 mb-md-0">
             Ok Bro © 2023. Cera Tiles.
@@ -276,5 +279,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
           </div>
           <!-- Right -->
         </div>
+      </footer>
+      
     </body>
 </html>

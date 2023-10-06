@@ -3,17 +3,26 @@
   --secondary-color: #d7d7d7;
 }
 
+body{
+  background: #b0cfe0;
+}
+
+a {
+  text-decoration: none;
+}
+
 .divider:after,
 .divider:before {
 content: "";
 flex: 1;
 height: 1px;
-background: #eee;
+background: #b0cfe0;
 }
 
 .form-outline {
   position: relative;
 }
+
 
 .form-outline i {
 position: absolute;
@@ -26,12 +35,18 @@ cursor: pointer;
 .h-custom {
 background: aliceblue;
 height: calc(100% - 73px);
+
+}
+
+.bg-secondary{
+  margin-top: 175px;
 }
 
 .row > *{
   border-radius: 1px;
 
 }  
+
 
 @media (min-width: 768px) {
 body {
