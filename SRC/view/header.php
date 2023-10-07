@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
     <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/docs/assets/owl.theme.green.min.cs">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
     <title>Tiles Ceramic</title>
 </head>
 
@@ -27,7 +29,7 @@
             <div class="navbar-collapse offcanvas-collapse px-2 text-warning" id="navbarsExampleDefault">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-warning">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./main.php">Home</a>
+                        <a class="nav-link " aria-current="page" href="./shop.php">Shop</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -69,7 +71,7 @@
                         <a class="nav-link" href="./aboutus.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contactus.php">Contact Us</a>
+                        <a class="nav-link" href="./contact.php">Contact Us</a>
                     </li>
                 </ul>
             </div>

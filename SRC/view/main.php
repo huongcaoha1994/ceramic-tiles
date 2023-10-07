@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-  <title>Ceramic Tiles</title>
-  <script>
-
-  </script>
-</head>
-
-<body>
 
   <?php
   include("./header.php");
@@ -33,7 +19,7 @@
 
   <div class="category-list container py-4">
     <div class="row">
-      
+
       <div class="col-12 col-md-4 my-2 text-center">
         <div class="card h-100">
           <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" alt="wall-tiles" height="300px">
@@ -253,64 +239,48 @@
         <div class="col-12">
           <h1 class="text-primary text-center py-4">Our Products</h1>
 
-          <div class="hn-tabs justify-content-around">
-            <div class="hn-tab-item active">
-              Wall Ceramic Tiles
-
-            </div>
-
-            <div class="hn-tab-item">
-
-              Floor Ceramic Tiles
-
-            </div>
-
-            <div class="hn-tab-item">
-
-              Special Ceramic Tiles
-
-
-            </div>
-            <div class="line d-none"></div>
-          </div>
-          <h1>Danh sách sản phẩm</h1>
-
-          <div class="hn-tab-content">
-            <div class="hn-tab-pane active">
+          <ul class="nav nav-pills mb-3 justify-content-around" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Wall Ceramic Tiles</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Floor Ceramic Tiles</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Special Ceramic Tiles</button>
+            </li>
+          </ul>
+          <div class="tab-content " id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <div class="container">
                 <div class="row">
-                  <div class="col-12">
-                    <div class="row">
-                      <?php
-                      include("product-main.php");
-                      ?>
-                    </div>
-                  </div>
+                  <?php include("product-main.php"); ?>
                 </div>
               </div>
             </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
           </div>
-
   </section>
   <!-- Blog post  -->
   <h1 class="text-primary text-center py-4">Blog Post</h1>
   <div class="container blog-post py-3">
     <div class="row">
-      <div class="col">
+      <div class="col-12 col-md-6">
         <div class="d-flex position-relative">
           <img src="../assets/img/homepage/banner-1.jpg" class="flex-shrink-0 me-3" alt="..." width="150px" height="150px">
           <div>
-            <h5 class="mt-0">Gạch Ceramic Là Gì? Phân Biệt Với Gạch Granite, Porcelain</h5>
+            <h5 class="mt-0 text-truncate">Gạch Ceramic Là Gì? Phân Biệt Với Gạch Granite, Porcelain</h5>
             <p>Nhiều mẫu mã, họa tiết, màu sắc, giá thành phải chăng… gạch ceramic (gạch men) trở thành loại vật liệu ốp lát phổ biến hiện nay. Tuy nhiên, loại gạch này có tốt và bền chắc không, có những ưu nhược điểm gì thì không phải gia chủ nào cũng biết. Để hiểu rõ vấn đề này và tìm ra mẫu gạch ceramic đẹp cũng như phương pháp thi công nâng cao chất lượng cho bề mặt ốp lát, bạn hãy tham khảo bài viết dưới đây..</p>
             <a href="#" class="stretched-link btn btn-primary">Đọc thêm</a>
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-12 col-md-6">
         <div class="d-flex position-relative">
           <img src="../assets/img/homepage/banner-1.jpg" class="flex-shrink-0 me-3" alt="..." width="150px" height="150px">
           <div>
-            <h5 class="mt-0">Cách tính số lượng gạch cần sử dụng</h5>
+            <h5 class="mt-0 text-truncate">Cách tính số lượng gạch cần sử dụng</h5>
             <p>Các hộ gia đình thường khá băn khoăn khi không biết nên mua số lượng gạch bao nhiêu cho không bị thừa hay thiếu khi đưa vào thi công. Để đảm bảo tiết kiệm chi phí cho công trình và không bị gián đoán quá trình thi công, hay tham khảo bài viết dưới đây để xác định được số lượng gạch cần mua chính xác nhất nhé!
             </p> <a href="#" class="stretched-link btn btn-primary">Đọc thêm</a>
           </div>
@@ -322,6 +292,3 @@
   <?php
   include('./footer.php');
   ?>
-</body>
-
-</html>

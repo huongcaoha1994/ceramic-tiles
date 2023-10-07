@@ -26,17 +26,10 @@ if ($result_product->num_rows > 0) {
 
 
           <div class="d-flex justify-content-between mb-3">
-            <h6 class="mb-0 product-view"><?php echo $row['product_name']; ?></h6>
-            <h6 class="text-dark mb-0 product-view"><?php echo $row['price']; ?>$</h6>
+            <h5 class="mb-0 product-view"><?php echo $row['product_name']; ?></h5>
+            <h5 class="text-dark mb-0 product-view"><?php echo $row['price']; ?>$</h5>
           </div>
 
-          <div class="d-flex justify-content-between mb-2">
-            <p class="text-muted mb-0">Available: <span class="fw-bold"><?php echo $row['inventory']; ?></span></p>
-
-          </div>
-          <h4>Brand : <?php echo $row['brand']; ?></h4>
-            <h4>Size : <?php echo $row['size']; ?></h4>
-            <h4>Color : <?php echo $row['color']; ?></h4>
           <div class="d-flex justify-content-between mb-2">
             <button class="btn btn-primary">Add to cart</button>
           </div>
