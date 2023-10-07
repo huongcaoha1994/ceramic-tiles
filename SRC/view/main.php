@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row">
       <div class="col d-flex justify-content-between align-items-center">
-        <h1 class="text-primary text-center py-4">Ceramic Tiles Categories</h1>
+        <h1 class="text-primary py-4">Ceramic Tiles Categories</h1>
         <a href="shop.php" class="btn btn-primary">
           <i class="fa-solid fa-bag-shopping"></i>
           Go to store</a>
@@ -65,11 +65,13 @@
     <h1 class="text-primary text-center py-4">Our Latest Product</h1>
     <div class="container">
       <div class="row">
-       
+      <div class="owl-carousel owl-theme" >
+
              <?php 
              include("best_sale.php");
              ?>
-               
+      
+      </div>
              
       </div>
     </div>
