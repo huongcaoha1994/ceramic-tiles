@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../assets/css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/docs/assets/owl.theme.green.min.cs">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
     <title>Tiles Ceramic</title>
@@ -96,27 +95,21 @@
                             </div>
                             <div class="header__cart-body">
                                 <!-- Thêm sản phẩm ở đây -->
-                                <p class="text-warning float-left">Xin chào</p>
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
-                                <p class="text-warning float-left">Xin chào</p>
-
+                               <?php
+                               session_start(); 
+                               include("../core/model/database.php");
+                              if(isset($_SESSION['user_id'])){
+                                $user_id = $_SESSION['user_id'];
+                                $count_cart = "select count(cart_id) as count from carts where user_id = $user_id ; " ;
+                                $result_count = $connect->query($count_cart);
+                                if($result_count->num_rows > 0){
+                                    $row = $result_count->fetch_assoc();
+                                    $count = $row['count'];
+                                }
+                                echo $count;
+                              }
+                              echo "0" ;
+                               ?>
                             </div>
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">

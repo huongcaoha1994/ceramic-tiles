@@ -17,185 +17,60 @@
     </div>
   </div>
 
-  <div class="category-list container py-4">
-    <div class="row">
+  <div class="container">
+    <div class="owl-carousel owl-theme carousel-slider" >
+      <div class="item">
+        <div class="my-2 text-center">
+          <div class="card h-100">
+            <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" alt="wall-tiles" height="300px">
+            <div class="card-body">
+              <h5 class="card-title">Wall Ceramic Tiles</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="my-2 text-center">
+          <div class="card h-100">
+            <img src="../assets/img/homepage/floor-ceramic-tile.jpg" class="card-img-top" alt="..." height="300px">
+            <div class="card-body">
+              <h5 class="card-title">Floor Ceramic Tiles</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="my-2 text-center">
+          <div class="card h-100">
+            <img src="../assets/img/homepage/special-ceramic-tiles.png" class="card-img-top" alt="..." height="300px">
+            <div class="card-body">
+              <h5 class="card-title">Special Ceramic Tiles</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Learn more</a>
+            </div>
 
-      <div class="col-12 col-md-4 my-2 text-center">
-        <div class="card h-100">
-          <img src="../assets/img/homepage/wall.jpg" class="card-img-top" alt="wall-tiles" height="300px">
-          <div class="card-body">
-            <h5 class="card-title">Wall Ceramic Tiles</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="shop.php?category=allwall" class="btn btn-primary">Learn more</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 my-2 text-center">
-        <div class="card h-100">
-          <img src="../assets/img/homepage/floor-ceramic-tile.jpg" class="card-img-top" alt="..." height="300px">
-          <div class="card-body">
-            <h5 class="card-title">Floor Ceramic Tiles</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="shop.php?category=allfloor" class="btn btn-primary">Learn more</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 my-2 text-center">
-        <div class="card h-100">
-          <img src="../assets/img/homepage/special.jpg" class="card-img-top" alt="..." height="300px">
-          <div class="card-body">
-            <h5 class="card-title">Special Ceramic Tiles</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="shop.php?category=allspecial" class="btn btn-primary">Learn more</a>
           </div>
         </div>
       </div>
 
     </div>
-  </div>
+</div>
 
   <!-- Latest product  -->
   <section style="background-color: #eee;" class="py-2">
     <h1 class="text-primary text-center py-4">Our Latest Product</h1>
     <div class="container">
       <div class="row">
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <div class="mb-3 mb-md-3 px-2">
+       
+             <?php 
+             include("best_sale.php");
+             ?>
+               
              
-            </div>
-          </div>
-          <div class="item">
-            <div class="mb-3 mb-md-3 px-2">
-              <div class="card h-100">
-                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                    <p class="small text-danger"><s>$1099</s></p>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-3">
-                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-2">
-                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                  </div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <button class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="mb-3 mb-md-3 px-2">
-              <div class="card h-100">
-                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                    <p class="small text-danger"><s>$1099</s></p>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-3">
-                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-2">
-                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                  </div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <button class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="mb-3 mb-md-3 px-2">
-              <div class="card h-100">
-                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                    <p class="small text-danger"><s>$1099</s></p>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-3">
-                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-2">
-                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                  </div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <button class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="mb-3 mb-md-3 px-2">
-              <div class="card h-100">
-                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                    <p class="small text-danger"><s>$1099</s></p>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-3">
-                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-2">
-                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                  </div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <button class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="mb-3 mb-md-3 px-2">
-              <div class="card h-100">
-                <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" height="150px" width="150px" alt="Laptop" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                    <p class="small text-danger"><s>$1099</s></p>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-3">
-                    <h6 class="mb-0 me-2 product-view">Dell notebook</h6>
-                    <h6 class="text-dark ms-2 mb-0 product-view">$9999999</h6>
-                  </div>
-
-                  <div class="d-flex justify-content-between mb-2">
-                    <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-
-                  </div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <button class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -230,13 +105,7 @@
             </li>
           </ul>
           <div class="tab-content " id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <div class="container">
-               
-              </div>
-            </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+          
           </div>
           <div class="row" id="category">
                  
