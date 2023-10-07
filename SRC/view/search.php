@@ -24,6 +24,15 @@ if (isset($_GET['category'])) {
     } else if ($category == "special") {
         $select_product = "SELECT * FROM products WHERE category_id = 9;";
     }
+    else if ($category == "allwall") {
+        $select_product = "SELECT * FROM products WHERE category_id IN (1,2,3,4,5,6,7);";
+    }
+    else if ($category == "allfloor") {
+        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,8);";
+    }
+    else if ($category == "allspecial") {
+        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,9);";
+    }
 } else if (isset($_POST['search'])) {
     $rs_search = htmlspecialchars($_POST['rs_search']);
     $select_product = "SELECT * FROM products
