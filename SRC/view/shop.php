@@ -1,3 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+   
+    function filter_color(color) {
+      $.ajax({
+        url: "filter-color.php",
+        type: "POST",
+        data: { color: color },
+        success: function(response) {
+          $("#color").html(response); // Cập nhật nội dung danh sách sản phẩm
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.error("Error:", textStatus, errorThrown);
+        }
+      });
+    }
+  </script>
+</head>
+<body>
 <?php
 include("header.php");
 ?>
@@ -40,13 +65,13 @@ include("header.php");
             <h4>Bộ lọc sản phẩm</h4>
             <h5>Colors</h5>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="color" id="flexRadioDefault1" onclick="filter-color('yellow')">
                 <label class="form-check-label" for="flexRadioDefault1">
                     Yellow
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input" type="radio" name="color" id="flexRadioDefault2" onclick="filter-color('red')">
                 <label class="form-check-label" for="flexRadioDefault2">
                     Red
                 </label>
@@ -56,7 +81,12 @@ include("header.php");
         <div class="col-12 col-lg-9">
             <div class="row">
                 <?php
+               if(isset($_SESSION['color']) || isset($_SESSION['brand']) || isset($_SESSION['size'])){
+                include("filter-color.php");
+               }
+               else {
                 include("search.php");
+               }
                 ?>
             </div>
         </div>
@@ -66,3 +96,5 @@ include("header.php");
 <?php
 include("footer.php");
 ?>
+</body>
+</html>

@@ -8,44 +8,42 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $size = $_POST['size'] ;
   $_SESSION['size'] = $size ;
 
-if($_SESSION['color'] === ""){
-  unset($_SESSION['color']);
-}
+// if($color === ""){
+//   unset($_SESSION['color']);
+// }
 
-if($_SESSION['brand'] === ""){
-  unset($_SESSION['brand']);
-}
+// if($_SESSION['brand'] === ""){
+//   unset($_SESSION['brand']);
+// }
 
-if($_SESSION['size'] === ""){
-  unset($_SESSION['size']);
-}
+// if($_SESSION['size'] === ""){
+//   unset($_SESSION['size']);
+// }
 
-if(isset($_SESSION['color'])){
+if($color !== ""){
   $select_filter = "SELECT * FROM products WHERE color = '$color';" ;
-  if(isset($_SESSION['brand'])){
+  if($brand !== ""){
     $select_filter = "SELECT * FROM products WHERE color = '$color' and brand = '$brand';" ;
   }
-  if(isset($_SESSION['size'])){
+  if($size !== ""){
     $select_filter = "SELECT * FROM products WHERE color = '$color' and brand = '$brand' and size = '$size';" ;
   }
 }
-
-if(isset($_SESSION['brand'])){
+else if($brand !== ""){
   $select_filter = "SELECT * FROM products WHERE brand = '$brand';" ;
-  if(isset($_SESSION['color'])){
+  if($color !== ""){
     $select_filter = "SELECT * FROM products WHERE brand = '$brand' and color = '$color';" ;
   }
-  if(isset($_SESSION['size'])){
+  if($size !== ""){
     $select_filter = "SELECT * FROM products WHERE brand = '$brand' and color = '$color' and size = '$size';" ;
   }
 }
-
-if(isset($_SESSION['size'])){
+else if($size !== ""){
   $select_filter = "SELECT * FROM products WHERE size = '$size';" ;
-  if(isset($_SESSION['brand'])){
+  if($brand !== ""){
     $select_filter = "SELECT * FROM products WHERE size = '$size' and brand = '$brand';" ;
   }
-  if(isset($_SESSION['color'])){
+  if($color !== ""){
     $select_filter = "SELECT * FROM products WHERE size = '$size' and brand = '$brand' and color = '$color';" ;
   }
 }

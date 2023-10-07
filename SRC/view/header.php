@@ -85,8 +85,7 @@
                 <div class="col">
                     <button class="btn btn-primary position-relative btn-cart">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            99+
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99
                             <span class="visually-hidden">unread messages</span>
                         </span>
                         <div class="header_cart position-absolute z-2 rounded-1 border">
@@ -95,7 +94,7 @@
                             </div>
                             <div class="header__cart-body">
                                 <!-- Thêm sản phẩm ở đây -->
-                               <?php
+                        <?php
                                session_start(); 
                                include("../core/model/database.php");
                               if(isset($_SESSION['user_id'])){
@@ -110,6 +109,7 @@
                               }
                               echo "0" ;
                                ?>
+                              
                             </div>
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">
