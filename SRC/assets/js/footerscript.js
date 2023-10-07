@@ -1,4 +1,25 @@
 // Function chạy carousel slider
+$(".carousel-slider").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    762: {
+      items: 2,
+    },
+    992: {
+      items: 3,
+    },
+    1200: {
+      items: 3,
+    },
+  },
+});
+
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
@@ -19,25 +40,8 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
-$(".categories-carousel").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 2,
-    },
-    762: {
-      items: 3,
-    },
-    992: {
-      items: 4,
-    },
-    1200: {
-      items: 5,
-    },
-  },
-});
+
+
 
 //Function search bar
 const searchFocus = document.getElementById("search-focus");

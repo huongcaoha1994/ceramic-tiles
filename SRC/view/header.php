@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../assets/css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/docs/assets/owl.theme.green.min.cs">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
     <title>Tiles Ceramic</title>
