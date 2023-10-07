@@ -22,11 +22,11 @@
       <div class="item">
         <div class="my-2 text-center">
           <div class="card h-100">
-            <img src="../assets/img/homepage/wall-ceramic-tiles.jpg" class="card-img-top" alt="wall-tiles" height="300px">
+            <img src="../assets/img/homepage/wall.jpg" class="card-img-top" alt="wall-tiles" height="300px">
             <div class="card-body">
               <h5 class="card-title">Wall Ceramic Tiles</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Learn more</a>
+              <a href="shop.php?category=allwall" class="btn btn-primary">Learn more</a>
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@
             <div class="card-body">
               <h5 class="card-title">Floor Ceramic Tiles</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Learn more</a>
+              <a href="shop.php?category=allfloor" class="btn btn-primary">Learn more</a>
             </div>
           </div>
         </div>
@@ -46,11 +46,11 @@
       <div class="item">
         <div class="my-2 text-center">
           <div class="card h-100">
-            <img src="../assets/img/homepage/special-ceramic-tiles.png" class="card-img-top" alt="..." height="300px">
+            <img src="../assets/img/homepage/special.jpg" class="card-img-top" alt="..." height="300px">
             <div class="card-body">
               <h5 class="card-title">Special Ceramic Tiles</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Learn more</a>
+              <a href="shop.php?category=allspecial" class="btn btn-primary">Learn more</a>
             </div>
 
           </div>
