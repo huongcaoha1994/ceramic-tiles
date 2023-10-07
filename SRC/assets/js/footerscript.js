@@ -8,45 +8,35 @@ $(".owl-carousel").owlCarousel({
       items: 2,
     },
     762: {
-      items: 2,
-    },
-    992: {
       items: 3,
     },
-    1000: {
+    992: {
+      items: 4,
+    },
+    1200: {
       items: 5,
     },
   },
 });
 
-// Function chay tab
-const itemTab = document.querySelector.bind(document);
-const paneTab = document.querySelectorAll.bind(document);
-
-const tabs = paneTab(".hn-tab-item");
-const panes = paneTab(".hn-tab-pane");
-
-const tabActive = itemTab(".hn-tab-item.active");
-const line = itemTab(".hn-tabs .line");
-
-requestIdleCallback(function () {
-  line.style.left = tabActive.offsetLeft + "px";
-  line.style.width = tabActive.offsetWidth + "px";
-});
-
-tabs.forEach((tab, index) => {
-  const pane = panes[index];
-
-  tab.onclick = function () {
-    itemTab(".hn-tab-item.active").classList.remove("active");
-    itemTab(".hn-tab-pane.active").classList.remove("active");
-
-    line.style.left = this.offsetLeft + "px";
-    line.style.width = this.offsetWidth + "px";
-
-    this.classList.add("active");
-    pane.classList.add("active");
-  };
+$(".categories-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    762: {
+      items: 3,
+    },
+    992: {
+      items: 4,
+    },
+    1200: {
+      items: 5,
+    },
+  },
 });
 
 //Function search bar
@@ -78,3 +68,25 @@ window.addEventListener("keyup", (e) => {
     }
   });
 });
+
+//function kiểm tra animation
+
+const elements = document.querySelectorAll('.animation-element');
+const windowHeight = window.innerHeight;
+
+function checkScroll() {
+  elements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    if (elementTop < windowHeight) {
+      element.classList.add('animate'); 
+    }
+  });
+
+  const allAnimated = Array.from(elements).every((element) => element.classList.contains('animate'));
+  if (allAnimated) {
+    window.removeEventListener('scroll', checkScroll);
+  }
+}
+
+window.addEventListener('scroll', checkScroll);
+
