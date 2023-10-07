@@ -1,44 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Radio Button Example</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-    function submitForm(color) {
+   
+    function category_main(category) {
       $.ajax({
-        url: "filter-color.php",
+        url: "product-main.php",
         type: "POST",
-        data: { color: color },
+        data: { category: category },
         success: function(response) {
-          $("#response-container").text(response); // Cập nhật phần tử HTML để hiển thị phản hồi
+          $("#category").html(response); // Cập nhật nội dung danh sách sản phẩm
         },
-        
         error: function(jqXHR, textStatus, errorThrown) {
           console.error("Error:", textStatus, errorThrown);
         }
-      });
-      var data = JSON.parse(response);
-      data.forEach(function(item) {
-        var img = $("<img>").attr("src", item.imageSrc);
-        var h3 = $("<h3>").text(item.title);
-        var h4 = $("<h4>").text(item.additionalInfo);
-        var div = $("<div>").append(img, h3, h4);
-
-        // Thêm phần tử vào container
-        $("#response-container").append(div);
       });
     }
   </script>
 </head>
 <body>
-  <h2>Ví dụ về nút radio</h2>
+<div class="hn-tabs justify-content-around">
+            <div class="hn-tab-item active">
+              <button name="category" onclick="category_main('wall')">Wall Ceramic Tiles</button>
 
-  <input type="radio" name="color" value="black" onclick="submitForm('black')" />
-  <input type="radio" name="color" value="white" onclick="submitForm('white')" />
+            </div>
 
-  <div id="response-container"></div> <!-- Phần tử HTML để hiển thị phản hồi -->
+            <div class="hn-tab-item">
+
+              <button name="category" onclick="category_main('floor')">Floor Ceramic Tiles</button>
+
+            </div>
+
+            <div class="hn-tab-item">
+
+              <button name="category" onclick="category_main('special')">Special Ceramic Tiles</button>
+
+
+            </div>
+            <div class="line d-none"></div>
+          </div>
+          <button name="category" onclick="category_main('wall')">Wall Ceramic Tiles</button>
+          <button name="category" onclick="category_main('floor')">Floor Ceramic Tiles</button>
+          <button name="category" onclick="category_main('special')">Special Ceramic Tiles</button>
+
+          <h1>Danh sách sản phẩm</h1>
+
+          <div class="hn-tab-content">
+            <div class="hn-tab-pane active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                      <div id="category">
+
+                      <?php
+                      include("product-main.php");
+                      ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 </body>
 </html>
-
-

@@ -6,8 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <title>Ceramic Tiles</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-
+   
+    function category_main(category) {
+      $.ajax({
+        url: "product-main.php",
+        type: "POST",
+        data: { category: category },
+        success: function(response) {
+          $("#category").html(response); // Cập nhật nội dung danh sách sản phẩm
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.error("Error:", textStatus, errorThrown);
+        }
+      });
+    }
   </script>
 </head>
 
@@ -254,19 +268,19 @@
 
           <div class="hn-tabs justify-content-around">
             <div class="hn-tab-item active">
-              Wall Ceramic Tiles
+              <button name="category" onclick="category_main('wall')">Wall Ceramic Tiles</button>
 
             </div>
 
             <div class="hn-tab-item">
 
-              Floor Ceramic Tiles
+              <button name="category" onclick="category_main('floor')">Floor Ceramic Tiles</button>
 
             </div>
 
             <div class="hn-tab-item">
 
-              Special Ceramic Tiles
+              <button name="category" onclick="category_main('special')">Special Ceramic Tiles</button>
 
 
             </div>
@@ -280,9 +294,12 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="row">
+                      <div id="category">
+
                       <?php
                       include("product-main.php");
                       ?>
+                      </div>
                     </div>
                   </div>
                 </div>
