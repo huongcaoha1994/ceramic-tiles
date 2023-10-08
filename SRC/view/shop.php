@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #pagination a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        #pagination a:hover {
+            color: black;
+        }
+    </style>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
    
@@ -48,6 +58,8 @@
         }
       });
     }
+
+    
   </script>
 </head>
 <body>
@@ -107,6 +119,12 @@ include("header.php");
     <label for="color">red</label>
     <input type="radio" name="color" value="red" onclick="filter_color('red')">
     <br>
+    <label for="color">brown</label>
+    <input type="radio" name="color" value="brown" onclick="filter_color('brown')">
+    <br>
+    <label for="color">pink</label>
+    <input type="radio" name="color" value="pink" onclick="filter_color('pink')">
+    <br>
     <label for="color">All</label>
     <input type="radio" name="color" value="" onclick="filter_color('')">
     <br>
@@ -123,6 +141,9 @@ include("header.php");
     <br>
     <label for="brand">Dong Tam Brick</label>
     <input type="radio" name="brand" value="Dong Tam Brick" onclick="filter_brand('Dong Tam Brick')">
+    <br>
+    <label for="brand">Eurotile</label>
+    <input type="radio" name="brand" value="Eurotile" onclick="filter_brand('Eurotile')">
     <br>
     <label for="brand">All</label>
     <input type="radio" name="brand" value="" onclick="filter_brand('')">
@@ -141,7 +162,19 @@ include("header.php");
     <label for="size">40x80</label>
     <input type="radio" name="size" value="40x80" onclick="filter_size('40x80')">
     <br>
-    <label for="size">all</label>
+    <label for="size">40x40</label>
+    <input type="radio" name="size" value="40x40" onclick="filter_size('40x40')">
+    <br>
+    <label for="size">25x40</label>
+    <input type="radio" name="size" value="25x40" onclick="filter_size('25x40')">
+    <br>
+    <label for="size">30x60</label>
+    <input type="radio" name="size" value="30x60" onclick="filter_size('30x60')">
+    <br>
+    <label for="size">30x90</label>
+    <input type="radio" name="size" value="30x90" onclick="filter_size('30x90')">
+    <br>
+    <label for="size">All</label>
     <input type="radio" name="size" value="" onclick="filter_size('')">
     <br>
 

@@ -88,18 +88,30 @@ else if(isset($_SESSION['size'])){
   }
 }
 else {
-  $select_filter = "SELECT * FROM products ;";
+  $select_filter = "SELECT * FROM products ";
 }
   
     include("../core/model/database.php");
-   
+   $item_per_page = 6 ;
+   $total_item = 0 ;
+   $result_total = $connect->query($select_filter);
+   if($result_total->num_rows > 0){
+    while($row1 = $result_total->fetch_assoc()){
+      $total_item++ ;
+    }
+   }
+   $total_page = ceil($total_item / $item_per_page);
+   $current_page = (isset($_GET['page'])) ? $_GET['page'] : 1 ;
+   $current_page = max(1, min($current_page,$total_page));
+   $start = ($current_page - 1 ) * $item_per_page + 1 ;
+   $select_filter = $select_filter." limit $start ,$item_per_page  " ;
     $result_filter = $connect->query($select_filter);
     if($result_filter->num_rows > 0) {
       while($row = $result_filter->fetch_assoc()){
         ?>
         <div class="col-6 col-md-4 mb-3 mb-md-3 px-2">
                   <div class="card h-100 ">
-                      <a href="#">
+                      <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id']; ?>">
                       <img src="../assets/img<?php echo $row['image']; ?>" alt="" width="100%" height="300px">
                       </a>
                       <div class="card-body set-equal">
@@ -124,14 +136,14 @@ else {
           <br>
         <?php
       }
-    
+    for($i = 1 ; $i <= $total_page ; $i++){
+      echo "<a href='shop.php?page=$i'>$i</a>" ;
+    }
   }
   else {
     echo "Không tìm thấy sản phẩm nào !" ;
   }
  
 }
-else {
-  include("search.php");
-}
+
 ?>

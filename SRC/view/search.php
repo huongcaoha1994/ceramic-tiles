@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pagination a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        #pagination a:hover {
+            color: black;
+        }
+    </style>
+    
+</head>
+<body>
 <?php
 include("../core/model/database.php");
 
@@ -6,32 +24,32 @@ $select_product = "";
 if (isset($_GET['category'])) {
     $category = $_GET['category'];
     if ($category == "wall") {
-        $select_product = "SELECT * FROM products WHERE category_id = 1;";
+        $select_product = "SELECT * FROM products WHERE category_id = 1";
     } else if ($category == "bathroom") {
-        $select_product = "SELECT * FROM products WHERE category_id = 2;";
+        $select_product = "SELECT * FROM products WHERE category_id = 2";
     } else if ($category == "kitchen") {
-        $select_product = "SELECT * FROM products WHERE category_id = 3;";
+        $select_product = "SELECT * FROM products WHERE category_id = 3";
     } else if ($category == "outdoor") {
-        $select_product = "SELECT * FROM products WHERE category_id = 4;";
+        $select_product = "SELECT * FROM products WHERE category_id = 4";
     } else if ($category == "living") {
-        $select_product = "SELECT * FROM products WHERE category_id = 5;";
+        $select_product = "SELECT * FROM products WHERE category_id = 5";
     } else if ($category == "bedroom") {
-        $select_product = "SELECT * FROM products WHERE category_id = 6;";
+        $select_product = "SELECT * FROM products WHERE category_id = 6";
     } else if ($category == "commercial") {
-        $select_product = "SELECT * FROM products WHERE category_id = 7;";
+        $select_product = "SELECT * FROM products WHERE category_id = 7";
     } else if ($category == "floor") {
-        $select_product = "SELECT * FROM products WHERE category_id = 8;";
+        $select_product = "SELECT * FROM products WHERE category_id = 8";
     } else if ($category == "special") {
-        $select_product = "SELECT * FROM products WHERE category_id = 9;";
+        $select_product = "SELECT * FROM products WHERE category_id = 9";
     }
     else if ($category == "allwall") {
-        $select_product = "SELECT * FROM products WHERE category_id IN (1,2,3,4,5,6,7);";
+        $select_product = "SELECT * FROM products WHERE category_id IN (1,2,3,4,5,6,7)";
     }
     else if ($category == "allfloor") {
-        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,8);";
+        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,8)";
     }
     else if ($category == "allspecial") {
-        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,9);";
+        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,9)";
     }
 } else if (isset($_POST['search'])) {
     $rs_search = htmlspecialchars($_POST['rs_search']);
@@ -41,9 +59,21 @@ if (isset($_GET['category'])) {
          OR products.color LIKE '%$rs_search%' OR products.price LIKE '%$rs_search%'
          OR products.brand LIKE '%$rs_search%' OR products.size LIKE '%$rs_search%';";
 } else {
-    $select_product = "SELECT * FROM products;";
+    $select_product = "SELECT * FROM products";
 }
-
+$item_per_page = 6 ;
+$total_item = 0 ;
+$result_total = $connect->query($select_product);
+if($result_total->num_rows > 0){
+ while($row = $result_total->fetch_assoc()){
+   $total_item++ ;
+ }
+}
+$total_page = ceil($total_item / $item_per_page);
+$current_page = (isset($_GET['page'])) ? $_GET['page'] : 1 ;
+$current_page = max(1, min($current_page,$total_page));
+$start = ($current_page - 1 ) * $item_per_page + 1 ;
+$select_product = $select_product." limit $start ,$item_per_page  " ;
 $result_product = $connect->query($select_product);
 if ($result_product->num_rows > 0) {
     while ($row = $result_product->fetch_assoc()) {
@@ -80,4 +110,12 @@ if ($result_product->num_rows > 0) {
 } else {
     echo "<h2>Không tìm thấy sản phẩm nào !</h2>";
 }
+ echo "<div id='pagination'>" ;
+for($i = 1 ; $i <= $total_page ; $i++){
+    echo "<a href='shop.php?page=$i'> $i </a>" ;
+  }
+  echo "</div>" ;
 ?>
+
+</body>
+</html>
