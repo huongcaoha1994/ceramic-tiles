@@ -137,9 +137,7 @@
 }
 
 /* Categories hover */
-.categories-items:hover {
-  /* opacity: 0.2; */
-}
+
 
 .categories-items::before:hover {
   content: '';
@@ -173,10 +171,6 @@
   background-color: rgba(255, 255, 255,90%);
   padding: 30px;
   border: 1px solid var(--secondary-color);
-}
-
-.categories-content {
-
 }
 
 /* navbar ngang */
@@ -294,7 +288,7 @@
 }
 
 .iconbox:hover .icon-box-img {
-  animation: jello-vertical 1s infinite 1s;
+  animation: jello-vertical 1s infinite;
 }
 
 .icon-box-img img {
