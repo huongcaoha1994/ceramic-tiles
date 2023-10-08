@@ -45,6 +45,16 @@
             </div>
         </footer>
     </div>
+    <div class="cta z-3">
+        <a href="#" class="my-2 border">
+            <img src="../assets/img/homepage/phone.png" alt="" srcset="" class="shake-bottom">
+
+        </a>
+        <a href="#" class="my-2 border">
+            <img src="../assets/img/homepage/messenger.png" alt="" srcset="">
+
+        </a>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../assets/js/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
