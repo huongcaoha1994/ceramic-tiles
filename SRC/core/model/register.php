@@ -15,30 +15,28 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 <!DOCTYPE html>
   <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="../../assets/css/register.css">
-        <link rel="stylesheet" href="../../assets/css/bootstrap.css">
-        <title>Register</title>
-        <style>
-            .error {
-                color: orangered;
-                font-weight: bold;
-                padding-left: 30px;
-            }
-        </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../assets/css/register.css">
+      <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+      <title>Register</title>
+      <style>
+          .error {
+              color: orangered;
+              font-weight: bold;
+              padding-left: 30px;
+          }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
     <body>
         <?php
         session_start();
-        //include 'database.php';
+        include 'database.php';
         $usernameErr = $passwordErr = $full_nameErr = $emailErr = $addressErr = $phoneErr = "";
         $username = $password = $full_name = $email = $address = $phone = "";
         $hasErrors = false; // Biến để kiểm tra có lỗi hay không
@@ -61,6 +59,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
               $email = test_input($_POST['email']);
               $address = test_input($_POST['address']);
               $phone = test_input($_POST['phone']);
+              $password_regex = "/^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/";
 
               //validate dữ liệu nhập vào
               if (empty($username)) {
@@ -75,6 +74,9 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
               }
               if (empty($_POST['password'])) {
                   $passwordErr = "Password is required";
+              }
+              if (preg_match($password_regex, $_POST['password']) !== 1) {
+                $passwordErr = "Passwords must have at least 8 characters and contain uppercase letters, numbers";
               }
               if (empty($full_name)) {
                   $full_nameErr = "Full name is required";
@@ -175,74 +177,73 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
       <section class="h-100 bg-light">
         <form action="" method="POST">
           <div class="container py-3 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col">
-              <div class="card card-registration my-4">
-                <div class="row g-0">
-                  <div class="col-xl-6 d-none d-xl-block">
-                    <img src="../../assets/img/homepage/logo.png"
-                      alt="Sample photo" class="img-fluid"
-                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
-                  </div>
-                  <div class="col-xl-6">
-                    <div class="card-body p-md-5 text-black">
-                      <h3 class="mb-5 text-uppercase text-center">Registration form</h3>
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col">
+                <div class="card card-registration my-4">
+                  <div class="row g-0">
+                    <div class="col-xl-6 d-none d-xl-block align-self-center">
+                      <img src="../../assets/img/homepage/logo.png"alt="" style="height:250px; display: flex; justify-content: center; align-items: center;" class="mx-auto my-auto">
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="card-body p-md-5 text-black">
+                        <h3 class="mb-5 text-uppercase text-center">Registration form</h3>
 
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input type="text" name="username" placeholder="Username" id="form3Example1m" class="form-control form-control-lg"
-                                  value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''; ?>">
-                              <?php if ($hasErrors) {
-                                  echo '<span class="error">' . $usernameErr . '</span>';
-                              } ?>
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <input type="text" name="username" placeholder="Username" id="form3Example1m" class="form-control form-control-lg"
+                                    value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''; ?>">
+                                <?php if ($hasErrors) {
+                                    echo '<span class="error">' . $usernameErr . '</span>';
+                                } ?>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <input type="password" name="password" placeholder="Password" id="form3Example1m" class="form-control form-control-lg"
+                                    value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
+                                <?php if ($hasErrors) {
+                                    echo '<span class="error">' . $passwordErr . '</span>';
+                                } ?>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input type="password" name="password" placeholder="Password" id="form3Example1m" class="form-control form-control-lg"
-                                  value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
-                              <?php if ($hasErrors) {
-                                  echo '<span class="error">' . $passwordErr . '</span>';
-                              } ?>
-                          </div>
+
+                        <div class="form-outline mb-4">
+                          <input type="text" name="full_name" placeholder="Full Name" id="form3Example8" class="form-control form-control-lg"
+                                    value="<?php echo isset($_POST['full_name']) ? $_POST['full_name'] : ''; ?>">
+                                <?php if ($hasErrors) {
+                                    echo '<span class="error">' . $full_nameErr . '</span>';
+                                } ?>
                         </div>
-                      </div>
 
-                      <div class="form-outline mb-4">
-                        <input type="text" name="full_name" placeholder="Full Name" id="form3Example8" class="form-control form-control-lg"
-                                  value="<?php echo isset($_POST['full_name']) ? $_POST['full_name'] : ''; ?>">
+                        <div class="form-outline mb-4">
+                        <input type="text" name="email" placeholder="Email ID" id="form3Example97" class="form-control form-control-lg"
+                                  value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
                               <?php if ($hasErrors) {
-                                  echo '<span class="error">' . $full_nameErr . '</span>';
+                                  echo '<span class="error">' . $emailErr . '</span>';
                               } ?>
-                      </div>
+                        </div>
 
-                      <div class="form-outline mb-4">
-                      <input type="text" name="email" placeholder="Email ID" id="form3Example97" class="form-control form-control-lg"
-                                value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
-                            <?php if ($hasErrors) {
-                                echo '<span class="error">' . $emailErr . '</span>';
-                            } ?>
-                      </div>
+                        <div class="form-outline mb-4">
+                        <input type="text" name="address" placeholder="Address" id="form3Example9" class="form-control form-control-lg"
+                                  value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>">
+                              <?php if ($hasErrors) {
+                                  echo '<span class="error">' . $addressErr . '</span>';
+                              } ?>
+                        </div>
+                        <div class="form-outline mb-4">
+                          <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg"
+                                  value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>">
+                              <?php if ($hasErrors) {
+                                  echo '<span class="error">' . $phoneErr . '</span>';
+                              } ?>
+                        </div>
 
-                      <div class="form-outline mb-4">
-                      <input type="text" name="address" placeholder="Address" id="form3Example9" class="form-control form-control-lg"
-                                value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>">
-                            <?php if ($hasErrors) {
-                                echo '<span class="error">' . $addressErr . '</span>';
-                            } ?>
-                      </div>
-                      <div class="form-outline mb-4">
-                        <input type="text" name="phone" placeholder="Phone" id="form3Example90" class="form-control form-control-lg"
-                                value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>">
-                            <?php if ($hasErrors) {
-                                echo '<span class="error">' . $phoneErr . '</span>';
-                            } ?>
-                      </div>
-
-                      <div class="d-flex justify-content-end pt-3">
-                        <button type="submit" class="btn btn-light btn-lg">Reset all</button>
-                        <button type="submit" name="btn" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                        <div class="d-flex justify-content-end pt-3">
+                          <button type="submit" class="btn btn-light btn-lg">Reset all</button>
+                          <button type="submit" name="btn" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -250,34 +251,27 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
               </div>
             </div>
           </div>
-        </div>
         </form>
-        
       </section>
       <footer>
         <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-secondary">
-          <!-- Copyright -->
           <div class="text-white mb-3 mb-md-0">
             Ok Bro © 2023. Cera Tiles.
           </div>
-          <!-- Copyright -->
-
-          <!-- Right -->
           <div>
-            <a href="#!" class="text-white me-4">
+            <a href="#!" class="text-white me-4 text-decoration-none">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#!" class="text-white me-4">
+            <a href="#!" class="text-white me-4 text-decoration-none">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#!" class="text-white me-4">
+            <a href="#!" class="text-white me-4 text-decoration-none">
               <i class="fab fa-google"></i>
             </a>
             <a href="#!" class="text-white">
               <i class="fab fa-linkedin-in"></i>
             </a>
           </div>
-          <!-- Right -->
         </div>
       </footer>
       
