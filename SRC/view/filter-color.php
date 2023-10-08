@@ -1,14 +1,44 @@
 <?php
 session_start();
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $color = $_POST['color'];
-  $_SESSION['color'] = $color ;
-  $brand = $_POST['brand'] ;
-  $_SESSION['brand'] = $brand ;
-  $size = $_POST['size'] ;
-  $_SESSION['size'] = $size ;
+  if(isset($_POST['color'])){
+    $color = $_POST['color'];
+    if($color === ""){
+      unset($_SESSION['color']);
+    }
+    else {
+      $_SESSION['color'] = $color ;
+    }
+  }
 
-// if($color === ""){
+  if(isset($_POST['brand'])){
+    $brand = $_POST['brand'];
+    if($brand === ""){
+      unset($_SESSION['brand']);
+    }
+    else {
+      $_SESSION['brand'] = $brand ;
+    }
+  }
+
+  if(isset($_POST['size'])){
+    $size = $_POST['size'];
+    if($size === ""){
+      unset($_SESSION['size']);
+    }
+    else {
+      $_SESSION['size'] = $size ;
+    }
+  }
+
+//   $color = $_POST['color'];
+//   $_SESSION['color'] = $color ;
+//   $brand = $_POST['brand'] ;
+//   $_SESSION['brand'] = $brand ;
+//   $size = $_POST['size'] ;
+//   $_SESSION['size'] = $size ;
+
+// if($_SESSION['color'] === ""){
 //   unset($_SESSION['color']);
 // }
 
@@ -20,32 +50,45 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 //   unset($_SESSION['size']);
 // }
 
-if($color !== ""){
-  $select_filter = "SELECT * FROM products WHERE color = '$color';" ;
-  if($brand !== ""){
-    $select_filter = "SELECT * FROM products WHERE color = '$color' and brand = '$brand';" ;
+if(isset($_SESSION['color'])){
+  $color = $_SESSION['color'] ;
+  $select_filter = "SELECT * FROM products WHERE color = '$color'" ;
+  if(isset($_SESSION['brand'])){
+    $brand = $_SESSION['brand'] ;
+    $select_filter = $select_filter." and brand = '$brand'" ;
   }
-  if($size !== ""){
-    $select_filter = "SELECT * FROM products WHERE color = '$color' and brand = '$brand' and size = '$size';" ;
-  }
-}
-else if($brand !== ""){
-  $select_filter = "SELECT * FROM products WHERE brand = '$brand';" ;
-  if($color !== ""){
-    $select_filter = "SELECT * FROM products WHERE brand = '$brand' and color = '$color';" ;
-  }
-  if($size !== ""){
-    $select_filter = "SELECT * FROM products WHERE brand = '$brand' and color = '$color' and size = '$size';" ;
+  if(isset($_SESSION['size'])){
+    $size = $_SESSION['size'] ;
+    $select_filter = $select_filter." and size = '$size'" ;
   }
 }
-else if($size !== ""){
-  $select_filter = "SELECT * FROM products WHERE size = '$size';" ;
-  if($brand !== ""){
-    $select_filter = "SELECT * FROM products WHERE size = '$size' and brand = '$brand';" ;
+else if(isset($_SESSION['brand'])){
+  $brand = $_SESSION['brand'] ;
+  $select_filter = "SELECT * FROM products WHERE brand = '$brand'" ;
+  if(isset($_SESSION['color'])){
+    $color = $_SESSION['color'] ;
+    $select_filter = $select_filter." and color = '$color'" ;
   }
-  if($color !== ""){
-    $select_filter = "SELECT * FROM products WHERE size = '$size' and brand = '$brand' and color = '$color';" ;
+  if(isset($_SESSION['size'])){
+    $size = $_SESSION['size'] ;
+    $select_filter = $select_filter." and size = '$size'" ;
   }
+}
+
+else if(isset($_SESSION['size'])){
+  $size = $_SESSION['size'] ;
+  $select_filter = "SELECT * FROM products WHERE size = '$size'" ;
+  if(isset($_SESSION['brand'])){
+    $brand = $_SESSION['brand'] ;
+    $select_filter = $select_filter." and brand = '$brand'" ;
+  }
+  if(isset($_SESSION['color'])){
+    $color = $_SESSION['color'] ;
+    $select_filter = $select_filter." and color = '$color'" ;
+  }
+}
+else {
+  $select_filter = "SELECT * FROM products ;";
 }
   
     include("../core/model/database.php");
@@ -82,6 +125,9 @@ else if($size !== ""){
         <?php
       }
     
+  }
+  else {
+    echo "Không tìm thấy sản phẩm nào !" ;
   }
  
 }

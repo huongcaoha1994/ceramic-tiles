@@ -1,3 +1,10 @@
+<?php 
+if (isset($_SESSION['user_id'])) {
+    header('Location: ../View/main.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +72,7 @@
               class="img-fluid" alt="Sample image"> 
           </div>
           <div class="col-md-8 col-lg-6 col-xl-3 offset-xl-1">
-            <form action="" method="POST">
+            <form action="login.php" method="POST">
               <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                 <p class="lead fw-normal mb-0 me-3">Sign in with</p>
                 <button type="button" class="btn btn-warning btn-floating mx-1">
@@ -108,7 +115,7 @@
               </div>
 
               <div class="text-center text-lg-start mt-4 pt-2">
-                <button type="button" name="btn" class="btn btn-warning btn-lg"
+                <button type="submit" name="btn" class="btn btn-warning btn-lg"
                   style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
                 <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.php"
                     class="link-danger">Register</a></p>
@@ -146,7 +153,7 @@
 
     <?php 
     include "./database.php";
-    if (isset($_POST["btn"])) {
+    if (isset($_POST['btn'])) {
         if (empty($_POST['username'])
             || empty($_POST['password'])) {
                 echo "<script> alert ('Username and password are required')</script>";
@@ -167,7 +174,7 @@
                     echo "<script> alert ('Logged in successfully')</script>";
                     $_SESSION['username'] = $username;
                     $_SESSION['user_id'] = $user_id;
-                    header("location: ../View/main.php");
+                    header("/ceramic-tiles/SRC/view/shop.php");
                 } else {
                     echo "<script> alert ('Username or password is incorrect')</script>";
                 }     
