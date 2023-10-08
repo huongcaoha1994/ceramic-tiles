@@ -46,6 +46,7 @@
         </footer>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../assets/js/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
     <script src="../assets/js/footerscript.js"></script>
 </body>

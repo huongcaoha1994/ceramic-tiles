@@ -30,9 +30,9 @@ if ($result_product->num_rows > 0) {
         </a>
 
         <div class="card-body set-equal">
-          <div class="d-flex justify-content-between mb-3">
+          <div class="d-flex justify-content-between mb-3 flex-column">
             <h6 class="mb-0 product-view"><?php echo $row['product_name']; ?></h6>
-            <h6 class="text-dark mb-0 product-view"><?php echo $row['price']; ?>$</h6>
+            <h6 class="text-dark mb-0 product-view">Price: <?php echo $row['price']; ?>$</h6>
           </div>
 
         
