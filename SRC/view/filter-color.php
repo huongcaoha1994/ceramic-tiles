@@ -136,9 +136,11 @@ else {
           <br>
         <?php
       }
+      echo "<div id='pagination'>" ;
     for($i = 1 ; $i <= $total_page ; $i++){
-      echo "<a href='shop.php?page=$i'>$i</a>" ;
+      echo "<a href='shop.php?page=$i'> $i </a>" ;
     }
+    echo "</div>" ;
   }
   else {
     echo "Không tìm thấy sản phẩm nào !" ;
