@@ -5,13 +5,13 @@ $result_product = $connect->query($select_product);
 if($result_product->num_rows > 0 ){
     while($row = $result_product->fetch_assoc()){
         ?>
-           <div class="item">
+           <div class="item position-relative">
            <div class="card h-100">
-                <img src="../assets/img<?php echo $row['image']; ?>" class="card-img-top" height="150px" width="150px" alt="Laptop" />
+                <img src="../assets/img<?php echo $row['image']; ?>" class="card-img-top" height="100%" width="100%" alt="Laptop" />
                 <div class="card-body">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h6 class="mb-0 me-2 product-view"><?php echo $row['product_name']; ?></h6>
-                    <h6 class="text-dark ms-2 mb-0 product-view"><?php echo $row['price']; ?>$</h6>
+                  <div class="d-flex justify-content-between mb-3 flex-column">
+                    <h6 class="mb-0 product-view"><?php echo $row['product_name']; ?></h6>
+                    <h6 class="text-dark mb-0 product-view">Price: <?php echo $row['price']; ?>$</h6>
                   </div>
 
                   <div class="d-flex justify-content-between mb-2">

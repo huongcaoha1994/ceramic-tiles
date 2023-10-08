@@ -94,3 +94,26 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll);
 
+// Function chuyển filter sang offcanvas
+
+var offCanvasFilter = document.querySelector('.filter_offcanvas')
+var offCanvasMenu = document.querySelector('#offcanvasMenu .offcanvas-body')
+
+offCanvasMenu.innerHTML = offCanvasFilter.innerHTML
+
+//
+function category_main(category) {
+  $.ajax({
+    url: "product-main.php",
+    type: "POST",
+    data: {
+      category: category
+    },
+    success: function(response) {
+      $("#category").html(response);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.error("Error:", textStatus, errorThrown);
+    }
+  });
+}
