@@ -3,7 +3,7 @@ include("./header.php");
 ?>
 
 <!-- Banner  -->
-<img src="../assets/img/homepage/banner.jpg" alt="banner" class="w-100 img-background">
+<img src="../assets/img/homepage/banner.png" alt="banner" class="w-100 img-background">
 <!-- Why Choose Us -->
 <div class="container py-3">
   <div class="row">
