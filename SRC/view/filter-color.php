@@ -121,14 +121,16 @@ else {
                           <h6>Inventory : <?php echo $row['inventory']; ?></h6>
                           <h6>Brand : <?php echo $row['brand']; ?></h6>
                           <h6>Size : <?php echo $row['size']; ?></h6>
-                          <!-- <form action="" method="POST">
-                              <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
-                              <input type="number" name="quantity">
-                              <input type="submit" name="add_to_cart" value="Add">
-                          </form> -->
-                          <div class="d-flex justify-content-between mb-2">
-                              <button class="btn btn-primary">Add to cart</button>
-                          </div>
+                          <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id']; ?>" method="POST">
+                           
+                            <label for="quantity">Quantity :</label>
+                            <input type="number" name="quantity">
+                           
+                            <button class="btn btn-primary" type="submit" name="add_to_cart">Add to cart</button>
+                        </form>
+                          <!-- <div class="d-flex justify-content-between mb-2">
+                              <button class="btn btn-primary" type="submit" name="add_to_cart">Add to cart</button>
+                          </div> -->
                       </div>
                   </div>
               </div>
