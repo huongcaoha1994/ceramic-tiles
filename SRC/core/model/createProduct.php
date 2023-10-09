@@ -84,17 +84,17 @@
                                         <h1 class="tm-block-title d-inline-block text-align-center">Add Product</h1>
                                     </div>
                                 </div>
-                                <form action="" method="POST">
+                                <form action="" method="POST" enctype="multipart/form-data">
                                     <div class="row tm-edit-product-row">
                                         <div class="col-xl-4 col-lg-6 col-md-12">
                                             <form class="tm-edit-product-form">
                                                 <div class="form-group mb-3">
                                                     <label for="name">Product Name</label>
-                                                    <input id="name" name="name" type="text" class="form-control validate" required="">
+                                                    <input id="name" name="product_name" type="text" class="form-control validate" required="">
                                                 </div>
                                                 <div class="form-group mb-3">
                                                     <label for="description">Description</label>
-                                                    <textarea class="form-control validate" rows="3" required=""></textarea>
+                                                    <textarea class="form-control validate" rows="3" required="" name="description"></textarea>
                                                 </div>
                                                 <div class="form-group mb-3">
                                                     <label for="color" class="form-label">Color</label>
@@ -152,12 +152,12 @@
                                                 <i class="" onclick="document.getElementById('fileInput').click();"></i>
                                             </div>
                                             <div class="custom-file mt-3 mb-3">
-                                                <input id="fileInput" type="file" style="display:none;">
-                                                <input type="button" class="btn btn-warning btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();">
+                                               <input type="file" name="image">
+                                                <!-- <input type="button" class="btn btn-warning btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();"> -->
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-warning btn-block text-uppercase">Add Product Now</button>
+                                            <button type="submit" name="create_product"class="btn btn-warning btn-block text-uppercase">Add Product Now</button>
                                         </div>
                                     </div>
                                 </form>
@@ -170,7 +170,7 @@
     </div>
     <!-- xử lý dữ liệu từ form gửi đến -->
     <?php 
-    //include("database.php");
+    include("database.php");
     if(isset($_POST['create_product'])){
         function clean_data($data){
             $data = trim($data) ;
@@ -187,7 +187,7 @@
         $description = clean_data($_POST['description']) ;
         // xử lý hình ảnh và lưu ảnh vào foder
         if(isset($_FILES['image'])){
-            $file_save = "../image/" ;
+            $file_save = "../../assets/img/image/" ;
             $taget_file = $file_save.basename($_FILES['image']['name']) ;
             $style_file = strtolower(pathinfo($taget_file,PATHINFO_EXTENSION)) ;
             $upload_oke = true ;
