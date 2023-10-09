@@ -189,16 +189,14 @@ include("./header.php");
         </div>
         <div class="row" id="category">
 
-
           <?php include("product-main.php"); ?>
 
         </div>
 </section>
 <!-- Blog post  -->
-<div class="container">
+<div class="container mb-2">
   <h1 class="text-primary text-center py-4 heading-section position-relative">Blog Post</h1>
-
-  <div class="row mb-2">
+  <div class="owl-carousel owl-theme blog-slider">
     <?php
       include("show_blog.php");
     ?>
