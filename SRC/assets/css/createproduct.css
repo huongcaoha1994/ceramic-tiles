@@ -1,51 +1,55 @@
-css trang create product
-.nav {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.nav-link {
-    color: rgb(131, 120, 120);
-    font-size: 20px;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.nav-link:hover {
-color: #131318;
-}
- 
-.container-fluid {
-    background-image: url('gach2.jpg');
-    width: 100%;
-  } 
-
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-0.5 * var(--bs-gutter-x));
-    margin-left: 60px;
-    justify-content: center;
-    align-items: flex-end;
-}
+:root {
+    --primary-color: #f9ba11;
+    --secondary-color: #d7d7d7;
+  }
   
-.col-md-8 {
-float: left;
-}
+  .divider:after,
+  .divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+  }
+  
+  .form-outline {
+    position: relative;
+  }
+  
+  .form-outline i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  }
+  
+  .h-custom {
+  background: rgb(145, 107, 235);
+  height: calc(100% - 73px);
+  }
 
-.col-md-4 {
-float: right;
-}
 
-.form-control {
-width: 100%;
-}
-
-.btn {
-width: 100%;
-}
+  .row > *{
+    border-radius: 1px;
+  
+  }  
+  
+  @media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  }
+  
+  /* Máy tính bảng */
+  @media (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  }
+  
+  /* Điện thoại */
+  @media (max-width: 575px) {
+  body {
+    font-size: 12px;
+  }
+  }
