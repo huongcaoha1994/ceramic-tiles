@@ -4,8 +4,7 @@ session_start();
 $product_id = $_GET['product_id'];
 include ("database.php");
 if (isset($_POST['add_to_cart'])) {
-    if(isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+    $user_id = $_SESSION['user_id'];    
     $quantity = $_POST['quantity'];
 
     if(empty($_SESSION['cart'])) {
@@ -30,10 +29,8 @@ if (isset($_POST['add_to_cart'])) {
             }
         }
     }
-        header("location: ../../view/shop.php?message_success=Add to cart successfully"); 
-    } else {
-        header('Location: login.php?error=You have to login');
-    }
+
+    header('Location: ../../view/shop.php');    
 }
 
 
