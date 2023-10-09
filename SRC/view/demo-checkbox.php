@@ -24,7 +24,7 @@
                 var searchTerm = $(this).val();
                 if (searchTerm.length >= 3) {
                     $.ajax({
-                        url: 'search.php',
+                        url: 'demo-search.php',
                         method: 'POST',
                         data: { search: searchTerm },
                         success: function(response) {
@@ -46,5 +46,14 @@
     
     <!-- Kết quả tìm kiếm -->
     <div id="search-results"></div>
+
+    <?php 
+    include("../core/model/database.php") ;
+      if(isset($_GET['product_id'])){
+          $product_id = $_GET['product_id'] ;
+          $get_product = "select * from products where product_id = $product_id ;" ;
+          $rs_product = $connect->query($get_product);
+      }
+    ?>  
 </body>
 </html>
