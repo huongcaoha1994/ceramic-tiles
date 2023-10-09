@@ -1,6 +1,8 @@
 <?php
 include("../core/model/database.php");
-
+if (isset($_GET['message_success'])) {
+    echo "<script> alert ('".$_GET['message_success']."')</script>";
+}
 $select_product = "";
 
 if (isset($_GET['category'])) {
@@ -47,7 +49,7 @@ if ($result_product->num_rows > 0) {
             <h4>Inventory : <?php echo $row['inventory'] ;?></h4>
             <h4>Brand : <?php echo $row['brand'] ;?></h4>
             <h4>Size : <?php echo $row['size'] ;?></h4>
-            <form action="../core/model/them_vao.php?product_id=<?php echo $row['product_id']; ?>" method="POST">
+            <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id']; ?>" method="POST">
                 <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ;?>">
                 <input type="number" name="quantity">
                 <input type="submit" name="add_to_cart" value="Add">
