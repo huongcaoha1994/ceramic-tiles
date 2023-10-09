@@ -37,7 +37,13 @@ if ($result_product->num_rows > 0) {
 
         
           <div class="d-flex justify-content-between mb-2">
-            <a class="btn btn-primary" href="../core/controller/addtocart.php">Add to cart</a>
+          <form action="../core/controller/product-detail.php" method="POST">
+                            <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ; ?>">
+                            <label for="quantity">Quantity : </label>
+                            <input type="number" name="quantity" required>
+                            <br>
+                            <input type="submit" name="add_to_cart" value="Add">
+                        </form>
           </div>
         </div>
       </div>
