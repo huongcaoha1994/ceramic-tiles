@@ -87,17 +87,7 @@
                     <button class="btn btn-primary position-relative btn-cart">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                       <?php 
-                            session_start();
-                            if(isset($_SESSION['number_cart'])){
-                                $number = $_SESSION['number_cart'];
-                                echo $number ;
-                            }
-                            else {
-                                echo "";
-                            }
-                            
-                       ?>
+                      99
                             <span class="visually-hidden">unread messages</span>
                         </span>
                         <div class="header_cart position-absolute z-2 rounded-1 border">
@@ -117,15 +107,18 @@
                         </div>
                 </div>
             </div>
-            </button>
-        </div>
-
-        </div>
-        </div>
-    </nav>
+        </button>
+    </div>
+    
+</div>
+</div>
+</nav>
+<?php echo "xin chào Nguyễn Công Hưởng" ;?>
 
     <script src="../assets/js/headerscript.js"></script>
     <script src="../assets/js/bootstrap.bundle.js"></script>
+
+                
 </body>
 
 </html>
