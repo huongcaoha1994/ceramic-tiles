@@ -44,8 +44,8 @@ include("./header.php");
             <img src="../assets/img/homepage/shipping.svg" alt="">
           </div>
           <div class="icon-box-text">
-            <h3>Free ship</h3>
-            <p>For total values > 1000$</p>
+            <h3>Freeship</h3>
+            <p>For total values >= 1000$</p>
           </div>
         </div>
       </div>

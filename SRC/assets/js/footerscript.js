@@ -97,7 +97,7 @@ window.addEventListener('scroll', checkScroll);
 // Function chuyển filter sang offcanvas
 
 var offCanvasFilter = document.querySelector('.filter_offcanvas')
-var offCanvasMenu = document.querySelector('#offcanvasMenu .offcanvas-body')
+var offCanvasMenu = document.querySelector('#offcanvasStore .offcanvas-body')
 
 offCanvasMenu.innerHTML = offCanvasFilter.innerHTML
 
