@@ -254,7 +254,6 @@
 
 /* Banner */
 .img-background {
-  height: 500px;
   object-fit: cover;
   object-position: bottom;
 }

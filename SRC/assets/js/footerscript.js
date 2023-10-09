@@ -20,6 +20,20 @@ $(".carousel-slider").owlCarousel({
 });
 
 
+$(".blog-slider").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    762: {
+      items: 2,
+    },
+  },
+});
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
@@ -39,6 +53,8 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
+
+
 
 
 
