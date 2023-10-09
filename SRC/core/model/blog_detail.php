@@ -16,7 +16,7 @@
                $row = $result_blog->fetch_assoc();
                     ?>
                         <div>
-                            <img src="<?php echo $row['image'] ;?>" alt="<?php echo $row['title'] ;?>">
+                            <img src="../<?php echo $row['image'] ;?>" alt="<?php echo $row['title'] ;?>">
                             <h3><?php echo $row['title'] ;?></h3>
                             <h4><?php echo $row['content'] ;?></h4>
                             <h5>Người viết bài :<?php echo $row['author'] ;?></h5>
