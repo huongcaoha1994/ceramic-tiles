@@ -57,7 +57,7 @@ if (isset($_GET['category'])) {
         JOIN categorys ON products.category_id = categorys.category_id
         WHERE products.product_name LIKE '%$rs_search%' OR categorys.category_name LIKE '%$rs_search%'
          OR products.color LIKE '%$rs_search%' OR products.price LIKE '%$rs_search%'
-         OR products.brand LIKE '%$rs_search%' OR products.size LIKE '%$rs_search%';";
+         OR products.brand LIKE '%$rs_search%' OR products.size LIKE '%$rs_search%'";
 } else {
     $select_product = "SELECT * FROM products";
 }
