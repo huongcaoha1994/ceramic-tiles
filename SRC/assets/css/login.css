@@ -3,10 +3,6 @@
   --secondary-color: #d7d7d7;
 }
 
-body{
-  background: #b0cfe0;
-}
-
 a {
   text-decoration: none;
 }
@@ -16,8 +12,14 @@ a {
 content: "";
 flex: 1;
 height: 1px;
-background: #b0cfe0;
+background: #edf2f2;
 }
+
+section{
+  margin: 20px;
+  bottom: 200px;
+}
+
 
 .form-outline {
   position: relative;
@@ -33,12 +35,12 @@ cursor: pointer;
 }
 
 .h-custom {
-background: aliceblue;
 height: calc(100% - 73px);
 
 }
 
 .bg-secondary{
+  min-height: 150px;
   margin-top: 175px;
 }
 
