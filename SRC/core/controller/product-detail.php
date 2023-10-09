@@ -10,7 +10,7 @@
     <h1>Product Detail</h1>
     <?php
     session_start();
-    echo "<script>alert('Bạn cần đăng nhập để đặt hàng !')</script>" ;
+   
     include("../model/database.php");
 
         if(isset($_GET['product_id'])){
