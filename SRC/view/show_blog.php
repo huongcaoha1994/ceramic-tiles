@@ -15,7 +15,7 @@ if ($result_blog->num_rows > 0) {
           <h3 class="mb-0"><?php echo $row['title']; ?></h3>
           <div class="mb-1 text-body-secondary"><?php echo $row['created_date']; ?></div>
           <p class="card-text mb-auto"></p>
-          <a href="../core/model/blog_detail.php?blog_id=<?php echo $row['blog_id']; ?>" class="icon-link gap-1 icon-link-hover stretched-link">
+          <a href="../view/blog_detail.php?blog_id=<?php echo $row['blog_id']; ?>" class="icon-link gap-1 icon-link-hover stretched-link">
             Continue reading
             <svg class="bi">
               <use xlink:href="#chevron-right" />

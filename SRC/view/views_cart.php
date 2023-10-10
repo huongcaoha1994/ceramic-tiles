@@ -58,7 +58,7 @@
                                 $each = mysqli_fetch_array($result);
                                 ?>
                                 <tr>
-                                    <td><img src="../assets/img<?php echo $each['image']; ?>" alt="Product Image"
+                                    <td><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image"
                                             style="max-width: 100px;"></td>
                                     <td>
                                         <?php echo $each['product_name']; ?>

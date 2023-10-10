@@ -30,7 +30,7 @@ if (isset($_POST['add_to_cart'])) {
         }
     }
 
-    header('Location: ../../view/shop.php');    
+    header("../../view/shop.php");    
 }
 
 

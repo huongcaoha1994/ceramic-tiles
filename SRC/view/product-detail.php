@@ -11,7 +11,7 @@
     <?php
     session_start();
    
-    include("../model/database.php");
+    include("../core/model/database.php");
 
         if(isset($_GET['product_id'])){
             $product_id = htmlspecialchars($_GET['product_id']) ;
@@ -21,7 +21,7 @@
                 $row = $result_product->fetch_assoc() ;
                 ?>
                     <div>
-                        <img src="../../assets/img/<?php echo $row['image'] ; ?>" alt="" width="300" height="300">
+                        <img src="../assets/img/<?php echo $row['image'] ; ?>" alt="" width="300" height="300">
                         <h2><?php echo $row['product_name'] ; ?></h2>
                         <h3>Price : <?php echo $row['price'] ; ?></h3>
                         <h3>Color : <?php echo $row['color'] ; ?></h3>
@@ -75,8 +75,8 @@
     //         }
     //     }
     // }
-    include("../model/add_to_cart.php");
+    include("../core/model/add_to_cart.php");
     ?>
-    <a href="../../view/shop.php">Go to Shop</a>
+    <a href="../view/shop.php">Go to Shop</a>
 </body>
 </html>

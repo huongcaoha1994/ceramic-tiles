@@ -1,5 +1,5 @@
 <?php
-include("database.php");
+include("../core/model/database.php");
 if (isset($_GET['blog_id'])) {
     $blog_id = htmlspecialchars($_GET['blog_id']);
     $select_blog = "select * from blogs where blog_id = $blog_id order by blog_id DESC ;";
@@ -8,7 +8,7 @@ if (isset($_GET['blog_id'])) {
         $row = $result_blog->fetch_assoc();
 ?>
         <div>
-            <img src="../<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
+            <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
             <h3><?php echo $row['title']; ?></h3>
             <h4><?php echo $row['content']; ?></h4>
             <h5>Người viết bài :<?php echo $row['author']; ?></h5>

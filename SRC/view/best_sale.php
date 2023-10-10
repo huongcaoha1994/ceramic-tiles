@@ -7,7 +7,7 @@ if($result_product->num_rows > 0 ){
         ?>
            <div class="item position-relative">
            <div class="card h-100">
-                <a href="../core/controller/product-detail.php?product_id=<?php echo $row['product_id']; ?>"><img src="../assets/img/<?php echo $row['image']; ?>" class="card-img-top" height="100%" width="100%" alt="Laptop" /></a>
+                <a href="../view/product-detail.php?product_id=<?php echo $row['product_id']; ?>"><img src="../assets/img/<?php echo $row['image']; ?>" class="card-img-top" height="100%" width="100%" alt="Laptop" /></a>
                 <div class="card-body">
                   <div class="d-flex justify-content-between mb-3 flex-column">
                     <h6 class="mb-0 product-view"><?php echo $row['product_name']; ?></h6>
