@@ -187,7 +187,7 @@
         $description = clean_data($_POST['description']) ;
         // xử lý hình ảnh và lưu ảnh vào foder
         if(isset($_FILES['image'])){
-            $file_save = "../../assets/img/image/" ;
+            $file_save = "image/" ;
             $taget_file = $file_save.basename($_FILES['image']['name']) ;
             $style_file = strtolower(pathinfo($taget_file,PATHINFO_EXTENSION)) ;
             $upload_oke = true ;
