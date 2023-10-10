@@ -1,9 +1,62 @@
-<?php 
+<?php
+session_start();  
 if (isset($_SESSION['user_id'])) {
-    header('Location: ../View/main.php');
+    header('Location: ../../view/main.php');
     exit();
 }
-?> 
+
+if (isset($_GET['success'])) {
+    ?>
+    <span style="color:green;">
+    <?php echo "<script> alert ('".$_GET['success']."')</script>"; ?>
+    </span>
+    <?php
+}
+
+if (isset($_GET['error'])) {
+  ?>
+  <span>
+  <?php echo "<script> alert ('".$_GET['error']."')</script>"; ?>
+  </span>
+  <?php
+}
+
+
+include "./database.php";
+if (isset($_POST['btn'])) {
+    if (empty($_POST['username'])
+        || empty($_POST['password'])) {
+            echo "<script> alert ('Username and password are required')</script>";
+    } else {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
+        $sql = "SELECT user_id, username, password FROM users";
+
+        $result = $connect->query($sql);
+        if ($result->num_rows > 0) {
+            while ($data = $result->fetch_assoc()) {    
+                $db_username = $data['username'];
+                $db_password = $data['password'];
+                $user_id = $data['user_id'];
+            }    
+            if ($username === $db_username && password_verify($password, $db_password)) {
+                echo "<script> alert ('Logged in successfully')</script>";
+                $_SESSION['username'] = $username;
+                $_SESSION['user_id'] = $user_id;
+                header("Location: ../../view/main.php");
+            } else {
+                echo "<script> alert ('Username or password is incorrect')</script>";
+            }     
+            
+        }
+
+        $connect->close();
+    }
+}
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,16 +74,6 @@ if (isset($_SESSION['user_id'])) {
   </head>
     
   <body class="bg-light">
-  <?php
-  session_start(); 
-  if (isset($_GET['success'])) {
-      ?>
-      <span style="color:green;">
-      <?php echo "<script> alert ('".$_GET['success']."')</script>"; ?>
-      </span>
-      <?php
-  }
-  ?>
   <div class="container-fluid bg-warning text-white">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -134,40 +177,7 @@ if (isset($_SESSION['user_id'])) {
         </div>
   </footer>
 
-  <?php 
-  include "./database.php";
-  if (isset($_POST['btn'])) {
-      if (empty($_POST['username'])
-          || empty($_POST['password'])) {
-              echo "<script> alert ('Username and password are required')</script>";
-      } else {
-          $username = $_POST['username'];
-          $password = $_POST['password'];
-          
-          $sql = "SELECT user_id, username, password FROM users";
 
-          $result = $connect->query($sql);
-          if ($result->num_rows > 0) {
-              while ($data = $result->fetch_assoc()) {    
-                  $db_username = $data['username'];
-                  $db_password = $data['password'];
-                  $user_id = $data['user_id'];
-              }    
-              if ($username === $db_username && password_verify($password, $db_password)) {
-                  echo "<script> alert ('Logged in successfully')</script>";
-                  $_SESSION['username'] = $username;
-                  $_SESSION['user_id'] = $user_id;
-                  header("Location: ../View/main.php");
-              } else {
-                  echo "<script> alert ('Username or password is incorrect')</script>";
-              }     
-              
-          }
-
-          $connect->close();
-      }
-  }
-  ?>
   <script>
   function myFunction() {
     var x = document.getElementById("myInput");
