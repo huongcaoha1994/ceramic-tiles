@@ -27,7 +27,7 @@ if ($result_blog->num_rows > 0) {
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
           </svg> -->
-          <img src="<?php echo $row['image']; ?>" alt=""  width="200" height="250" class="img-background">
+          <img src="<?php echo $row['image']; ?>" alt=""  class="blog-img-fixed img-background">
 
         </div>
       </div>

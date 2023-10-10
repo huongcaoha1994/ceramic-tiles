@@ -293,3 +293,8 @@
 .icon-box-img img {
   height: 100px;
 }
+
+.blog-img-fixed {
+  width: 200px !important;
+  height: 250px !important;
+}
