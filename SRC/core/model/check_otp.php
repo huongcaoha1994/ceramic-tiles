@@ -26,6 +26,7 @@ if (isset($_GET['message_error'])) {
       <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <img src="../../assets/img/homepage/logo.png" alt="" height="50">
       </a>
+      <ul>
       <li><a href="../../view/main.php" class="nav-link px-2 link-dark">Home</a></li>
         <li><a href="../../view/admin.php" class="nav-link px-2 link-dark">Admin</a></li>
         <li><a href="../../view/shop.php" class="nav-link px-2 link-dark">Shop</a></li>
