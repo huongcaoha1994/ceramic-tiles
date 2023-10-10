@@ -12,29 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <style>
-    .sidenav {
-      background-color: rgb(145, 107, 235);
-      height: 100%;
-    }
-
-    .input-group i {
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translateY(50%);
-  cursor: pointer;
-  }
-
-
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-    }
-    </style>
   </head>
   <body>
   <!-- demo bootstrap vào form -->
@@ -49,29 +26,29 @@
                 <div class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="">Nhận Hàng</a>
+                            <a href="" class="text-decoration-none">Nhận Hàng</a>
                         </li>
                         <li>
-                            <a href="">Thể Loại</a>
+                            <a href="" class="text-decoration-none">Thể Loại</a>
                         </li>
                         <li>
-                            <a href="">Sản Phẩm</a>
+                            <a href="" class="text-decoration-none">Sản Phẩm</a>
                         </li>
                         <li>
-                            <a href="">Đơn Hàng</a>
+                            <a href="" class="text-decoration-none">Đơn Hàng</a>
                         </li>
                         <li>
-                            <a href="">Khách Hàng</a>
+                            <a href="" class="text-decoration-none">Khách Hàng</a>
                         </li>
                         <li>
-                            <a href="">Người Dùng</a>
+                            <a href="" class="text-decoration-none">Người Dùng</a>
                         </li>
                     </ul>
                 </div> 
             </div>
             <div class="col-10 main-content">
                 <header>
-                    <div class="wrapper">
+                    <div class="wrapper text-dark">
                         <input type="search" placeholder="Search">
                     </div>
                 </header>
@@ -84,17 +61,17 @@
                                         <h1 class="tm-block-title d-inline-block text-align-center">Add Product</h1>
                                     </div>
                                 </div>
-                                <form action="" method="POST" enctype="multipart/form-data">
+                                <form action="" method="POST">
                                     <div class="row tm-edit-product-row">
                                         <div class="col-xl-4 col-lg-6 col-md-12">
                                             <form class="tm-edit-product-form">
                                                 <div class="form-group mb-3">
                                                     <label for="name">Product Name</label>
-                                                    <input id="name" name="product_name" type="text" class="form-control validate" required="">
+                                                    <input id="name" name="name" type="text" class="form-control validate" required="">
                                                 </div>
                                                 <div class="form-group mb-3">
                                                     <label for="description">Description</label>
-                                                    <textarea class="form-control validate" rows="3" required="" name="description"></textarea>
+                                                    <textarea class="form-control validate" rows="3" required=""></textarea>
                                                 </div>
                                                 <div class="form-group mb-3">
                                                     <label for="color" class="form-label">Color</label>
@@ -152,12 +129,12 @@
                                                 <i class="" onclick="document.getElementById('fileInput').click();"></i>
                                             </div>
                                             <div class="custom-file mt-3 mb-3">
-                                               <input type="file" name="image">
-                                                <!-- <input type="button" class="btn btn-warning btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();"> -->
+                                                <input id="fileInput" name="btn" type="file" style="display:none;">
+                                                <input type="button" name="btn" class="btn btn-warning btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();">
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" name="create_product"class="btn btn-warning btn-block text-uppercase">Add Product Now</button>
+                                            <button type="submit" name="btn" class="btn btn-warning btn-block text-uppercase">Add Product Now</button>
                                         </div>
                                     </div>
                                 </form>
@@ -170,7 +147,7 @@
     </div>
     <!-- xử lý dữ liệu từ form gửi đến -->
     <?php 
-    include("database.php");
+    //include("database.php");
     if(isset($_POST['create_product'])){
         function clean_data($data){
             $data = trim($data) ;
@@ -187,7 +164,7 @@
         $description = clean_data($_POST['description']) ;
         // xử lý hình ảnh và lưu ảnh vào foder
         if(isset($_FILES['image'])){
-            $file_save = "image/" ;
+            $file_save = "../image/" ;
             $taget_file = $file_save.basename($_FILES['image']['name']) ;
             $style_file = strtolower(pathinfo($taget_file,PATHINFO_EXTENSION)) ;
             $upload_oke = true ;

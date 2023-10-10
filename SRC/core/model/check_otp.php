@@ -26,8 +26,8 @@ if (isset($_GET['message_error'])) {
       <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <img src="../../assets/img/homepage/logo.png" alt="" height="50">
       </a>
-      <ul>
-      <li><a href="../../view/main.php" class="nav-link px-2 link-dark">Home</a></li>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="../../view/main.php" class="nav-link px-2 link-dark">Home</a></li>
         <li><a href="../../view/admin.php" class="nav-link px-2 link-dark">Admin</a></li>
         <li><a href="../../view/shop.php" class="nav-link px-2 link-dark">Shop</a></li>
         <li><a href="../../view/home.php" class="nav-link px-2 link-dark">View</a></li>
@@ -41,17 +41,16 @@ if (isset($_GET['message_error'])) {
     </header>
   </div>
   <!-- tạo form gửi code qua mail -->
-<form action="check_otp_process.php" method="POST" style="margin-top: 200px;">
+<form action="" method="POST" style="margin-top: 200px;">
   <div class="row">
     <div class="col-12 col-sm-8 col-md-6 m-auto d-flex flex-row align-items-center justify-content-center">
       <div class="card">
         <div class="card-body">
           <form action="" method="post">
             <label for="send">Nhập mã</label>
-            <input type="text" name="code" id="" class="form-control my-3 py-2">
+            <input type="text" name="" id="" class="form-control my-3 py-2">
             <div class="text-center mt-3">
-              <button class="btn btn-warning send_code" name="send_code "><a href="#">
-              </a>Nhập</button>
+              <button class="btn btn-warning"><a href="#"></a>Nhập</button>
             </div>
           </form>
         </div>
