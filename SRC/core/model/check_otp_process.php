@@ -13,13 +13,13 @@ if(isset($_POST['send_code'])){
         $result = $connect->query($query);
 
         if ($result) {
-            header('Location: login.php?success=Đăng ký thành công');
+            header('Location: login.php?success=Register successfully');
             exit;
         } else {
             echo "Lỗi khi thêm dữ liệu vào CSDL: " . $connect->error;
         }
     } else {        
-        header('Location: check_otp.php?message_error="mã code không trùng khớp"');
+        header('Location: check_otp.php?message_error="Code does not match"');
 
     } 
 } 
