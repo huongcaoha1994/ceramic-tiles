@@ -26,12 +26,11 @@ if (isset($_GET['message_error'])) {
       <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <img src="../../assets/img/homepage/logo.png" alt="" height="50">
       </a>
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      <li><a href="../../view/main.php" class="nav-link px-2 link-dark">Home</a></li>
+        <li><a href="../../view/admin.php" class="nav-link px-2 link-dark">Admin</a></li>
+        <li><a href="../../view/shop.php" class="nav-link px-2 link-dark">Shop</a></li>
+        <li><a href="../../view/home.php" class="nav-link px-2 link-dark">View</a></li>
+        <li><a href="../../view/best_sale.php" class="nav-link px-2 link-dark">Sale</a></li>
       </ul>
 
       <div class="col-md-3 text-end ">
