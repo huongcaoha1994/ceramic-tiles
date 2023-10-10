@@ -16,7 +16,7 @@ include("./header.php");
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">
-            <h1>Compare <a href=""> sp1</a> vs <a href=""> sp2</a> </h1>
+            <h1>Expert Corner</h1>
         </div>
     </div>
 </div>
