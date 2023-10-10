@@ -129,12 +129,12 @@
                                                 <i class="" onclick="document.getElementById('fileInput').click();"></i>
                                             </div>
                                             <div class="custom-file mt-3 mb-3">
-                                                <input id="fileInput" type="file" style="display:none;">
-                                                <input type="button" class="btn btn-warning btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();">
+                                                <input id="fileInput" name="btn" type="file" style="display:none;">
+                                                <input type="button" name="btn" class="btn btn-warning btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();">
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-warning btn-block text-uppercase">Add Product Now</button>
+                                            <button type="submit" name="btn" class="btn btn-warning btn-block text-uppercase">Add Product Now</button>
                                         </div>
                                     </div>
                                 </form>
