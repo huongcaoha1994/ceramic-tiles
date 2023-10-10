@@ -12,18 +12,9 @@ if (isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../assets/css/login.css">
     <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
     <title>Login</title>
-    <style>
-      .vh-100 {
-        height: 100%;
-      }
-
-      .h-custom {
-        height: 100%;
-      }
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -60,7 +51,7 @@ if (isset($_SESSION['user_id'])) {
       </div>
     </header>
   </div>
-  <section>
+  <section class="pading">
     <div class="container h-custom bg-light">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-9 col-lg-4 col-xl-2">
@@ -121,8 +112,8 @@ if (isset($_SESSION['user_id'])) {
     </div>
   </div>
   </section>
-  <footer>
-    <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-secondary">
+  <footer class="position-fixed footerlogin">
+    <div class="d-flex flex-md-row text-center text-md-start justify-content-around !important bg-secondary py-3">
           <div class="text-white mb-3 mb-md-0">
             Ok Bro © 2023. Cera Tiles.
           </div>
@@ -189,5 +180,3 @@ if (isset($_SESSION['user_id'])) {
   </script>
 </body>
 </html>
-
-khung suon
