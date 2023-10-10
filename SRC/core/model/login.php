@@ -1,9 +1,9 @@
 <?php
 session_start();  
-if (isset($_SESSION['user_id'])) {
-    header('Location: ../../view/main.php');
-    exit();
-}
+// if (isset($_SESSION['user_id'])) {
+//     header('Location: ../../view/main.php');
+//     exit();
+// }
 
 if (isset($_GET['success'])) {
     ?>
