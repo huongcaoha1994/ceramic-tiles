@@ -135,7 +135,7 @@ if (isset($_SESSION['user_id'])) {
   </footer>
 
   <?php 
-  //include "./database.php";
+  include "./database.php";
   if (isset($_POST['btn'])) {
       if (empty($_POST['username'])
           || empty($_POST['password'])) {
