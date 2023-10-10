@@ -100,7 +100,7 @@
                             </div>
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">
-                                    <a href="" class="btn btn-primary">Check cart</a>
+                                    <a href="../view/views_cart.php" class="btn btn-primary">Check cart</a>
                                     <a href="" class="btn btn-primary">Checkout</a>
                                 </div>
                             </div>
