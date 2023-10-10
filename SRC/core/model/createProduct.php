@@ -12,29 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <style>
-    .sidenav {
-      background-color: rgb(145, 107, 235);
-      height: 100%;
-    }
-
-    .input-group i {
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translateY(50%);
-  cursor: pointer;
-  }
-
-
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-    }
-    </style>
   </head>
   <body>
   <!-- demo bootstrap vào form -->
@@ -49,29 +26,29 @@
                 <div class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="">Nhận Hàng</a>
+                            <a href="" class="text-decoration-none">Nhận Hàng</a>
                         </li>
                         <li>
-                            <a href="">Thể Loại</a>
+                            <a href="" class="text-decoration-none">Thể Loại</a>
                         </li>
                         <li>
-                            <a href="">Sản Phẩm</a>
+                            <a href="" class="text-decoration-none">Sản Phẩm</a>
                         </li>
                         <li>
-                            <a href="">Đơn Hàng</a>
+                            <a href="" class="text-decoration-none">Đơn Hàng</a>
                         </li>
                         <li>
-                            <a href="">Khách Hàng</a>
+                            <a href="" class="text-decoration-none">Khách Hàng</a>
                         </li>
                         <li>
-                            <a href="">Người Dùng</a>
+                            <a href="" class="text-decoration-none">Người Dùng</a>
                         </li>
                     </ul>
                 </div> 
             </div>
             <div class="col-10 main-content">
                 <header>
-                    <div class="wrapper">
+                    <div class="wrapper text-dark">
                         <input type="search" placeholder="Search">
                     </div>
                 </header>
