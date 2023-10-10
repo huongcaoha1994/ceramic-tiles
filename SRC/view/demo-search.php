@@ -7,9 +7,9 @@ if($result_product->num_rows > 0){
     while($row = $result_product->fetch_assoc()){
         $products[] = 
             array(
-                'product_id' => $row['product_id'],
+                'id' => $row['product_id'],
                 'name' => $row['product_name'],
-                'image' => '../assets/img'.$row['image'] ,
+                'image' => '../assets/img/'.$row['image'] ,
                 'size' => $row['size'] ,
                 'price' => $row['price'],
                 'color' => $row['color'] 
@@ -19,7 +19,7 @@ if($result_product->num_rows > 0){
 
 // Xử lý yêu cầu tìm kiếm
 if (isset($_POST['search'])) {
-    $searchTerm = $_POST['search'];
+    $searchTerm = strval($_POST['search']);
     $filteredProducts = array_filter($products, function($product) use ($searchTerm) {
         return 
             stripos($product['name'], $searchTerm) !== false ||
@@ -31,16 +31,18 @@ if (isset($_POST['search'])) {
     // Hiển thị kết quả tìm kiếm
     if (!empty($filteredProducts)) {
         foreach ($filteredProducts as $product) {
-            echo '<a href="demo-checkbox.php?product_id='.$product['product_id'].'" class="product">';
-            echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
+            echo "<div>";
+            echo '<img src="'.$product['image'].'" alt="' . $product['name'] . '" width="150" height="50">';
             echo '<span>|' . $product['name'] . '|</span>';
-            echo '<span>|' . $product['size'] . '|</span>';
-            echo '<span>|$' . $product['price'] . '|</span>';
-            echo '<span>|' . $product['color'] . '|</span>';
+            echo "<a href='sosanh.php?sp1=" . $product['id'] . "'>product 1</a>";
+            echo "<a href='sosanh.php?sp2=" . $product['id'] . "'>product 2</a>";
             echo '</div>';
         }
     } else {
         echo 'Không tìm thấy sản phẩm phù hợp.';
     }
 }
+
+
 ?>
+
