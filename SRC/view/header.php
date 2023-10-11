@@ -87,19 +87,18 @@
                     <button class="btn btn-primary position-relative btn-cart">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            <?php 
-                           
-                            if(isset($_SESSION['cart'])){
+                            <?php
+
+                            if (isset($_SESSION['cart'])) {
 
                                 $carts = $_SESSION['cart'];
-                                $number_product = 0 ;
-                                foreach($carts as $value){
-                                    $number_product++ ;
+                                $number_product = 0;
+                                foreach ($carts as $value) {
+                                    $number_product++;
                                 }
                                 echo $number_product;
-                            }
-                            else {
-                                echo "0" ;
+                            } else {
+                                echo "0";
                             }
                             ?>
                             <span class="visually-hidden">unread messages</span>
@@ -110,7 +109,7 @@
                             </div>
                             <div class="header__cart-body">
                                 <!-- Thêm sản phẩm ở đây -->
-                               
+
                             </div>
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">
@@ -120,19 +119,21 @@
                             </div>
                         </div>
                 </div>
+                <div class="col">
+                    <a href="" class="btn btn-primary">Đăng xuất</a>
+                </div>
             </div>
-        </button>
-    </div>
-    
-    <?php echo "xin chào Nguyễn Công Hưởng" ;?>
-</div>
-</div>
-</nav>
+            </button>
+        </div>
+
+        </div>
+        </div>
+    </nav>
 
     <script src="../assets/js/headerscript.js"></script>
     <script src="../assets/js/bootstrap.bundle.js"></script>
 
-                
+
 </body>
 
 </html>
