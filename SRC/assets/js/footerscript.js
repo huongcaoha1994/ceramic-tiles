@@ -133,3 +133,52 @@ function category_main(category) {
     }
   });
 }
+
+//shop function
+  function filter_color(color) {
+    $.ajax({
+      url: "filter-color.php",
+      type: "POST",
+      data: {
+        color: color
+      },
+      success: function(response) {
+        $("#filter").html(response); // Cập nhật nội dung danh sách sản phẩm
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("Error:", textStatus, errorThrown);
+      }
+    });
+  }
+
+  function filter_brand(brand) {
+    $.ajax({
+      url: "filter-color.php",
+      type: "POST",
+      data: {
+        brand: brand
+      },
+      success: function(response) {
+        $("#filter").html(response); // Cập nhật nội dung danh sách sản phẩm
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("Error:", textStatus, errorThrown);
+      }
+    });
+  }
+
+  function filter_size(size) {
+    $.ajax({
+      url: "filter-color.php",
+      type: "POST",
+      data: {
+        size: size
+      },
+      success: function(response) {
+        $("#filter").html(response); // Cập nhật nội dung danh sách sản phẩm
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("Error:", textStatus, errorThrown);
+      }
+    });
+  }

@@ -24,6 +24,10 @@
   color: var(--primary-color) !important;
 }
 
+.text-decoration-none {
+  text-decoration: none;
+  color: unset;
+}
 /* Nav pill */
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -122,6 +126,14 @@
 /* Thêm dấu ... vào title với giá khi quá dài */
 .product-view {
   height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.product-view-shop {
+  height: 50px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -297,4 +309,14 @@
 .blog-img-fixed {
   width: 200px !important;
   height: 250px !important;
+}
+
+/* Table Product */
+
+.table-product th {
+  width: 30%;
+}
+
+.table-product th, .table-product td {
+  border: none;
 }

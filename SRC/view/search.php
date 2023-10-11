@@ -108,7 +108,9 @@ if ($result_product->num_rows > 0) {
                     <img src="../assets/img/<?php echo $row['image']; ?>" alt="" width="100%" height="300px">
                     </a>
                     <div class="card-body set-equal">
-                        <h5 class="product-view"><?php echo $row['product_name']; ?></h5>
+                        <a href="../view/product-detail.php?product_id=<?php echo $row['product_id'] ;?>" class="text-decoration-none">
+                        <h5 class="product-view-shop"><?php echo $row['product_name']; ?></h5>
+                        </a>
                         <h6>Price : <?php echo $row['price']; ?>$</h6>
                         <h6>Color : <?php echo $row['color']; ?></h6>
                         <h6>Inventory : <?php echo $row['inventory']; ?></h6>
@@ -122,10 +124,8 @@ if ($result_product->num_rows > 0) {
                         <div class="d-flex justify-content-between mb-2">
                         <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id'] ; ?>" method="POST">
                             <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ; ?>">
-                            <label for="quantity">Quantity : </label>
-                            <input type="number" name="quantity" required>
                             <br>
-                            <input type="submit" name="add_to_cart" value="Add">
+                            <input type="submit" name="add_to_cart" value="Add to cart" class="btn btn-primary">
                         </form>
                         </div>
                     </div>
