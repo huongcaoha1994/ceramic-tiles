@@ -310,3 +310,13 @@
   width: 200px !important;
   height: 250px !important;
 }
+
+/* Table Product */
+
+.table-product th {
+  width: 30%;
+}
+
+.table-product th, .table-product td {
+  border: none;
+}

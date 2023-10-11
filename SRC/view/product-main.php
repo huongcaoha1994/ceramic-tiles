@@ -21,7 +21,7 @@ $result_product = $connect->query($select_product);
 
 if ($result_product->num_rows > 0) {
   while ($row = $result_product->fetch_assoc()) {
-    ?>
+?>
 
     <div class="col-6 col-lg-3 mb-3 mb-md-3 px-2">
       <div class="card h-100">
@@ -35,21 +35,18 @@ if ($result_product->num_rows > 0) {
             <h6 class="text-dark mb-0 product-view">Price: <?php echo $row['price']; ?>$</h6>
           </div>
 
-        
+
           <div class="d-flex justify-content-between mb-2">
-          <!-- <form action="../core/controller/product-detail.php" method="POST">
-                            <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ; ?>">
-                            <label for="quantity">Quantity : </label>
-                            <input type="number" name="quantity" required>
-                            <br>
-                            <input type="submit" name="add_to_cart" value="Add">
-                        </form> -->
+            <form action="../core/controller/product-detail.php" method="POST">
+              <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
+              <input type="submit" name="add_to_cart" value="Add to cart" class="btn btn-primary">
+            </form>
           </div>
         </div>
       </div>
     </div>
 
-    <?php
+<?php
   }
 }
 ?>

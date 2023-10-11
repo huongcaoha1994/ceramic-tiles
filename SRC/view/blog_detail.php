@@ -1,3 +1,6 @@
+<?php 
+include('./header.php')
+?>
 <?php
 include("../core/model/database.php");
 if (isset($_GET['blog_id'])) {
@@ -21,4 +24,8 @@ if (isset($_GET['blog_id'])) {
         echo "<h2>Không có bài viết nào cả !</h2>";
     }
 }
+?>
+
+<?php 
+include('./footer.php')
 ?>
