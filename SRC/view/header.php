@@ -18,7 +18,6 @@
 </head>
 
 <body>
-    <?php session_start() ; ?>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light " aria-label="Main navigation" id="header">
         <div class="container-fluid mx-4">
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
