@@ -1,11 +1,11 @@
 <?php
-    include './header.php';
-    
-    if (empty(($_SESSION['user_id']))) {
-        header('Location: ../core/model/login.php?error=You have to login');
-        exit();
-    }
+session_start();
 
+if (empty(($_SESSION['user_id']))) {
+    header('Location: ../core/model/login.php?error=You have to login');
+    exit();
+}
+require './header.php';
 
     require '../core/model/database.php';
     ?>
@@ -83,7 +83,7 @@
                                     <td>
                                         <?php
                                         $rs = $each['price'] * $quantity;
-                                        echo $each['price'] * $quantity;
+                                        echo $rs;
                                         ?>
                                     </td>
                                     <td>
@@ -124,7 +124,7 @@
                 <a href="shop.php" class="btn btn-primary">Back to Shop</a>
             </div>
             <div class="col-6 ">
-                <a href="order.php" class="btn btn-primary float-right">Buy now</a>
+                <a href="check_out.php" class="btn btn-primary float-right">Buy now</a>
             </div>
         </div>
     </div>
