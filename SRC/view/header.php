@@ -18,6 +18,11 @@ session_start();
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
     <title>Tiles Ceramic</title>
+    <style>
+        #logout {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -165,7 +170,23 @@ session_start();
             </button>
         </div>
 
-        <?php echo "xin chào Nguyễn Công Hưởng"; ?>
+        <?php 
+       if(isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+        echo "Xin chào ".$username ;
+       }
+       
+        ?>
+        <?php 
+        if(isset($_SESSION['login']) && $_SESSION['login'] === true){
+            echo " <style>
+            #logout {
+                display: block;
+            }
+        </style>";
+        }
+        ?>
+        <a href="logout.php" id="logout">Logout</a>
         </div>
         </div>
     </nav>
