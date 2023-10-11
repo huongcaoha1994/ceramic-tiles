@@ -1,11 +1,11 @@
 <?php
-    session_start();
+    include './header.php';
     
     if (empty(($_SESSION['user_id']))) {
         header('Location: ../core/model/login.php?error=You have to login');
         exit();
     }
-    include './header.php';
+
 
     require '../core/model/database.php';
     ?>
