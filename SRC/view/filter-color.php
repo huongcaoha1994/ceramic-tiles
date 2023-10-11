@@ -1,34 +1,34 @@
 <?php
-session_start();
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if(isset($_POST['color'])){
     $color = $_POST['color'];
-    if($color === ""){
-      unset($_SESSION['color']);
-    }
-    else {
+    // if($color === ""){
+    //   unset($_SESSION['color']);
+    // }
+    // else {
       $_SESSION['color'] = $color ;
-    }
+    // }
   }
 
   if(isset($_POST['brand'])){
     $brand = $_POST['brand'];
-    if($brand === ""){
-      unset($_SESSION['brand']);
-    }
-    else {
+    // if($brand === ""){
+    //   unset($_SESSION['brand']);
+    // }
+    // else {
       $_SESSION['brand'] = $brand ;
-    }
+    // }
   }
 
   if(isset($_POST['size'])){
     $size = $_POST['size'];
-    if($size === ""){
-      unset($_SESSION['size']);
-    }
-    else {
+    // if($size === ""){
+    //   unset($_SESSION['size']);
+    // }
+    // else {
       $_SESSION['size'] = $size ;
-    }
+    // }
   }
 
 //   $color = $_POST['color'];

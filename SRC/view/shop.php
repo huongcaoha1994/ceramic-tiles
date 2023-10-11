@@ -124,9 +124,9 @@
 
         <h4>Bộ lọc sản phẩm</h4>
         <h2>Color</h2>
-        <input type="radio" name="color" value="" onclick="filter_color('')">
+        <!-- <input type="radio" name="color" value="" onclick="filter_color('')">
         <label for="color">All</label>
-        <br>
+        <br> -->
         <input type="radio" name="color" value="white" onclick="filter_color('white')">
         <label for="color">White</label>
         <br>
@@ -165,9 +165,9 @@
         <input type="radio" name="brand" value="Eurotile" onclick="filter_brand('Eurotile')">
         <label for="brand">Eurotile</label>
         <br>
-        <input type="radio" name="brand" value="" onclick="filter_brand('')">
+        <!-- <input type="radio" name="brand" value="" onclick="filter_brand('')">
         <label for="brand">All</label>
-        <br>
+        <br> -->
 
         <h2>Size</h2>
         <input type="radio" name="size" value="60x60" onclick="filter_size('60x60')">
@@ -194,9 +194,9 @@
         <input type="radio" name="size" value="30x90" onclick="filter_size('30x90')">
         <label for="size">30x90</label>
         <br>
-        <input type="radio" name="size" value="" onclick="filter_size('')">
+        <!-- <input type="radio" name="size" value="" onclick="filter_size('')">
         <label for="size">All</label>
-        <br>
+        <br> -->
 
       </div>
 
@@ -204,9 +204,9 @@
         <div class="row" id="filter">
           <?php
           if (isset($_SESSION['color']) || isset($_SESSION['brand']) || isset($_SESSION['size'])) {
-            include("filter-color.php");
-          } else {
             include("search.php");
+          } else {
+            include("filter-color.php");
           }
           ?>
         </div>

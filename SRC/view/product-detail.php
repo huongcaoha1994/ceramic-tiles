@@ -36,7 +36,7 @@
                             <br>
                             <input type="submit" name="add_to_cart" value="Add">
                         </form>
-
+                        <a href="sosanh.php?sp1=<?php echo $row['product_id']; ?>">So sánh</a>
                     </div>
                 <?php
             }

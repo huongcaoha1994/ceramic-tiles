@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <?php session_start() ; ?>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light " aria-label="Main navigation" id="header">
         <div class="container-fluid mx-4">
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -87,7 +88,21 @@
                     <button class="btn btn-primary position-relative btn-cart">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      99
+                            <?php 
+                           
+                            if(isset($_SESSION['cart'])){
+
+                                $carts = $_SESSION['cart'];
+                                $number_product = 0 ;
+                                foreach($carts as $value){
+                                    $number_product++ ;
+                                }
+                                echo $number_product;
+                            }
+                            else {
+                                echo "0" ;
+                            }
+                            ?>
                             <span class="visually-hidden">unread messages</span>
                         </span>
                         <div class="header_cart position-absolute z-2 rounded-1 border">
