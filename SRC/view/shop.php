@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_GET['add_success'])) {
   ?>
   <span>
@@ -15,6 +16,38 @@ if (isset($_GET['add_success'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+        function filterColor(color,brand,size) {
+            // Create a new form element
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'filter-color.php';
+
+            // Create a new input element
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'color';
+            input.value = color;
+
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'brand';
+            input.value = brand;
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'size';
+            input.value = size;
+
+            // Append the input element to the form
+            form.appendChild(input);
+
+            // Append the form to the document body
+            document.body.appendChild(form);
+
+            // Submit the form
+            form.submit();
+        }
+    </script>
   <style>
     #pagination a {
       text-decoration: none;
@@ -167,11 +200,11 @@ if (isset($_GET['add_success'])) {
       <div class="col-12 col-lg-9">
         <div class="row" id="filter">
           <?php
-          if (isset($_SESSION['color']) || isset($_SESSION['brand']) || isset($_SESSION['size'])) {
-            include("filter-color.php");
-          } else {
+        
             include("search.php");
-          }
+       
+            include("filter-color.php");
+          
           ?>
         </div>
       </div>

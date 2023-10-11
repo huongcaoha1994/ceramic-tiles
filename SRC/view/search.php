@@ -137,11 +137,27 @@ if ($result_product->num_rows > 0) {
 } else {
     echo "<h2>Không tìm thấy sản phẩm nào !</h2>";
 }
- echo "<div id='pagination'>" ;
-for($i = 1 ; $i <= $total_page ; $i++){
-    echo "<a href='shop.php?page=$i'> $i </a>" ;
-  }
-  echo "</div>" ;
+echo "<div id='pagination'>";
+
+$previous_page = $current_page - 5;
+$next_page = $current_page + 5;
+
+if ($previous_page > 0) {
+    echo "<a href='shop.php?page=$previous_page'>&lt;&lt;</a>";
+}
+
+$start_page = max(1, $current_page);
+$end_page = min($start_page + 4, $total_page);
+
+for ($i = $start_page ; $i <= $end_page; $i++) {
+    echo "<a href='shop.php?page=$i'>  $i   </a>";
+}
+
+if ($next_page <= $total_page) {
+    echo "<a href='shop.php?page=$next_page'>&gt;&gt;</a>";
+}
+
+echo "</div>";
 ?>
 
 </body>
