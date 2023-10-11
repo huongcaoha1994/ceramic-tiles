@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #title {
+            display: flex;
+            margin-left: 5%;
+        }
+        h1 {
+            margin-right: 35%;
+        }
         #container {
             display: flex;
         }
@@ -54,7 +61,11 @@
         
 </div>
 
-
+        <div id="title">
+            <h1>Product 1</h1>
+            <h1>VS</h1>
+            <h1>Product 2</h1>
+        </div>
     <?php 
     session_start();
     include("../core/model/database.php") ;
@@ -77,7 +88,7 @@
                 $row = $result_sp1->fetch_assoc();
                 ?>
                     <div>
-                        <h1>Product 1</h1>
+                       
                         <img src="../assets//img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
                         <h3><?php echo $row['product_name']; ?></h3>
                         <h4>Price : <?php echo $row['price']; ?></h4>
@@ -105,7 +116,7 @@
                 $row = $result_sp2->fetch_assoc();
                 ?>
                     <div>
-                        <h1>Product 2</h1>
+                      
                         <img src="../assets//img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
                         <h3><?php echo $row['product_name']; ?></h3>
                         <h4>Price : <?php echo $row['price']; ?></h4>
