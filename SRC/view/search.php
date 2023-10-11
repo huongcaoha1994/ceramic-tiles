@@ -23,33 +23,56 @@ $select_product = "";
 
 if (isset($_GET['category'])) {
     $category = $_GET['category'];
-    if ($category == "wall") {
-        $select_product = "SELECT * FROM products WHERE category_id = 1";
-    } else if ($category == "bathroom") {
-        $select_product = "SELECT * FROM products WHERE category_id = 2";
-    } else if ($category == "kitchen") {
-        $select_product = "SELECT * FROM products WHERE category_id = 3";
-    } else if ($category == "outdoor") {
-        $select_product = "SELECT * FROM products WHERE category_id = 4";
-    } else if ($category == "living") {
-        $select_product = "SELECT * FROM products WHERE category_id = 5";
-    } else if ($category == "bedroom") {
-        $select_product = "SELECT * FROM products WHERE category_id = 6";
-    } else if ($category == "commercial") {
-        $select_product = "SELECT * FROM products WHERE category_id = 7";
-    } else if ($category == "floor") {
-        $select_product = "SELECT * FROM products WHERE category_id = 8";
-    } else if ($category == "special") {
-        $select_product = "SELECT * FROM products WHERE category_id = 9";
+    // if ($category == "wall") {
+    //     $select_product = "SELECT * FROM products WHERE category_id = 1";
+    // } 
+     if ($category == "wallbathroom") {
+        $select_product = "SELECT * FROM products WHERE category_id = 11";
+    }
+    else if ($category == "floorbathroom") {
+        $select_product = "SELECT * FROM products WHERE category_id = 21";
+    }
+     else if ($category == "wallkitchen") {
+        $select_product = "SELECT * FROM products WHERE category_id = 12";
+    }
+    else if ($category == "floorkitchen") {
+        $select_product = "SELECT * FROM products WHERE category_id = 22";
+    }
+     else if ($category == "walloutdoor") {
+        $select_product = "SELECT * FROM products WHERE category_id = 13";
+    }
+    else if ($category == "flooroutdoor") {
+        $select_product = "SELECT * FROM products WHERE category_id = 23";
+    }
+     else if ($category == "wallliving") {
+        $select_product = "SELECT * FROM products WHERE category_id = 14";
+    }
+    else if ($category == "floorliving") {
+        $select_product = "SELECT * FROM products WHERE category_id = 24";
+    }
+     else if ($category == "wallbedroom") {
+        $select_product = "SELECT * FROM products WHERE category_id = 15";
+    }
+    else if ($category == "floorbedroom") {
+        $select_product = "SELECT * FROM products WHERE category_id = 25";
+    }
+     else if ($category == "wallcommercial") {
+        $select_product = "SELECT * FROM products WHERE category_id = 16";
+    }
+    else if ($category == "floorcommercial") {
+        $select_product = "SELECT * FROM products WHERE category_id = 26";
+    }
+     else if ($category == "wallspecial") {
+        $select_product = "SELECT * FROM products WHERE category_id = 19";
     }
     else if ($category == "allwall") {
-        $select_product = "SELECT * FROM products WHERE category_id IN (1,2,3,4,5,6,7)";
+        $select_product = "SELECT * FROM products WHERE category_id IN (11,12,13,14,15,1619)";
     }
     else if ($category == "allfloor") {
-        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,8)";
+        $select_product = "SELECT * FROM products WHERE category_id IN (21,22,23,24,25,26)";
     }
     else if ($category == "allspecial") {
-        $select_product = "SELECT * FROM products WHERE category_id IN (2,3,4,5,6,7,9)";
+        $select_product = "SELECT * FROM products WHERE category_id = 19 ";
     }
 } else if (isset($_POST['search'])) {
     $rs_search = htmlspecialchars($_POST['rs_search']);
