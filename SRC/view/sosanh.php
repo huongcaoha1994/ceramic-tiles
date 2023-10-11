@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #compare {
+            display: flex;
+        }
         #title {
             display: flex;
             margin-left: 5%;
@@ -31,19 +34,38 @@
     <script>
         $(document).ready(function() {
             // Gửi yêu cầu tìm kiếm khi người dùng nhập từ khóa
-            $('#search').on('input', function() {
+            $('#search1').on('input', function() {
                 var searchTerm = $(this).val();
                 if (searchTerm.length >= 3) {
                     $.ajax({
                         url: 'demo-search.php',
                         method: 'POST',
-                        data: { search: searchTerm },
+                        data: { search1: searchTerm },
                         success: function(response) {
-                            $('#search-results').html(response);
+                            $('#search-results1').html(response);
                         }
                     });
                 } else {
-                    $('#search-results').empty();
+                    $('#search-results1').empty();
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            // Gửi yêu cầu tìm kiếm khi người dùng nhập từ khóa
+            $('#search2').on('input', function() {
+                var searchTerm = $(this).val();
+                if (searchTerm.length >= 3) {
+                    $.ajax({
+                        url: 'demo-search.php',
+                        method: 'POST',
+                        data: { search2: searchTerm },
+                        success: function(response) {
+                            $('#search-results2').html(response);
+                        }
+                    });
+                } else {
+                    $('#search-results2').empty();
                 }
             });
         });
@@ -51,13 +73,26 @@
 </head>
 <body>
     <!-- Form tìm kiếm sản phẩm -->
-    <form>
-        <input type="text" id="search" placeholder="Nhập tên sản phẩm">
-    </form>
+    <div id="compare">
+
+        <form>
+            <label for="search1">Chọn sản phẩm 1 :</label>
+            <input type="text" id="search1" placeholder="Nhập tên sản phẩm">
+        </form>
+        <br><br><br><br><br><br>
+        <form>
+            <label for="search2">Chọn sản phẩm 2 :</label>
+            <input type="text" id="search2" placeholder="Nhập tên sản phẩm">
+        </form>
+    </div>
 
 <!-- Kết quả tìm kiếm -->
 
-<div id="search-results">
+<div id="search-results1">
+        
+</div>
+
+<div id="search-results2">
         
 </div>
 
@@ -89,14 +124,14 @@
                 ?>
                     <div>
                        
-                        <img src="../assets//img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
+                        <img src="../assets/img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
                         <h3><?php echo $row['product_name']; ?></h3>
                         <h4>Price : <?php echo $row['price']; ?></h4>
                         <h4>Brand : <?php echo $row['brand']; ?></h4>
                         <h4>Color : <?php echo $row['color']; ?></h4>
                         <h4>Size : <?php echo $row['size']; ?></h4>
                         <p>Description : <?php echo $row['description']; ?></p>
-                        <form action="" method="POST">
+                        <form action="sosanh.php" method="POST">
                             <input type="submit" name="delete1" value="Delete">
                         </form>
                     </div>
@@ -117,14 +152,14 @@
                 ?>
                     <div>
                       
-                        <img src="../assets//img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
+                        <img src="../assets/img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
                         <h3><?php echo $row['product_name']; ?></h3>
                         <h4>Price : <?php echo $row['price']; ?></h4>
                         <h4>Brand : <?php echo $row['brand']; ?></h4>
                         <h4>Color : <?php echo $row['color']; ?></h4>
                         <h4>Size : <?php echo $row['size']; ?></h4>
                         <p>Description : <?php echo $row['description']; ?></p>
-                        <form action="" method="POST">
+                        <form action="sosanh.php" method="POST">
                             <input type="submit" name="delete2" value="Delete">
                         </form>
                     </div>

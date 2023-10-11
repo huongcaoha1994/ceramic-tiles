@@ -4,7 +4,10 @@ session_start();
 //     header('Location: ../../view/main.php');
 //     exit();
 // }
-
+if(isset($_SESSION['login']) && $_SESSION['login'] === true ){
+  header("location: ../../view/main.php");
+  exit;
+}
 if (isset($_GET['success'])) {
     ?>
     <span style="color:green;">
@@ -39,9 +42,11 @@ if (isset($_POST['btn'])) {
                 $db_username = $data['username'];
                 $db_password = $data['password'];
                 $user_id = $data['user_id'];
+
             }    
             if ($username === $db_username && password_verify($password, $db_password)) {
                 echo "<script> alert ('Logged in successfully')</script>";
+                $_SESSION['login'] = true ;
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $user_id;
                 header("Location: ../../view/main.php");
@@ -89,8 +94,8 @@ if (isset($_POST['btn'])) {
       </ul>
 
       <div class="col-md-3 text-end ">
-        <button type="submit" class="btn btn-warning "><a href="register.php" class="text-dark" style="text-decoration: none;">Sign Up</a></button>
-        <button type="submit" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
+        <button type="submit" name="logout" class="btn btn-warning "><a href="../../view/logout.php" class="text-dark" style="text-decoration: none;">Log-Out</a></button>
+        <button type="submit" name="phoncall" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
       </div>
     </header>
   </div>
@@ -136,8 +141,6 @@ if (isset($_POST['btn'])) {
             <div class="divider d-flex align-items-center my-4">
               <p class="text-center fw-bold mx-3 mb-0">Or</p>
             </div>
-
-            
 
             <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
               <p class="lead fw-normal mb-0 me-3">Sign in with</p>

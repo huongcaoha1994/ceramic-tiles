@@ -18,8 +18,8 @@ if($result_product->num_rows > 0){
 }
 
 // Xử lý yêu cầu tìm kiếm
-if (isset($_POST['search'])) {
-    $searchTerm = strval($_POST['search']);
+if (isset($_POST['search1'])) {
+    $searchTerm = strval($_POST['search1']);
     $filteredProducts = array_filter($products, function($product) use ($searchTerm) {
         return 
             stripos($product['name'], $searchTerm) !== false ||
@@ -32,10 +32,34 @@ if (isset($_POST['search'])) {
     if (!empty($filteredProducts)) {
         foreach ($filteredProducts as $product) {
             echo "<div>";
+            echo "<a href='sosanh.php?sp1=" . $product['id'] . "'>";
             echo '<img src="'.$product['image'].'" alt="' . $product['name'] . '" width="150" height="50">';
             echo '<span>|' . $product['name'] . '|</span>';
-            echo "<a href='sosanh.php?sp1=" . $product['id'] . "'>product 1</a>";
-            echo "<a href='sosanh.php?sp2=" . $product['id'] . "'>product 2</a>";
+            echo "</a>";
+            echo '</div>';
+        }
+    } else {
+        echo 'Không tìm thấy sản phẩm phù hợp.';
+    }
+}
+else if (isset($_POST['search2'])) {
+    $searchTerm = strval($_POST['search2']);
+    $filteredProducts = array_filter($products, function($product) use ($searchTerm) {
+        return 
+            stripos($product['name'], $searchTerm) !== false ||
+            stripos($product['size'], $searchTerm) !== false ||
+            stripos($product['price'], $searchTerm) !== false ||
+            stripos($product['color'], $searchTerm) !== false;
+    });
+
+    // Hiển thị kết quả tìm kiếm
+    if (!empty($filteredProducts)) {
+        foreach ($filteredProducts as $product) {
+            echo "<div>";
+            echo "<a href='sosanh.php?sp2=" . $product['id'] . "'>";
+            echo '<img src="'.$product['image'].'" alt="' . $product['name'] . '" width="150" height="50">';
+            echo '<span>|' . $product['name'] . '|</span>';
+            echo "</a>";
             echo '</div>';
         }
     } else {
