@@ -61,10 +61,10 @@ session_start();
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Special Wall tiles</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="shop.php?category=special">Germ free</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=special">Tac</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=special">Anti static</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=special">Cool roof</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialgem">Germ free</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialtac">Tac</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialanti">Anti static</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialcool">Cool roof</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
