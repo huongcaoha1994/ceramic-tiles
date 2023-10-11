@@ -106,14 +106,16 @@
                 </table>
             </div>
         </div>
-        <?php
-        if (isset($_SESSION['cart'])) {
-        ?>
+
         <div class="row">
             <div class="col">
                 <h3 class="float-right">
                     Total amount:
-                    <?php echo $sum; ?>
+                    <?php 
+                    if (isset($_SESSION['cart'])) {
+                    echo $sum; 
+                    } else {
+                    ?> 0 <?php } ?>
                 </h3>
             </div>
         </div>
@@ -127,10 +129,6 @@
         </div>
     </div>
     <div class="mt-4"></div>
-        <?php 
-        }; 
-        ?>
-
 
     <?php include 'footer.php'; ?>
 
