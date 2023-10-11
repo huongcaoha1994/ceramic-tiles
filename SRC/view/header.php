@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -90,19 +90,18 @@ session_start();
                     <button class="btn btn-primary position-relative btn-cart">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            <?php 
-                           
-                            if(isset($_SESSION['cart'])){
+                            <?php
+
+                            if (isset($_SESSION['cart'])) {
 
                                 $carts = $_SESSION['cart'];
-                                $number_product = 0 ;
-                                foreach($carts as $value){
-                                    $number_product++ ;
+                                $number_product = 0;
+                                foreach ($carts as $value) {
+                                    $number_product++;
                                 }
                                 echo $number_product;
-                            }
-                            else {
-                                echo "0" ;
+                            } else {
+                                echo "0";
                             }
                             ?>
                             <span class="visually-hidden">unread messages</span>
@@ -114,25 +113,45 @@ session_start();
                             <div class="header__cart-body">
                                 <!-- Thêm sản phẩm ở đây -->
                                 <?php
-                                require '../core/model/database.php'; 
+                                require '../core/model/database.php';
                                 if (isset($_SESSION['cart'])) {
                                     $cart = $_SESSION['cart'];
-                                    foreach ($cart as $product_id => $quantity):
+                                    foreach ($cart as $product_id => $quantity) :
                                         $sql = "select * from products where product_id = $product_id";
                                         $result = $connect->query($sql);
                                         $each = mysqli_fetch_array($result);
-                                    ?>
-                                    <img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image"
-                                            style="max-width: 100px;">
-                                            <p><?php echo $each['product_name']; ?></p>
-                                            <p><?php echo $each['price']; ?></p>
-                                            <p><?php echo $quantity; ?></p>
+                                ?>
+                                        <div class="container py-2">
+                                            <div class="row gx-3">
+                                                <div class="col-3"><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image" class="w-100"></div>
+                                                <div class="col-9">
+                                                    <div class="row gx-2">
+                                                        <div class="col-8 text-start"><p class="text-dark mb-0"><?php echo $each['product_name']; ?></p></div>
+                                                        <div class="col-4 text-end"><p class="text-warning  mb-0">Price: <?php echo $each['price']; ?>$</p></div>
+                                                    </div>
+                                                    
+                                                    <div class="row gx-2">
+                                                        <div class="col-6 text-start">
+                                                        <p class="text-gray mb-0">Quantity: <?php echo $quantity; ?></p>
+                                                        </div>
+                                                        <div class="col-6 text-end">
+                                                            <a href="#" class="text-danger ">Delete</a>
+                                                        </div>
+                                                    </div>
 
-                                    <?php endforeach; }
-                                    $connect->close();
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                <?php endforeach;
+                                }
+                                $connect->close();
                                 ?>
 
-                               
+
                             </div>
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">
@@ -143,18 +162,18 @@ session_start();
                         </div>
                 </div>
             </div>
-        </button>
-    </div>
-    
-    <?php echo "xin chào Nguyễn Công Hưởng" ;?>
-</div>
-</div>
-</nav>
+            </button>
+        </div>
+
+        <?php echo "xin chào Nguyễn Công Hưởng"; ?>
+        </div>
+        </div>
+    </nav>
 
     <script src="../assets/js/headerscript.js"></script>
     <script src="../assets/js/bootstrap.bundle.js"></script>
 
-                
+
 </body>
 
 </html>
