@@ -30,7 +30,14 @@
             <div class="col-12">
                 <h2>Shopping Cart</h2>
                 <p>There are
-                    <?php echo count($_SESSION['cart']); ?> products in the cart
+                    <?php
+                    if (isset($_SESSION['cart'])) {
+                        echo count($_SESSION['cart']); 
+                    } else {
+                    ?> 0
+                    <?php    
+                    }
+                    ?> products in the cart
                 </p>
             </div>
         </div>
@@ -99,6 +106,9 @@
                 </table>
             </div>
         </div>
+        <?php
+        if (isset($_SESSION['cart'])) {
+        ?>
         <div class="row">
             <div class="col">
                 <h3 class="float-right">
@@ -117,6 +127,9 @@
         </div>
     </div>
     <div class="mt-4"></div>
+        <?php 
+        }; 
+        ?>
 
 
     <?php include 'footer.php'; ?>
