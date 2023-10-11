@@ -37,23 +37,23 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Wall tiles</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="shop.php?category=bathroom">Bathroom wall tiles</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=kitchen">Kitchen wall tiles</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=outdoor">Outdoor wall tiles</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=living">Living room</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=bedroom">Bedroom</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=commercial">Commercial spaces tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=wallbathroom">Bathroom wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=wallkitchen">Kitchen wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=walloutdoor">Outdoor wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=wallliving">Living room</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=wallbedroom">Bedroom</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=wallcommercial">Commercial spaces tiles</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Floor tiles</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="shop.php?category=bathroom">Bathroom wall tiles</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=kitchen">Kitchen wall tiles</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=outdoor">Outdoor wall tiles</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=living">Living room</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=bedroom">Bedroom</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=commercial">Commercial spaces tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=floorbathroom">Bathroom wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=floorkitchen">Kitchen wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=flooroutdoor">Outdoor wall tiles</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=floorliving">Living room</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=floorbedroom">Bedroom</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=floorcommercial">Commercial spaces tiles</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
