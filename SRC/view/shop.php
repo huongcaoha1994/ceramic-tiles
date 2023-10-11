@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET['add_success'])) {
+  ?>
+  <span>
+  <?php echo "<script> alert ('".$_GET['add_success']."')</script>"; ?>
+  </span>
+  <?php
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
