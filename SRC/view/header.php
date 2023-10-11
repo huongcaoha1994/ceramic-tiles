@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,6 +113,25 @@
                             </div>
                             <div class="header__cart-body">
                                 <!-- Thêm sản phẩm ở đây -->
+                                <?php
+                                require '../core/model/database.php'; 
+                                if (isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                    foreach ($cart as $product_id => $quantity):
+                                        $sql = "select * from products where product_id = $product_id";
+                                        $result = $connect->query($sql);
+                                        $each = mysqli_fetch_array($result);
+                                    ?>
+                                    <img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image"
+                                            style="max-width: 100px;">
+                                            <p><?php echo $each['product_name']; ?></p>
+                                            <p><?php echo $each['price']; ?></p>
+                                            <p><?php echo $quantity; ?></p>
+
+                                    <?php endforeach; }
+                                    $connect->close();
+                                ?>
+
                                
                             </div>
                             <div class="header__cart-footer py-2">
