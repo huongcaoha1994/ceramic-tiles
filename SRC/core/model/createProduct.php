@@ -147,7 +147,7 @@
     </div>
     <!-- xử lý dữ liệu từ form gửi đến -->
     <?php 
-    //include("database.php");
+    include("database.php");
     if(isset($_POST['create_product'])){
         function clean_data($data){
             $data = trim($data) ;

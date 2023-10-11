@@ -3,141 +3,52 @@
   --secondary-color: #d7d7d7;
 }
 
-* {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+a {
   text-decoration: none;
-  list-style-type: none;
-  box-sizing: border-box;
 }
 
-.sidebar{
-  height: 100%;
-  width: 240px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  background: #6A5ACD;
-  color: #fff;
-
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #edf2f2;
 }
 
-.sidebar-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  padding: 1rem;
-  margin-bottom: 70px;
+section{
+  margin: 20px;
+  bottom: 200px;
 }
 
-.sidebar img{
-  height: 100px;
-  margin-top: 10px;
-  margin-left: 40px;
-}
 
-.sidebar-menu{
-  padding: 20px;
-}
-
-.sidebar li{
-  margin-bottom: 30px;
-}
-
-.sidebar a {
-  color: #fff;
-}
-
-.main-content{
+.form-outline {
   position: relative;
-  margin-left: 240px;
-}
-
-header{
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  background: #ffffff;
-  height: 60px;
-  padding: 20px;
-  border-bottom: 1px solid;
-  color:  rgba(0,0,0,0.2) ;
-  
 }
 
 
-
-.wrapper{
-  display: flex;
-  align-items: center;
-}
-.wrapper input{
-  border: 0;
-  outline: 0;  /* xóa viền của thanh search */
-
-}
-
-main{
-  margin-top: 60px;
-  background: #fff;
-  min-height: 90px;
-  padding: 10px;
-
+.form-outline i {
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+cursor: pointer;
 }
 
 
-.title{
-  margin-left: 70px;
-  margin-top: 50px;
-
+.pading{
+  padding-bottom: 69px;
 }
 
-.dsah-cards{
-  display: grid;
-  grid-template-columns: repeat(3 , 1fr);
-  grid-column: 7rem;
-  padding: 50px;
-  
+.footerlogin{
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.card-single{
-  background: #f1f5f9;
-  border-radius: 10px;
-  margin-right: 40px;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-  margin-top: 20px;
-}
+.row > *{
+  border-radius: 1px;
 
-.card-single:hover{
-  background: #DCDCDC;
-}
-
-.card-single i {
-  padding: 20px;
-}
-
-.card-body{
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  
-}
-
-.card-body h5{
-  color: gray;
-  font-size: 1rem;
-}
-.card-body h4{
-  margin-top: 20px;
-}
-
-
-
-
+}  
 
 
 @media (min-width: 768px) {
@@ -159,6 +70,7 @@ body {
   font-size: 12px;
 }
 }
+
 
 
 
