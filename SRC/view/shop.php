@@ -16,56 +16,7 @@
     }
   </style>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    function filter_color(color) {
-      $.ajax({
-        url: "filter-color.php",
-        type: "POST",
-        data: {
-          color: color
-        },
-        success: function(response) {
-          $("#filter").html(response); // Cập nhật nội dung danh sách sản phẩm
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          console.error("Error:", textStatus, errorThrown);
-        }
-      });
-    }
 
-    function filter_brand(brand) {
-      $.ajax({
-        url: "filter-color.php",
-        type: "POST",
-        data: {
-          brand: brand
-        },
-        success: function(response) {
-          $("#filter").html(response); // Cập nhật nội dung danh sách sản phẩm
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          console.error("Error:", textStatus, errorThrown);
-        }
-      });
-    }
-
-    function filter_size(size) {
-      $.ajax({
-        url: "filter-color.php",
-        type: "POST",
-        data: {
-          size: size
-        },
-        success: function(response) {
-          $("#filter").html(response); // Cập nhật nội dung danh sách sản phẩm
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          console.error("Error:", textStatus, errorThrown);
-        }
-      });
-    }
-  </script>
 </head>
 
 <body>
@@ -85,7 +36,7 @@
       <div class="col-12 text-center text-md-start col-md-4">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-3 mb-md-0 justify-content-center justify-content-md-start">
-            <li class="breadcrumb-item"><a href="#" class="fs-6">Home</a></li>
+            <li class="breadcrumb-item"><a href="./home.php" class="fs-6">Home</a></li>
             <li class="breadcrumb-item active fs-6" aria-current="page">Shop</li>
           </ol>
         </nav>
