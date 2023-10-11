@@ -160,6 +160,9 @@ else {
       
       echo "</div>";
 }
+else {
+  echo "<h2> Không tìm thấy sản phẩm nào !</h2>";
+}
 }
 
 ?>

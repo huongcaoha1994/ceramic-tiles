@@ -4,7 +4,10 @@ session_start();
 //     header('Location: ../../view/main.php');
 //     exit();
 // }
-
+if(isset($_SESSION['login']) && $_SESSION['login'] === true ){
+  header("location: ../../view/main.php");
+  exit;
+}
 if (isset($_GET['success'])) {
     ?>
     <span style="color:green;">
@@ -39,9 +42,11 @@ if (isset($_POST['btn'])) {
                 $db_username = $data['username'];
                 $db_password = $data['password'];
                 $user_id = $data['user_id'];
+
             }    
             if ($username === $db_username && password_verify($password, $db_password)) {
                 echo "<script> alert ('Logged in successfully')</script>";
+                $_SESSION['login'] = true ;
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $user_id;
                 header("Location: ../../view/main.php");

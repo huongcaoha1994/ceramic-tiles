@@ -137,7 +137,7 @@ session_start();
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">
                                     <a href="../view/views_cart.php" class="btn btn-primary">Check cart</a>
-                                    <a href="" class="btn btn-primary">Checkout</a>
+                                    <a href="../view/logout.php" class="btn btn-primary">Checkout</a>
                                 </div>
                             </div>
                         </div>
