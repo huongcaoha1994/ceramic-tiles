@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #title {
+            display: flex;
+            margin-left: 5%;
+        }
+        h1 {
+            margin-right: 35%;
+        }
         #container {
             display: flex;
         }
@@ -43,18 +50,22 @@
     </script>
 </head>
 <body>
-    <div id="search-results">
-         <!-- Form tìm kiếm sản phẩm -->
+    <!-- Form tìm kiếm sản phẩm -->
     <form>
         <input type="text" id="search" placeholder="Nhập tên sản phẩm">
     </form>
-    </div>
-    <!-- Kết quả tìm kiếm -->
-   
+
+<!-- Kết quả tìm kiếm -->
+
+<div id="search-results">
         
-    
+</div>
 
-
+        <div id="title">
+            <h1>Product 1</h1>
+            <h1>VS</h1>
+            <h1>Product 2</h1>
+        </div>
     <?php 
     session_start();
     include("../core/model/database.php") ;
@@ -69,7 +80,7 @@
     <div id="container">
         <?php 
        
-        if(isset($_SESSION['sp1'])){
+        if(isset($_SESSION['sp1']) && $_SESSION['sp1'] > 0 ){
             $sp1 = $_SESSION['sp1'];
             $select_sp1 = "select * from products where product_id = $sp1 ;" ;
             $result_sp1 = $connect->query($select_sp1);
@@ -77,7 +88,7 @@
                 $row = $result_sp1->fetch_assoc();
                 ?>
                     <div>
-                        <h1>Product 1</h1>
+                       
                         <img src="../assets//img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
                         <h3><?php echo $row['product_name']; ?></h3>
                         <h4>Price : <?php echo $row['price']; ?></h4>
@@ -95,9 +106,9 @@
         }
         ?>
 
-<?php 
+ <?php 
        
-        if(isset($_SESSION['sp2'])){
+        if(isset($_SESSION['sp2']) && $_SESSION['sp2'] > 0 ){
             $sp2 = $_SESSION['sp2'];
             $select_sp2 = "select * from products where product_id = $sp2 ;" ;
             $result_sp2 = $connect->query($select_sp2);
@@ -105,7 +116,7 @@
                 $row = $result_sp2->fetch_assoc();
                 ?>
                     <div>
-                        <h1>Product 2</h1>
+                      
                         <img src="../assets//img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
                         <h3><?php echo $row['product_name']; ?></h3>
                         <h4>Price : <?php echo $row['price']; ?></h4>
@@ -122,19 +133,19 @@
         }
         ?>
     </div>
-    </div>
+  
     <?php 
    
     if(isset($_POST['delete1'])){
-        unset($_SESSION['sp1']);
-        header("sosanh.php");
+       $_SESSION['sp1'] = 0 ;
+        header("location: sosanh.php");
         exit;
     }
     else if(isset($_POST['delete2'])){
-        unset($_SESSION['sp2']);
-        header("sosanh.php");
+        $_SESSION['sp2'] = 0 ;
+        header("location: sosanh.php");
         exit;
     }
-    ?>
+    ?> 
 </body>
 </html>
