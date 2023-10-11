@@ -46,7 +46,7 @@ if (isset($_SESSION['user_id'])) {
       </ul>
 
       <div class="col-md-3 text-end ">
-        <button type="submit" name="logout" class="btn btn-warning "><a href="../../view/logout.php" class="text-dark" style="text-decoration: none;">Log-Out</a></button>
+        <button type="submit" name="register" class="btn btn-warning "><a href="register.php" class="text-dark" style="text-decoration: none;">Register</a></button>
         <button type="submit" name="phoncall" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
       </div>
     </header>
