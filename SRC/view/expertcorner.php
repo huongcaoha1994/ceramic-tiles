@@ -47,22 +47,22 @@ include("./header.php");
                 if($result_blog->num_rows > 0 ){
                     while($row = $result_blog->fetch_assoc()){
                         ?>
-                       
+                       <a href="../view/blog_detail.php?blog_id=<?php echo $row['blog_id']; ?>" class=" text-decoration-none">
                         <div class=" mb-3 text-start" >
                                 <div class="row">
                                     <div class="col-sm-4">
-                                       <img src="<?php echo $row['image']; ?>" alt="" width="100%" height="300">
+                                        <img src="<?php echo $row['image']; ?>" alt="" width="100%" height="300">
                                     </div>
                                     <div class="col-sm-8 text-start">
                                         <div class="card-body">
-                                            <a href="" class="content">
                                                 <h5 class="card-title"><?php echo $row['title']; ?></h5>
                                                 <h5><?php echo $row['created_date']; ?></h5>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
                         </div>
+                       </a>
+                        
                             
                 
                         <?php
