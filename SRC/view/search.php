@@ -62,8 +62,17 @@ if (isset($_GET['category'])) {
     else if ($category == "floorcommercial") {
         $select_product = "SELECT * FROM products WHERE category_id = 26";
     }
-     else if ($category == "wallspecial") {
-        $select_product = "SELECT * FROM products WHERE category_id = 19";
+     else if ($category == "specialgem") {
+        $select_product = "SELECT * FROM products WHERE category_id = 17";
+    }
+    else if ($category == "specialtac") {
+        $select_product = "SELECT * FROM products WHERE category_id = 27";
+    }
+    else if ($category == "specialanti") {
+        $select_product = "SELECT * FROM products WHERE category_id = 18";
+    }
+    else if ($category == "specialcool") {
+        $select_product = "SELECT * FROM products WHERE category_id = 28";
     }
     else if ($category == "allwall") {
         $select_product = "SELECT * FROM products WHERE category_id IN (11,12,13,14,15,1619)";
