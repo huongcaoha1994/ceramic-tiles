@@ -83,6 +83,13 @@ session_start();
                     </li>
                 </ul>
             </div>
+            <?php 
+       if(isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+        echo "<h4>Xin chào $username </h4>" ;
+       }
+       
+        ?>
             <div class="row flex-nowrap">
                 <div class="col">
                     <a href="../core/model/login.php">
@@ -170,13 +177,7 @@ session_start();
             </button>
         </div>
 
-        <?php 
-       if(isset($_SESSION['username'])){
-        $username = $_SESSION['username'];
-        echo "Xin chào ".$username ;
-       }
        
-        ?>
         <?php 
         if(isset($_SESSION['login']) && $_SESSION['login'] === true){
             echo " <style>
@@ -186,7 +187,8 @@ session_start();
         </style>";
         }
         ?>
-        <a href="logout.php" id="logout">Logout</a>
+        <button class=" btn btn-primary"  id="logout"><a style="text-decoration: none;" href="logout.php">Logout</a></button>
+        
         </div>
         </div>
     </nav>
