@@ -7,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['category'])) {
   $category = $_POST['category'];
 
   if ($category === "wall") {
-    $select_product = "SELECT * FROM products WHERE category_id = 1 LIMIT 8";
+    $select_product = "SELECT * FROM products WHERE category_id IN (11,21) LIMIT 8";
   } else if ($category === "floor") {
-    $select_product = "SELECT * FROM products WHERE category_id = 8 LIMIT 8";
+    $select_product = "SELECT * FROM products WHERE category_id IN (18,28) LIMIT 8";
   } else if ($category === "special") {
-    $select_product = "SELECT * FROM products WHERE category_id = 9 LIMIT 8";
+    $select_product = "SELECT * FROM products WHERE category_id IN (19) LIMIT 8";
   }
 } else {
   $select_product = "SELECT * FROM products LIMIT 8";
