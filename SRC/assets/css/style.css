@@ -18,7 +18,10 @@
   border-color: var(--primary-color);
   background-color: var(--primary-color);
 }
-
+/* Border */
+.border-primary {
+  border: 1px solid var(--primary-color) !important;
+}
 /* Text  */
 .text-primary {
   color: var(--primary-color) !important;
@@ -315,12 +318,13 @@
   height: 250px !important;
 }
 
-/* Table Product */
 
-.table-product th {
-  width: 30%;
+.product-heading {
+  width: 75%;
 }
 
-.table-product th, .table-product td {
-  border: none;
+.compare-button {
+  width: 20%;
+  display: flex;
+  align-items: center;
 }

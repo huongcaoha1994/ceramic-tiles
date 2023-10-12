@@ -11,8 +11,8 @@
         #title {
             display: flex;
             margin-left: 5%;
-        }
-        h1 {
+            }
+            h1 {
             margin-right: 35%;
         }
         #container {
