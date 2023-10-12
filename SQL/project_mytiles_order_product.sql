@@ -16,26 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `categorys`
+-- Table structure for table `order_product`
 --
 
-DROP TABLE IF EXISTS `categorys`;
+DROP TABLE IF EXISTS `order_product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `categorys` (
-  `category_id` int NOT NULL,
-  `category_name` varchar(50) NOT NULL
+CREATE TABLE `order_product` (
+  `order_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `quantity` int NOT NULL,
+  PRIMARY KEY (`order_id`,`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `categorys`
+-- Dumping data for table `order_product`
 --
 
-LOCK TABLES `categorys` WRITE;
-/*!40000 ALTER TABLE `categorys` DISABLE KEYS */;
-INSERT INTO `categorys` VALUES (11,'bathroom wall tiles'),(21,'bathroom floor tiles'),(12,'kitchen wall tiles'),(22,'kitchen floor tiles'),(13,'outdoor wall tiles'),(23,'outdoor floor tiles'),(14,'living room wall tiles'),(24,'living room floor tiles'),(15,'bedroom wall tiles'),(25,'bedroom floor tiles'),(16,'commercial spaces wall tiles'),(26,'commercial spaces floor tiles'),(19,'special wall tiles');
-/*!40000 ALTER TABLE `categorys` ENABLE KEYS */;
+LOCK TABLES `order_product` WRITE;
+/*!40000 ALTER TABLE `order_product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `order_product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-11 21:44:02
+-- Dump completed on 2023-10-12  8:17:38

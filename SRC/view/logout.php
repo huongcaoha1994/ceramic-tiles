@@ -1,6 +1,6 @@
 <?php 
 session_start() ;
 session_destroy();
-header("location: main.php");
+header("location: ../core/model/login.php");
 exit;
 ?>

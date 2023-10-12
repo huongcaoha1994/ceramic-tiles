@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +18,11 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
     <title>Tiles Ceramic</title>
+    <style>
+        #logout {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,10 +66,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Special Wall tiles</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="shop.php?category=special">Germ free</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=special">Tac</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=special">Anti static</a></li>
-                            <li><a class="dropdown-item " href="shop.php?category=special">Cool roof</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialgem">Germ free</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialtac">Tac</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialanti">Anti static</a></li>
+                            <li><a class="dropdown-item " href="shop.php?category=specialcool">Cool roof</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -109,23 +117,76 @@
                             </div>
                             <div class="header__cart-body">
                                 <!-- Thêm sản phẩm ở đây -->
+                                <?php
+                                require '../core/model/database.php';
+                                if (isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                    foreach ($cart as $product_id => $quantity) :
+                                        $sql = "select * from products where product_id = $product_id";
+                                        $result = $connect->query($sql);
+                                        $each = mysqli_fetch_array($result);
+                                ?>
+                                        <div class="container py-2">
+                                            <div class="row gx-3">
+                                                <div class="col-3"><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image" class="w-100"></div>
+                                                <div class="col-9">
+                                                    <div class="row gx-2">
+                                                        <div class="col-8 text-start"><p class="text-dark mb-0"><?php echo $each['product_name']; ?></p></div>
+                                                        <div class="col-4 text-end"><p class="text-warning  mb-0">Price: <?php echo $each['price']; ?>$</p></div>
+                                                    </div>
+                                                    
+                                                    <div class="row gx-2">
+                                                        <div class="col-6 text-start">
+                                                        <p class="text-gray mb-0">Quantity: <?php echo $quantity; ?></p>
+                                                        </div>
+                                                        <div class="col-6 text-end">
+                                                            <a href="../core/model/product_cart_delete.php?product_id=<?php echo $product_id;?>" class="text-danger ">Delete</a>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                <?php endforeach;
+                                }
+                                $connect->close();
+                                ?>
+
 
                             </div>
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">
-                                    <a href="../view/views_cart.php" class="btn btn-primary">Check cart</a>
-                                    <a href="" class="btn btn-primary">Checkout</a>
+                                    <a href="./views_cart.php" class="btn btn-primary">Check cart</a>
+                                    <a href="./check_out.php" class="btn btn-primary">Checkout</a>
                                 </div>
                             </div>
                         </div>
-                </div>
-                <div class="col">
-                    <a href="" class="btn btn-primary">Đăng xuất</a>
                 </div>
             </div>
             </button>
         </div>
 
+        <?php 
+       if(isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+        echo "Xin chào ".$username ;
+       }
+       
+        ?>
+        <?php 
+        if(isset($_SESSION['login']) && $_SESSION['login'] === true){
+            echo " <style>
+            #logout {
+                display: block;
+            }
+        </style>";
+        }
+        ?>
+        <a href="logout.php" id="logout">Logout</a>
         </div>
         </div>
     </nav>

@@ -23,10 +23,9 @@ DROP TABLE IF EXISTS `categorys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categorys` (
-  `category_id` int NOT NULL AUTO_INCREMENT,
-  `category_name` varchar(25) NOT NULL,
-  PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `category_id` int NOT NULL,
+  `category_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +34,7 @@ CREATE TABLE `categorys` (
 
 LOCK TABLES `categorys` WRITE;
 /*!40000 ALTER TABLE `categorys` DISABLE KEYS */;
-INSERT INTO `categorys` VALUES (1,'wall tiles'),(2,'bathroom wall tiles'),(3,'kitchen wall tiles'),(4,'outdoor wall tiles'),(5,'living room'),(6,'bedroom'),(7,'commercial spaces tiles'),(8,'floor tiles'),(9,'special tiles');
+INSERT INTO `categorys` VALUES (11,'bathroom wall tiles'),(21,'bathroom floor tiles'),(12,'kitchen wall tiles'),(22,'kitchen floor tiles'),(13,'outdoor wall tiles'),(23,'outdoor floor tiles'),(14,'living room wall tiles'),(24,'living room floor tiles'),(15,'bedroom wall tiles'),(25,'bedroom floor tiles'),(16,'commercial spaces wall tiles'),(26,'commercial spaces floor tiles'),(19,'special wall tiles');
 /*!40000 ALTER TABLE `categorys` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-29 23:17:02
+-- Dump completed on 2023-10-11 21:44:02

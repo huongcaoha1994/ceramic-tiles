@@ -4,7 +4,10 @@ session_start();
 //     header('Location: ../../view/main.php');
 //     exit();
 // }
-
+if(isset($_SESSION['login']) && $_SESSION['login'] === true ){
+  header("location: ../../view/main.php");
+  exit;
+}
 if (isset($_GET['success'])) {
     ?>
     <span style="color:green;">
@@ -39,9 +42,11 @@ if (isset($_POST['btn'])) {
                 $db_username = $data['username'];
                 $db_password = $data['password'];
                 $user_id = $data['user_id'];
+
             }    
             if ($username === $db_username && password_verify($password, $db_password)) {
                 echo "<script> alert ('Logged in successfully')</script>";
+                $_SESSION['login'] = true ;
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $user_id;
                 header("Location: ../../view/main.php");
@@ -89,8 +94,8 @@ if (isset($_POST['btn'])) {
       </ul>
 
       <div class="col-md-3 text-end ">
-        <button type="submit" class="btn btn-warning "><a href="register.php" class="text-dark" style="text-decoration: none;">Sign Up</a></button>
-        <button type="submit" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
+        <button type="submit" name="register" class="btn btn-warning "><a href="register.php" class="text-dark" style="text-decoration: none;">Register</a></button>
+        <button type="submit" name="phoncall" class="btn btn-warning "><i class='bx bx-phone-call'></i></button>
       </div>
     </header>
   </div>
@@ -103,27 +108,9 @@ if (isset($_POST['btn'])) {
         </div>
         <div class="col-md-8 col-lg-6 col-xl-3 offset-xl-1">
           <form action="login.php" method="POST">
-            <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-              <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-              <button type="button" class="btn btn-warning btn-floating mx-1">
-              <i class='bx bxl-meta' ></i>
-              </button>
-
-              <button type="button" class="btn btn-warning btn-floating mx-1 ">
-                <i class="fab fa-twitter"></i>
-              </button>
-
-              <button type="button" class="btn btn-warning btn-floating mx-1 ">
-                <i class="fab fa-linkedin-in"></i>
-              </button>
-            </div>
-
-            <div class="divider d-flex align-items-center my-4">
-              <p class="text-center fw-bold mx-3 mb-0">Or</p>
-            </div>
-
-            <!-- Username input -->
-            <div class="form-outline mb-4">
+           
+          <!-- Username input -->
+          <div class="form-outline mb-4">
               <input type="text" name="username" id="form3Example3" class="form-control form-control-lg" placeholder="Username" />
             </div>
 
@@ -149,6 +136,25 @@ if (isset($_POST['btn'])) {
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.php"
                   class="link-danger">Register</a></p>
+            </div>
+
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0">Or</p>
+            </div>
+
+            <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+              <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+              <button type="button" class="btn btn-warning btn-floating mx-1">
+              <i class='bx bxl-meta' ></i>
+              </button>
+
+              <button type="button" class="btn btn-warning btn-floating mx-1 ">
+                <i class="fab fa-twitter"></i>
+              </button>
+
+              <button type="button" class="btn btn-warning btn-floating mx-1 ">
+                <i class="fab fa-linkedin-in"></i>
+              </button>
             </div>
           </form>
       </div>

@@ -62,8 +62,17 @@ if (isset($_GET['category'])) {
     else if ($category == "floorcommercial") {
         $select_product = "SELECT * FROM products WHERE category_id = 26";
     }
-     else if ($category == "wallspecial") {
-        $select_product = "SELECT * FROM products WHERE category_id = 19";
+     else if ($category == "specialgem") {
+        $select_product = "SELECT * FROM products WHERE category_id = 17";
+    }
+    else if ($category == "specialtac") {
+        $select_product = "SELECT * FROM products WHERE category_id = 27";
+    }
+    else if ($category == "specialanti") {
+        $select_product = "SELECT * FROM products WHERE category_id = 18";
+    }
+    else if ($category == "specialcool") {
+        $select_product = "SELECT * FROM products WHERE category_id = 28";
     }
     else if ($category == "allwall") {
         $select_product = "SELECT * FROM products WHERE category_id IN (11,12,13,14,15,1619)";
@@ -123,8 +132,6 @@ if ($result_product->num_rows > 0) {
                         </form> -->
                         <div class="d-flex justify-content-between mb-2">
                         <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id'] ; ?>" method="POST">
-                            <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ; ?>">
-                            <br>
                             <input type="submit" name="add_to_cart" value="Add to cart" class="btn btn-primary">
                         </form>
                         </div>
@@ -139,11 +146,27 @@ if ($result_product->num_rows > 0) {
 } else {
     echo "<h2>Không tìm thấy sản phẩm nào !</h2>";
 }
- echo "<div id='pagination'>" ;
-for($i = 1 ; $i <= $total_page ; $i++){
-    echo "<a href='shop.php?page=$i'> $i </a>" ;
-  }
-  echo "</div>" ;
+echo "<div id='pagination'>";
+
+$previous_page = $current_page - 5;
+$next_page = $current_page + 5;
+
+if ($previous_page > 0) {
+    echo "<a href='shop.php?page=$previous_page'>&lt;&lt;</a>";
+}
+
+$start_page = max(1, $current_page);
+$end_page = min($start_page + 4, $total_page);
+
+for ($i = $start_page ; $i <= $end_page; $i++) {
+    echo "<a href='shop.php?page=$i'>  $i   </a>";
+}
+
+if ($next_page <= $total_page) {
+    echo "<a href='shop.php?page=$next_page'>&gt;&gt;</a>";
+}
+
+echo "</div>";
 ?>
 
 </body>

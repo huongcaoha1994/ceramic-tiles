@@ -1,42 +1,42 @@
 <?php
-
+session_start();
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if(isset($_POST['color'])){
     $color = $_POST['color'];
-    // if($color === ""){
-    //   unset($_SESSION['color']);
-    // }
-    // else {
+    if($color === ""){
+      unset($_SESSION['color']);
+    }
+    else {
       $_SESSION['color'] = $color ;
-    // }
+    }
   }
 
   if(isset($_POST['brand'])){
     $brand = $_POST['brand'];
-    // if($brand === ""){
-    //   unset($_SESSION['brand']);
-    // }
-    // else {
+    if($brand === ""){
+      unset($_SESSION['brand']);
+    }
+    else {
       $_SESSION['brand'] = $brand ;
-    // }
+    }
   }
 
   if(isset($_POST['size'])){
     $size = $_POST['size'];
-    // if($size === ""){
-    //   unset($_SESSION['size']);
-    // }
-    // else {
+    if($size === ""){
+      unset($_SESSION['size']);
+    }
+    else {
       $_SESSION['size'] = $size ;
-    // }
+    }
   }
 
-//   $color = $_POST['color'];
-//   $_SESSION['color'] = $color ;
-//   $brand = $_POST['brand'] ;
-//   $_SESSION['brand'] = $brand ;
-//   $size = $_POST['size'] ;
-//   $_SESSION['size'] = $size ;
+  // $color = $_POST['color'];
+  // $_SESSION['color'] = $color ;
+  // $brand = $_POST['brand'] ;
+  // $_SESSION['brand'] = $brand ;
+  // $size = $_POST['size'] ;
+  // $_SESSION['size'] = $size ;
 
 // if($_SESSION['color'] === ""){
 //   unset($_SESSION['color']);
@@ -138,16 +138,31 @@ else {
           <br>
         <?php
       }
-      echo "<div id='pagination'>" ;
-    for($i = 1 ; $i <= $total_page ; $i++){
-      echo "<a href='shop.php?page=$i'> $i </a>" ;
-    }
-    echo "</div>" ;
-  }
-  else {
-    echo "Không tìm thấy sản phẩm nào !" ;
-  }
- 
+      echo "<div id='pagination'>";
+
+      $previous_page = $current_page - 5;
+      $next_page = $current_page + 5;
+      
+      if ($previous_page > 0) {
+          echo "<a href='shop.php?page=$previous_page'>&lt;&lt;</a>";
+      }
+      
+      $start_page = max(1, $current_page);
+      $end_page = min($start_page + 4, $total_page);
+      
+      for ($i = $start_page ; $i <= $end_page; $i++) {
+          echo "<a href='shop.php?page=$i'>  $i   </a>";
+      }
+      
+      if ($next_page <= $total_page) {
+          echo "<a href='shop.php?page=$next_page'>&gt;&gt;</a>";
+      }
+      
+      echo "</div>";
+}
+else {
+  echo "<h2> Không tìm thấy sản phẩm nào !</h2>";
+}
 }
 
 ?>

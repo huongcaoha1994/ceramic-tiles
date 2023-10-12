@@ -31,6 +31,10 @@
   text-decoration: none;
   color: unset;
 }
+
+.text-gray {
+  color: var(--gray-color);
+}
 /* Nav pill */
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {

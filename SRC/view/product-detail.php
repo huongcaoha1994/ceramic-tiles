@@ -64,8 +64,7 @@ if (isset($_GET['product_id'])) {
                     <h2><?php echo $row['price']; ?>$</h2>
 
 
-                    <form action="" method="POST">
-                        <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
+                    <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id'] ; ?>" method="POST">
                         <label for="quantity">Quantity : </label>
                         <input type="number" name="quantity" value="1" required>
                         <span>Available: <span class="fw-bold"><?php echo $row['inventory']; ?></span><span>
