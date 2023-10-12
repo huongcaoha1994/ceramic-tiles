@@ -146,24 +146,24 @@ if ($result_product->num_rows > 0) {
 } else {
     echo "<h2>Không tìm thấy sản phẩm nào !</h2>";
 }
-echo "<div id='pagination'>";
+echo "<div id='pagination' class='pagination justify-content-center'>";
 
 $previous_page = $current_page - 5;
 $next_page = $current_page + 5;
 
 if ($previous_page > 0) {
-    echo "<a href='shop.php?page=$previous_page'>&lt;&lt;</a>";
+    echo "<li class='page-item'><a href='shop.php?page=$previous_page' class='page-link'>«</a></li>";
 }
 
 $start_page = max(1, $current_page);
 $end_page = min($start_page + 4, $total_page);
 
 for ($i = $start_page ; $i <= $end_page; $i++) {
-    echo "<a href='shop.php?page=$i'>  $i   </a>";
+    echo "<li class='page-item'><a href='shop.php?page=$i' class='page-link'>  $i   </a></li>";
 }
 
 if ($next_page <= $total_page) {
-    echo "<a href='shop.php?page=$next_page'>&gt;&gt;</a>";
+    echo "<li class='page-item'><a href='shop.php?page=$next_page' class='page-link'>»</a></li>";
 }
 
 echo "</div>";
