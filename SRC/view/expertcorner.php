@@ -28,7 +28,7 @@ include("./header.php");
 <div class="container">
     <div class="row">
         <h1>Expert Corner</h1>
-        <div class="main col-12 text-center ">
+        <div class="py-5 col-12 text-center ">
             <?php 
             include("../core/model/database.php");
             $item_per_page = 5 ;
@@ -47,13 +47,13 @@ include("./header.php");
                 if($result_blog->num_rows > 0 ){
                     while($row = $result_blog->fetch_assoc()){
                         ?>
-                        
-                        <div class=" mb-3" >
-                                <div class="row g-0">
-                                    <div class="col-sm-6">
-                                       <img src="<?php echo $row['image']; ?>" alt="" width="400" height="300">
+                       
+                        <div class=" mb-3 text-start" >
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                       <img src="<?php echo $row['image']; ?>" alt="" width="100%" height="300">
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-8 text-start">
                                         <div class="card-body">
                                             <a href="" class="content">
                                                 <h5 class="card-title"><?php echo $row['title']; ?></h5>
@@ -70,24 +70,12 @@ include("./header.php");
                 }
             }
 
-            //     for($i = 1 ; $i <= $total_page ; $i++){
-            //     echo "<a href='expertcorner.php?page=$i'> $i </a>" ;
-            // }
+                for($i = 1 ; $i <= $total_page ; $i++){
+                echo "<a href='expertcorner.php?page=$i'> $i </a>" ;
+            }
             ?>
             
-            <nav class="cardi" aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
+
             
         </div>
     </div>
