@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (isset($_GET['add_success'])) {
+if (isset($_GET['check_out_success'])) {
   ?>
   <span>
-  <?php echo "<script> alert ('".$_GET['add_success']."')</script>"; ?>
+  <?php echo "<script> alert ('".$_GET['check_out_success']."')</script>"; ?>
   </span>
   <?php
 }

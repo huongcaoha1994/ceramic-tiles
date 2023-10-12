@@ -6,6 +6,9 @@ if (empty(($_SESSION['user_id']))) {
     exit();
 }
 $product_id = $_GET['product_id'];
+$from_main = $_GET['from_main'];
+$from_shop = $_GET['from_shop'];
+$from_product_detail = $_GET['from_product_detail'];
 include ("database.php");
 if (isset($_POST['add_to_cart'])) {
     $user_id = $_SESSION['user_id'];
@@ -38,8 +41,20 @@ if (isset($_POST['add_to_cart'])) {
             }
         }
     }
+    if (isset($from_main)) {
+        header("location: ../../view/main.php");
+        exit();    
+    } 
 
-    header("location: ../../view/shop.php?add_success=Add to cart successfully");    
+    if (isset($from_shop)) {
+        header("location: ../../view/shop.php");
+        exit();   
+
+    }
+    if (isset($from_product_detail)) {
+        header("Location: ../../view/product-detail.php?product_id=" . $product_id);
+        exit();    
+    }
 }
 
 

@@ -41,5 +41,5 @@ foreach ($cart as $id => $each) {
 }
 mysqli_close($connect);
 unset($_SESSION['cart']);
-header('location: ../../view/shop.php');
+header('location: ../../view/shop.php?check_out_success=Check out successfully');
 ?>

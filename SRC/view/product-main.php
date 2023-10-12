@@ -37,7 +37,7 @@ if ($result_product->num_rows > 0) {
 
 
           <div class="d-flex justify-content-between mb-2">
-            <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id'] ; ?>" method="POST">
+            <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id'] ; ?>&from_main" method="POST">
               <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
               <input type="submit" name="add_to_cart" value="Add to cart" class="btn btn-primary">
             </form>
