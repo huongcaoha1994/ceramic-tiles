@@ -67,7 +67,7 @@ if (isset($_GET['add_success'])) {
   include("header.php");
   ?>
   <!-- breadcrumb -->
-  <div class="container py-3 d-none d-md-block">
+  <div class="container py-3 d-none d-lg-block">
     <div class="row align-items-center">
       <div class="col-12 rounded-1 " style="background:url(../assets/img/homepage/banner-1.jpg);">
         <h1 class="text-center text-light">Store</h1>
@@ -76,18 +76,18 @@ if (isset($_GET['add_success'])) {
   </div>
   <div class="container py-3">
     <div class="row">
-      <div class="col-12 text-center text-md-start col-md-4">
+      <div class="col-12 text-center text-md-start col-lg-4">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb mb-3 mb-md-0 justify-content-center justify-content-md-start">
+          <ol class="breadcrumb mb-3 mb-md-0 justify-content-center justify-content-lg-start">
             <li class="breadcrumb-item"><a href="./home.php" class="fs-6">Home</a></li>
             <li class="breadcrumb-item active fs-6" aria-current="page">Shop</li>
           </ol>
         </nav>
       </div>
-      <div class="col-12 col-md-4">
-        <h1 class="text-center d-md-none">Store</h1>
+      <div class="col-12 col-lg-4">
+        <h1 class="text-center d-lg-none">Store</h1>
       </div>
-      <div class="col-2 d-md-none">
+      <div class="col-2 d-lg-none">
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasStore" aria-controls="offcanvasStore">
         <i class="fa-solid fa-filter"></i>
         </button>
@@ -100,7 +100,7 @@ if (isset($_GET['add_success'])) {
           </div>
         </div>
       </div>
-      <div class="col-10 text-center text-md-end col-md-4">
+      <div class="col-10 text-center text-md-end col-lg-4">
         <form action="shop.php" method="POST" class="d-flex">
           <input type="text" name="rs_search" class="form-control rounded">
           <input type="submit" name="search" value="search" class="btn btn-outline-primary">
