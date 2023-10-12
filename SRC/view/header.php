@@ -84,15 +84,15 @@
                 </ul>
             </div>
             <?php 
-       if(isset($_SESSION['username'])){
-        $username = $_SESSION['username'];
-        echo "<h4>Xin chào $username </h4>" ;
+       if(isset($_SESSION['full_name'])){
+        $fullname = $_SESSION['full_name'];
+        echo "<h4>Xin chào $fullname </h4>" ;
        }
        
         ?>
             <div class="row flex-nowrap">
                 <div class="col">
-                    <a href="../core/model/login.php">
+                    <a href="./user.php">
                         <button class="btn btn-primary">
                             <i class="fas fa-user">
                             </i></button>
@@ -176,16 +176,17 @@
             </div>
             </button>
         </div>
-
+      
        
         <?php 
-        if(isset($_SESSION['login']) && $_SESSION['login'] === true){
+        if(isset($_SESSION['user_id'])){
             echo " <style>
             #logout {
                 display: block;
             }
         </style>";
         }
+        
         ?>
         <button class=" btn btn-primary"  id="logout"><a style="text-decoration: none;" href="logout.php">Logout</a></button>
         

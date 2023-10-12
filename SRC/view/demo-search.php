@@ -18,8 +18,8 @@ if($result_product->num_rows > 0){
 }
 
 // Xử lý yêu cầu tìm kiếm
-if (isset($_POST['search1'])) {
-    $searchTerm = strval($_POST['search1']);
+if (isset($_POST['search1994'])) {
+    $searchTerm = strval($_POST['search1994']);
     $filteredProducts = array_filter($products, function($product) use ($searchTerm) {
         return 
             stripos($product['name'], $searchTerm) !== false ||
@@ -42,8 +42,8 @@ if (isset($_POST['search1'])) {
         echo 'Không tìm thấy sản phẩm phù hợp.';
     }
 }
-else if (isset($_POST['search2'])) {
-    $searchTerm = strval($_POST['search2']);
+else if (isset($_POST['search1995'])) {
+    $searchTerm = strval($_POST['search1995']);
     $filteredProducts = array_filter($products, function($product) use ($searchTerm) {
         return 
             stripos($product['name'], $searchTerm) !== false ||

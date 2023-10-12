@@ -34,65 +34,68 @@
     <script>
         $(document).ready(function() {
             // Gửi yêu cầu tìm kiếm khi người dùng nhập từ khóa
-            $('#search1').on('input', function() {
+            $('#search1994').on('input', function() {
                 var searchTerm = $(this).val();
                 if (searchTerm.length >= 3) {
                     $.ajax({
                         url: 'demo-search.php',
                         method: 'POST',
-                        data: { search1: searchTerm },
+                        data: { search1994: searchTerm },
                         success: function(response) {
-                            $('#search-results1').html(response);
+                            $('#search-results1994').html(response);
                         }
                     });
                 } else {
-                    $('#search-results1').empty();
+                    $('#search-results1994').empty();
                 }
             });
         });
 
         $(document).ready(function() {
             // Gửi yêu cầu tìm kiếm khi người dùng nhập từ khóa
-            $('#search2').on('input', function() {
+            $('#search1995').on('input', function() {
                 var searchTerm = $(this).val();
                 if (searchTerm.length >= 3) {
                     $.ajax({
                         url: 'demo-search.php',
                         method: 'POST',
-                        data: { search2: searchTerm },
+                        data: { search1995: searchTerm },
                         success: function(response) {
-                            $('#search-results2').html(response);
+                            $('#search-results1995').html(response);
                         }
                     });
                 } else {
-                    $('#search-results2').empty();
+                    $('#search-results1995').empty();
                 }
             });
         });
     </script>
 </head>
 <body>
+    <?php
+    include("header.php");
+    ?>
     <!-- Form tìm kiếm sản phẩm -->
     <div id="compare">
 
         <form>
-            <label for="search1">Chọn sản phẩm 1 :</label>
-            <input type="text" id="search1" placeholder="Nhập tên sản phẩm">
+            <label for="search1994">Chọn sản phẩm 1 :</label>
+            <input type="text" id="search1994" placeholder="Nhập tên sản phẩm">
         </form>
         <br><br><br><br><br><br>
         <form>
-            <label for="search2">Chọn sản phẩm 2 :</label>
-            <input type="text" id="search2" placeholder="Nhập tên sản phẩm">
+            <label for="search1995">Chọn sản phẩm 2 :</label>
+            <input type="text" id="search1995" placeholder="Nhập tên sản phẩm">
         </form>
     </div>
 
 <!-- Kết quả tìm kiếm -->
 
-<div id="search-results1">
+<div id="search-results1994">
         
 </div>
 
-<div id="search-results2">
+<div id="search-results1995">
         
 </div>
 
@@ -102,7 +105,10 @@
             <h1>Product 2</h1>
         </div>
     <?php 
-    session_start();
+    
+    // session_start();
+    // unset($_SESSION['sp1']);
+    // unset($_SESSION['sp2']) ;
     include("../core/model/database.php") ;
       if(isset($_GET['sp1'])){
           $_SESSION['sp1'] = $_GET['sp1'] ; 
@@ -183,5 +189,9 @@
        
     }
     ?> 
+
+    <?php 
+    include("footer.php");
+    ?>
 </body>
 </html>

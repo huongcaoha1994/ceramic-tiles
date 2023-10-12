@@ -7,6 +7,13 @@ if (isset($_GET['add_success'])) {
   </span>
   <?php
 }
+if (isset($_GET['err_add'])) {
+  ?>
+  <span>
+  <?php echo "<script> alert ('".$_GET['err_add']."')</script>"; ?>
+  </span>
+  <?php
+}
 ?>
 
 <!DOCTYPE html>
@@ -142,7 +149,7 @@ if (isset($_GET['add_success'])) {
         <input type="radio" name="color" value="black" onclick="filter_color('black')">
         <label for="color">Black</label>
         <br>
-        <input type="radio" name="color" value="" onclick="filter_color('')">
+        <input type="radio" name="color" value="" checked="checked" onclick="filter_color('')">
         <label for="color">All</label>
         <br>
 
@@ -162,7 +169,7 @@ if (isset($_GET['add_success'])) {
         <input type="radio" name="brand" value="Eurotile" onclick="filter_brand('Eurotile')">
         <label for="brand">Eurotile</label>
         <br>
-        <input type="radio" name="brand" value="" onclick="filter_brand('')">
+        <input type="radio" name="brand" value="" checked="checked" onclick="filter_brand('')">
         <label for="brand">All</label>
         <br>
 
@@ -191,7 +198,7 @@ if (isset($_GET['add_success'])) {
         <input type="radio" name="size" value="30x90" onclick="filter_size('30x90')">
         <label for="size">30x90</label>
         <br>
-        <input type="radio" name="size" value="" onclick="filter_size('')">
+        <input type="radio" name="size" value="" checked onclick="filter_size('')">
         <label for="size">All</label>
         <br>
 
@@ -200,7 +207,7 @@ if (isset($_GET['add_success'])) {
       <div class="col-12 col-lg-9">
         <div class="row" id="filter">
           <?php
-        if(isset($_SESSION['color']) || isset($_SESSION['color']) || isset($_SESSION['color']) ){
+        if(isset($_SESSION['color']) || isset($_SESSION['brand']) || isset($_SESSION['size']) ){
 
           include("filter-color.php");
         }

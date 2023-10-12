@@ -1,10 +1,10 @@
 <?php
+session_start();
 include('./header.php')
 ?>
 
 <h1 class="text-center">Product Detail</h1>
 <?php
-// session_start();
 
 include("../core/model/database.php");
 
@@ -121,9 +121,9 @@ if (isset($_GET['product_id'])) {
 //         }
 //     }
 // }
-include("../core/model/add_to_cart.php");
+// include("../core/model/add_to_cart.php");
 ?>
-<a href="../view/shop.php">Go to Shop</a>
+
 
 <?php
 include('./footer.php')

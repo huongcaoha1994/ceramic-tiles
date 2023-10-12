@@ -34,7 +34,7 @@ if (isset($_POST['btn'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
         
-        $sql = "SELECT user_id, username, password FROM users";
+        $sql = "SELECT user_id, username,  full_name, password FROM users";
 
         $result = $connect->query($sql);
         if ($result->num_rows > 0) {
@@ -42,6 +42,7 @@ if (isset($_POST['btn'])) {
                 $db_username = $data['username'];
                 $db_password = $data['password'];
                 $user_id = $data['user_id'];
+                $full_name = $data['full_name'];
 
             }    
             if ($username === $db_username && password_verify($password, $db_password)) {
@@ -49,6 +50,7 @@ if (isset($_POST['btn'])) {
                 $_SESSION['login'] = true ;
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $user_id;
+                $_SESSION['full_name'] = $full_name;
                 header("Location: ../../view/main.php");
             } else {
                 echo "<script> alert ('Username or password is incorrect')</script>";

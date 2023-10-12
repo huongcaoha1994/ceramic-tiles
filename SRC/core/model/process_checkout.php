@@ -6,6 +6,7 @@ $phone_receiver = $_POST['phone_receiver'];
 $address_receiver = $_POST['address_receiver'];
 
 session_start();
+
 $cart = $_SESSION['cart'];
 
 $total_price = 0;

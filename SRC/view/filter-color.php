@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();       
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if(isset($_POST['color'])){
 
@@ -34,24 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
   }
 
-  // $color = $_POST['color'];
-  // $_SESSION['color'] = $color ;
-  // $brand = $_POST['brand'] ;
-  // $_SESSION['brand'] = $brand ;
-  // $size = $_POST['size'] ;
-  // $_SESSION['size'] = $size ;
 
-// if($_SESSION['color'] === ""){
-//   unset($_SESSION['color']);
-// }
-
-// if($_SESSION['brand'] === ""){
-//   unset($_SESSION['brand']);
-// }
-
-// if($_SESSION['size'] === ""){
-//   unset($_SESSION['size']);
-// }
 
 if(isset($_SESSION['color'])){
   $color = $_SESSION['color'] ;

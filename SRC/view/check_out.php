@@ -1,7 +1,16 @@
 <?php
+session_start();
+if (empty(($_SESSION['user_id']))) {
+    header('Location: ../core/model/login.php?error=You have to login');
+    exit();
+}
+if(empty($_SESSION['cart'])) {
+    header('location: ./shop.php?err_add=Please add product to cart');
+    exit();
+}
+
 require 'header.php';
 require '../core/model/database.php';
-
 $id = $_SESSION['user_id'];
 $sql = "select * from users where user_id = $id";
 $result = mysqli_query($connect, $sql);
@@ -63,7 +72,7 @@ $each = mysqli_fetch_array($result);
                             $sum = 0;
                             foreach ($cart as $product_id => $quantity) {
                                 $sql = "select * from products where product_id = $product_id";
-                                $result = $connect->query($sql);
+$result = $connect->query($sql);
                                 $each = mysqli_fetch_array($result);
                         ?>
                                 <tr>
@@ -104,4 +113,4 @@ $each = mysqli_fetch_array($result);
     <?php include 'footer.php'; ?>
 </body>
 
-</html>
+</html> 
