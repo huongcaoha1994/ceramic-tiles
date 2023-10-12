@@ -200,10 +200,15 @@ if (isset($_GET['add_success'])) {
       <div class="col-12 col-lg-9">
         <div class="row" id="filter">
           <?php
-        
-            include("search.php");
+        if(isset($_SESSION['color']) || isset($_SESSION['color']) || isset($_SESSION['color']) ){
+
+          include("filter-color.php");
+        }
+        else {
+
+          include("search.php");
+        }
        
-            include("filter-color.php");
           
           ?>
         </div>

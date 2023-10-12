@@ -23,7 +23,7 @@ if (isset($_GET['product_id'])) {
                 <div class="col-12 col-lg-6 py-2 border-primary rounded-2">
                     <div class="d-flex justify-content-between">
                     <h4 class="product-heading"><?php echo $row['product_name']; ?></h4>
-                    <a href="sosanh.php?product_id=<?php echo $row['product_id']; ?>" class="compare-button justify-content-end"> <i class="fa-solid fa-plus"></i> Compare</a>
+                    <a href="sosanh.php?sp1=<?php echo $row['product_id']; ?>" class="compare-button justify-content-end"> <i class="fa-solid fa-plus"></i> Compare</a>
                     </div>
                     <div class="row py-3">
                         <div class="col-4">

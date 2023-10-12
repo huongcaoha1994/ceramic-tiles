@@ -33,7 +33,7 @@ if (isset($_POST['search1'])) {
         foreach ($filteredProducts as $product) {
             echo "<div>";
             echo "<a href='sosanh.php?sp1=" . $product['id'] . "'>";
-            echo '<img src="'.$product['image'].'" alt="' . $product['name'] . '" width="150" height="50">';
+            echo '<img src="'.$product['image'].'" alt="' . $product['name'] . '" width="100" height="100">';
             echo '<span>|' . $product['name'] . '|</span>';
             echo "</a>";
             echo '</div>';
@@ -57,7 +57,7 @@ else if (isset($_POST['search2'])) {
         foreach ($filteredProducts as $product) {
             echo "<div>";
             echo "<a href='sosanh.php?sp2=" . $product['id'] . "'>";
-            echo '<img src="'.$product['image'].'" alt="' . $product['name'] . '" width="150" height="50">';
+            echo '<img src="'.$product['image'].'" alt="' . $product['name'] . '" width="100" height="100">';
             echo '<span>|' . $product['name'] . '|</span>';
             echo "</a>";
             echo '</div>';

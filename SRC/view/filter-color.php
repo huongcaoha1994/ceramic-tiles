@@ -1,7 +1,9 @@
 <?php
-session_start();
+// session_start();
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if(isset($_POST['color'])){
+
+    
     $color = $_POST['color'];
     if($color === ""){
       unset($_SESSION['color']);
@@ -12,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
 
   if(isset($_POST['brand'])){
+
     $brand = $_POST['brand'];
     if($brand === ""){
       unset($_SESSION['brand']);
