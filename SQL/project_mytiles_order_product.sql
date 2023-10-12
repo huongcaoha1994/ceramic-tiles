@@ -16,31 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `carts`
+-- Table structure for table `order_product`
 --
 
-DROP TABLE IF EXISTS `carts`;
+DROP TABLE IF EXISTS `order_product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `carts` (
-  `cart_id` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `order_product` (
+  `order_id` int NOT NULL,
   `product_id` int NOT NULL,
-  `price` decimal(10,0) NOT NULL,
   `quantity` int NOT NULL,
-  `total_money` decimal(10,0) NOT NULL,
-  `user_id` int NOT NULL,
-  `created_date` date DEFAULT (curdate()),
-  PRIMARY KEY (`cart_id`)
+  PRIMARY KEY (`order_id`,`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `carts`
+-- Dumping data for table `order_product`
 --
 
-LOCK TABLES `carts` WRITE;
-/*!40000 ALTER TABLE `carts` DISABLE KEYS */;
-/*!40000 ALTER TABLE `carts` ENABLE KEYS */;
+LOCK TABLES `order_product` WRITE;
+/*!40000 ALTER TABLE `order_product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `order_product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-29 23:17:02
+-- Dump completed on 2023-10-12  8:17:38

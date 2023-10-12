@@ -140,7 +140,7 @@ session_start();
                                                         <p class="text-gray mb-0">Quantity: <?php echo $quantity; ?></p>
                                                         </div>
                                                         <div class="col-6 text-end">
-                                                            <a href="#" class="text-danger ">Delete</a>
+                                                            <a href="../core/model/product_cart_delete.php?product_id=<?php echo $product_id;?>" class="text-danger ">Delete</a>
                                                         </div>
                                                     </div>
 
@@ -160,8 +160,8 @@ session_start();
                             </div>
                             <div class="header__cart-footer py-2">
                                 <div class="d-flex justify-content-around">
-                                    <a href="../view/views_cart.php" class="btn btn-primary">Check cart</a>
-                                    <a href="../view/logout.php" class="btn btn-primary">Checkout</a>
+                                    <a href="./views_cart.php" class="btn btn-primary">Check cart</a>
+                                    <a href="./check_out.php" class="btn btn-primary">Checkout</a>
                                 </div>
                             </div>
                         </div>

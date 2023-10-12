@@ -1,6 +1,10 @@
 <?php
 session_start();
 // unset($_SESSION['cart']);
+if (empty(($_SESSION['user_id']))) {
+    header('Location: ./login.php?error=You have to login');
+    exit();
+}
 $product_id = $_GET['product_id'];
 include ("database.php");
 if (isset($_POST['add_to_cart'])) {
