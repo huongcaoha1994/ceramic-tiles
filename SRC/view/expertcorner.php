@@ -1,3 +1,15 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/expertcorner.css">
+    <title>Expertcorner</title>
+
+</head>
+
+<body>
 <?php
 include("./header.php");
 ?>
@@ -15,12 +27,75 @@ include("./header.php");
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center">
-            <h1>Expert Corner</h1>
+        <h1>Expert Corner</h1>
+        <div class="main col-12 text-center ">
+            <?php 
+            include("../core/model/database.php");
+            $item_per_page = 5 ;
+            $total = "select count(*) as total from blogs ;" ;
+            $result_total = $connect->query($total);
+            if($result_total->num_rows > 0 ){
+                $row = $result_total->fetch_assoc();
+                $total_item = $row['total'];
+            }
+            $total_page = ceil($total_item / $item_per_page);
+            $current_page = (isset($_GET['page'])) ? $_GET['page'] : 1 ;
+            $current_page = max(1, min($current_page,$total_page));
+            $start = ($current_page - 1 ) * $item_per_page + 1 ;
+            $select_blog = "select * from blogs limit $start,$item_per_page ;";
+            $result_blog = $connect->query($select_blog);{
+                if($result_blog->num_rows > 0 ){
+                    while($row = $result_blog->fetch_assoc()){
+                        ?>
+                        
+                        <div class=" mb-3" >
+                                <div class="row g-0">
+                                    <div class="col-sm-6">
+                                       <img src="<?php echo $row['image']; ?>" alt="" width="400" height="300">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card-body">
+                                            <a href="" class="content">
+                                                <h5 class="card-title"><?php echo $row['title']; ?></h5>
+                                                <h5><?php echo $row['created_date']; ?></h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                            
+                
+                        <?php
+                    }
+                }
+            }
+
+            //     for($i = 1 ; $i <= $total_page ; $i++){
+            //     echo "<a href='expertcorner.php?page=$i'> $i </a>" ;
+            // }
+            ?>
+            
+            <nav class="cardi" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            
         </div>
     </div>
 </div>
+      
 
 <?php
 include('./footer.php');
 ?>
+</body>
+</html>
