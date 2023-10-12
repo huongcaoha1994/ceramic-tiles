@@ -31,6 +31,8 @@
   list-style: none;
   overflow-y: scroll;
   text-align: start;
+  overflow-x: hidden;
+
 }
 
 .header__cart-footer {

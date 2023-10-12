@@ -126,7 +126,7 @@ session_start();
                                         $result = $connect->query($sql);
                                         $each = mysqli_fetch_array($result);
                                 ?>
-                                        <div class="container py-2">
+                                        <div class="container px-0 py-2 pe-2">
                                             <div class="row gx-3">
                                                 <div class="col-3"><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image" class="w-100"></div>
                                                 <div class="col-9">
