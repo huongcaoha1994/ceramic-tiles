@@ -1,3 +1,15 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/expertcorner.css">
+    <title>Expertcorner</title>
+
+</head>
+
+<body>
 <?php
 include("./header.php");
 ?>
@@ -15,8 +27,8 @@ include("./header.php");
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center">
-            <h1>Expert Corner</h1>
+        <h1>Expert Corner</h1>
+        <div class="py-5 col-12 text-center ">
             <?php 
             include("../core/model/database.php");
             $item_per_page = 5 ;
@@ -35,24 +47,43 @@ include("./header.php");
                 if($result_blog->num_rows > 0 ){
                     while($row = $result_blog->fetch_assoc()){
                         ?>
-                            <a href="">
-                                <img src="<?php echo $row['image']; ?>" alt="" width="300" height="300">
-                                <h3><?php echo $row['title']; ?></h3>
-                                <h4><?php echo $row['created_date']; ?></h4>
-                            </a>
+                       <a href="../view/blog_detail.php?blog_id=<?php echo $row['blog_id']; ?>" class=" text-decoration-none">
+                        <div class=" mb-3 text-start" >
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src="<?php echo $row['image']; ?>" alt="" width="100%" height="300">
+                                    </div>
+                                    <div class="col-sm-8 text-start">
+                                        <div class="card-body">
+                                                <h5 class="card-title"><?php echo $row['title']; ?></h5>
+                                                <h5><?php echo $row['created_date']; ?></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                       </a>
+                        
                             
+                
                         <?php
                     }
                 }
             }
-            for($i = 1 ; $i <= $total_page ; $i++){
+
+                for($i = 1 ; $i <= $total_page ; $i++){
                 echo "<a href='expertcorner.php?page=$i'> $i </a>" ;
             }
             ?>
+            
+
+            
         </div>
     </div>
 </div>
+      
 
 <?php
 include('./footer.php');
 ?>
+</body>
+</html>
