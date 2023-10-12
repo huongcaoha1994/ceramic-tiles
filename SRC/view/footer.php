@@ -30,9 +30,9 @@
                 <div class="col-6 col-md-3 mb-3 col-lg-3">
                     <h5>Danh muc</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Wall tiles</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Floor tiles</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Special tiles</a></li>
+                        <li class="nav-item mb-2"><a href="shop.php?category=allwall" class="nav-link p-0 text-muted">Wall tiles</a></li>
+                        <li class="nav-item mb-2"><a href="shop.php?category=allfloor" class="nav-link p-0 text-muted">Floor tiles</a></li>
+                        <li class="nav-item mb-2"><a href="shop.php?category=allspecial" class="nav-link p-0 text-muted">Special tiles</a></li>
                     </ul>
                 </div>
 
