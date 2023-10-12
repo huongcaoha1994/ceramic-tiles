@@ -34,7 +34,7 @@ CREATE TABLE `categorys` (
 
 LOCK TABLES `categorys` WRITE;
 /*!40000 ALTER TABLE `categorys` DISABLE KEYS */;
-INSERT INTO `categorys` VALUES (11,'bathroom wall tiles'),(21,'bathroom floor tiles'),(12,'kitchen wall tiles'),(22,'kitchen floor tiles'),(13,'outdoor wall tiles'),(23,'outdoor floor tiles'),(14,'living room wall tiles'),(24,'living room floor tiles'),(15,'bedroom wall tiles'),(25,'bedroom floor tiles'),(16,'commercial spaces wall tiles'),(26,'commercial spaces floor tiles'),(19,'special wall tiles');
+INSERT INTO `categorys` VALUES (11,'bathroom wall tiles'),(21,'bathroom floor tiles'),(12,'kitchen wall tiles'),(22,'kitchen floor tiles'),(13,'outdoor wall tiles'),(23,'outdoor floor tiles'),(14,'living room wall tiles'),(24,'living room floor tiles'),(15,'bedroom wall tiles'),(25,'bedroom floor tiles'),(16,'commercial spaces wall tiles'),(26,'commercial spaces floor tiles'),(17,'special germ free'),(27,'special tac'),(18,'special anti static'),(28,'special cool roof'),(19,'special wall tiles');
 /*!40000 ALTER TABLE `categorys` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -47,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-11 21:44:02
+-- Dump completed on 2023-10-12 18:08:44
