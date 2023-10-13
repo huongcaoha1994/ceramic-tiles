@@ -6,9 +6,19 @@ if (empty(($_SESSION['user_id']))) {
     exit();
 }
 $product_id = $_GET['product_id'];
-$from_main = $_GET['from_main'];
-$from_shop = $_GET['from_shop'];
-$from_product_detail = $_GET['from_product_detail'];
+
+if (isset($_GET['from_main'])) {
+    $from_main = $_GET['from_main'];
+}
+
+if (isset($_GET['from_shop'])) {
+    $from_shop = $_GET['from_shop'];
+}
+
+if (isset($_GET['from_product_detail'])) {
+    $from_product_detail = $_GET['from_product_detail'];
+}
+
 include ("database.php");
 if (isset($_POST['add_to_cart'])) {
     $user_id = $_SESSION['user_id'];
