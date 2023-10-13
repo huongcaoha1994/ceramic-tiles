@@ -32,4 +32,9 @@ for (let i = 0; i < menuLinks.length; i++) {
   }
 }
 
-navLink.closest()
+var toOffCanvasMenu = document.querySelectorAll('.button-offcanvas');
+var moveButtontoMenu = document.querySelector('#navbarsExampleDefault')
+
+if (window.innerWidth < 992) {
+  moveButtontoMenu.innerHTML = toOffCanvasMenu.innerHTML
+  }

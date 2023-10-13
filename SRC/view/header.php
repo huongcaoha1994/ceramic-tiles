@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="../assets/css/cta.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-
     <title>Tiles Ceramic</title>
     <style>
         #logout {
@@ -35,7 +33,7 @@
                 <img src="../assets/img/homepage/logo.png" alt="logo" width="100px" height="70px" class="navbar-brand">
             </a>
             <div class="navbar-collapse offcanvas-collapse px-2 text-warning" id="navbarsExampleDefault">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-warning">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-warning main-menu">
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="./shop.php">Shop</a>
                     </li>
@@ -83,19 +81,20 @@
                     </li>
                 </ul>
             </div>
-            <?php 
-       if(isset($_SESSION['full_name'])){
-        $fullname = $_SESSION['full_name'];
-        echo "<h4>Xin chào $fullname </h4>" ;
-       }
-       
-        ?>
+
             <div class="row flex-nowrap">
-                <div class="col">
-                    <a href="./user.php">
+                <div class="col button-offcanvas d-none d-lg-block">
+                    <a href="./user.php" class="text-decoration-none">
                         <button class="btn btn-primary">
                             <i class="fas fa-user">
                             </i></button>
+                        <?php
+                        if (isset($_SESSION['full_name'])) {
+                            $fullname = $_SESSION['full_name'];
+                            echo "<h6>Xin chào $fullname </h6>";
+                        }
+
+                        ?>
                     </a>
                 </div>
                 <div class="col">
@@ -138,16 +137,20 @@
                                                 <div class="col-3"><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image" class="w-100"></div>
                                                 <div class="col-9">
                                                     <div class="row gx-2">
-                                                        <div class="col-8 text-start"><p class="text-dark mb-0"><?php echo $each['product_name']; ?></p></div>
-                                                        <div class="col-4 text-end"><p class="text-warning  mb-0">Price: <?php echo $each['price']; ?>$</p></div>
+                                                        <div class="col-8 text-start">
+                                                            <p class="text-dark mb-0"><?php echo $each['product_name']; ?></p>
+                                                        </div>
+                                                        <div class="col-4 text-end">
+                                                            <p class="text-warning  mb-0">Price: <?php echo $each['price']; ?>$</p>
+                                                        </div>
                                                     </div>
-                                                    
+
                                                     <div class="row gx-2">
                                                         <div class="col-6 text-start">
-                                                        <p class="text-gray mb-0">Quantity: <?php echo $quantity; ?></p>
+                                                            <p class="text-gray mb-0">Quantity: <?php echo $quantity; ?></p>
                                                         </div>
                                                         <div class="col-6 text-end">
-                                                            <a href="../core/model/product_cart_delete.php?product_id=<?php echo $product_id;?>" class="text-danger ">Delete</a>
+                                                            <a href="../core/model/product_cart_delete.php?product_id=<?php echo $product_id; ?>" class="text-danger ">Delete</a>
                                                         </div>
                                                     </div>
 
@@ -176,22 +179,19 @@
             </div>
             </button>
         </div>
-      
-       
-        <?php 
-        if(isset($_SESSION['user_id'])){
+
+
+        <?php
+        if (isset($_SESSION['user_id'])) {
             echo " <style>
             #logout {
                 display: block;
             }
         </style>";
         }
-        
+
         ?>
-        <button class=" btn btn-primary"  id="logout"><a style="text-decoration: none;" href="logout.php">Logout</a></button>
-        
-        </div>
-        </div>
+        <button class=" btn btn-primary button-offcanvas d-none d-lg-block" id="logout"><a style="text-decoration: none;" href="logout.php">Logout</a></button>
     </nav>
 
     <script src="../assets/js/headerscript.js"></script>
