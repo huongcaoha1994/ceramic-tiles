@@ -18,23 +18,24 @@
     <div class="bg-light">
         <div class="container py-5">
             <div class="row h-100 align-items-center py-5">
-            <div class="col-lg-6">
-                <h1 class="display-4">About us page</h1>
-                <p class="lead text-muted mb-0">
-                Tiles Luxury with many years of experience and a team of professional and skilled technical staff, we have constructed many projects that are aesthetically pleasing and ensure quality. 
-                Tiles Luxury's construction and installation services have gained trust and affirmed their position in the hearts of customers.
-                </p>
-                <p class="lead text-muted mb-0">
-                Our team of experienced sales and technical consultants will be an effective assistant to help customers conduct surveys, appraise, evaluate and provide advice on stone use as well as estimates. budget for each item in the most optimal way. 
-                The experience and ability of this team has been demonstrated in every project that Anphat Stone has been implementing.
-                </p>
-            </div>
-            <div class="col-lg-6 d-none d-lg-block">
-                <img src="../assets/img/homepage/logo.png" alt="" class="img-fluid"></div>
+                <div class="col-lg-6">
+                    <h1 class="display-4">About us page</h1>
+                    <p class="lead text-muted mb-0">
+                        Tiles Luxury with many years of experience and a team of professional and skilled technical staff, we have constructed many projects that are aesthetically pleasing and ensure quality. 
+                        Tiles Luxury's construction and installation services have gained trust and affirmed their position in the hearts of customers.
+                    </p>
+                    <p class="lead text-muted mb-0">
+                        Our team of experienced sales and technical consultants will be an effective assistant to help customers conduct surveys, appraise, evaluate and provide advice on stone use as well as estimates. budget for each item in the most optimal way. 
+                        The experience and ability of this team has been demonstrated in every project that Anphat Stone has been implementing.
+                    </p>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="../assets/img/homepage/logo.png" alt="" class="img-fluid"></div>
+                </div>
             </div>
         </div>
-    </div>
-
+        
+        <a href="https://www.canva.com/design/DAFxI2DMw7I/DOMNh-qwjVs0hjdxzmMR8Q/view?utm_content=DAFxI2DMw7I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview">e-catalogue </a>
         <div class="bg-white py-5">
             <div class="container py-5">
                 <div class="row align-items-center mb-5">
