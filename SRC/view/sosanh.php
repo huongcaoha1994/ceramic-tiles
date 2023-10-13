@@ -15,7 +15,7 @@
             h1 {
             margin-right: 35%;
         }
-        #container {
+        #container1994 {
             display: flex;
         }
         .product {
@@ -73,7 +73,7 @@
 </head>
 <body>
     <?php
-    include("header.php");
+    // include("header.php");
     ?>
     <!-- Form tìm kiếm sản phẩm -->
     <div id="compare">
@@ -106,7 +106,7 @@
         </div>
     <?php 
     
-    // session_start();
+    session_start();
     // unset($_SESSION['sp1']);
     // unset($_SESSION['sp2']) ;
     include("../core/model/database.php") ;
@@ -118,7 +118,7 @@
     }
     ?>
     
-    <div id="container">
+    <div id="container1994">
         <?php 
        
         if(isset($_SESSION['sp1']) && $_SESSION['sp1'] > 0 ){
