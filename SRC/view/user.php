@@ -30,61 +30,70 @@ $result = $connect->query($sql);
 </head>
 
 <body>
-<div class="container">
-    <?php foreach ($result as $order) : ?>
-        <!-- bây giờ a vứt mẹ cái <tr> chứa mấy cái thead 
+    <div class="container">
+        <?php foreach ($result as $order): ?>
+            <!-- bây giờ a vứt mẹ cái <tr> chứa mấy cái thead 
         đi và css cho e 1 dòng hiện thông tin t
         head nhưng không phải là dùng table được k a, 
         dùng thẻ div các thứ ý, vì nếu không nó bị lặp lại cả thead
         a thử comment tr chứa thead là hiểu nhé -->
-        <table class="table table-responsive">
-            <tr>
-                <th>Created at</th>
-                <th>Orderer's information</th>
-                <th>Receiver's information</th>
-                <th>Status</th>
-                <th>Total amount</th>
-                <th>View detail</th>
-            </tr>
-            <tr>
-                <td>
-                    <?php echo $order['created_at'] ?>
-                </td>
-                <td>
-                    <?php echo $order['full_name'] ?>
-                    <?php echo $order['phone'] ?>
-                    <?php echo $order['user_address'] ?>
-                </td>
-                <td>
-                    <?php echo $order['name_receiver'] ?>
-                    <?php echo $order['phone_receiver'] ?>
-                    <?php echo $order['receiver_address'] ?>
-                </td>
-                <td>
-                    <?php
-                    switch ($order['status']) {
-                        case 0:
-                            echo "Pending";
-                            break;
-                        case 1:
-                            echo "Order is being delivered";
-                            break;
-                        case 2:
-                            echo "Received";
-                            break;
-                    }
-                    ?>
-                </td>
-                <td>
-                    <?php echo $order['total_price'] ?>
-                </td>
-                <td>
-                    <!-- <a href="order_detail.php?order_id=<?php echo $order['order_id'] ?>">View detail</a> -->
-                </td>
-            </tr>
-        </table>
+            <table class="table table-responsive">
+                <tr>
+                    <th>Created at</th>
+                    <th>Orderer's information</th>
+                    <th>Receiver's information</th>
+                    <th>Total amount</th>
+                    <th>Purchase method</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>
+                        <?php echo $order['created_at'] ?>
+                    </td>
+                    <td>
+                        <?php echo $order['full_name'] ?>
+                        <?php echo $order['phone'] ?>
+                        <?php echo $order['user_address'] ?>
+                    </td>
+                    <td>
+                        <?php echo $order['name_receiver'] ?>
+                        <?php echo $order['phone_receiver'] ?>
+                        <?php echo $order['receiver_address'] ?>
+                    </td>
+                    <td>
+                        <?php echo $order['total_price'] ?>
+                    </td>
+                    <td>
+                        <?php
+                        switch ($order['purchase_method']) {
+                            case 1:
+                                echo "Cash";
+                                break;
+                            case 2:
+                                echo "Bank Transfer";
+                                break;
+                        }
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        switch ($order['status']) {
+                            case 0:
+                                echo "Pending";
+                                break;
+                            case 1:
+                                echo "Order is being delivered";
+                                break;
+                            case 2:
+                                echo "Received";
+                                break;
+                        }
+                        ?>
+                    </td>
+                </tr>
+            </table>
 
-        <?php
+            <?php
             $order_id = $order['order_id'];
             $sql = "select * from order_product
                     join products on products.product_id = order_product.product_id
@@ -99,29 +108,38 @@ $result = $connect->query($sql);
                         where products.product_id = $product_id";
                 $result = $connect->query($sql);
                 $product_info = mysqli_fetch_array($result);
-        ?>
-        <div class="container">
-            <div class="row py-2">
-                <div class="col-10 col-lg-6 d-flex">
-                    <img src="../assets/img/<?php echo $product_info['image']; ?>" alt="Product Image" style="max-width: 50px;">
-                    <span class="px-2 h6"><?php echo $product_info['product_name']; ?></span>
+                ?>
+                <div class="container">
+                    <div class="row py-2">
+                        <div class="col-10 col-lg-6 d-flex">
+                            <img src="../assets/img/<?php echo $product_info['image']; ?>" alt="Product Image"
+                                style="max-width: 50px;">
+                            <span class="px-2 h6">
+                                <?php echo $product_info['product_name']; ?>
+                            </span>
+                        </div>
+                        <div class="col-2 col-lg-2 ">
+                            <p class="h6">
+                                <?php echo $product_info['price']; ?>$
+                            </p>
+                        </div>
+                        <div class="col-6 col-lg-2 ">
+                            <p>Quantity:
+                                <?php echo $product['quantity']; ?>
+                            </p>
+                        </div>
+                        <div class="col-6 col-lg-2  text-end">
+                            <p>Total:
+                                <?php echo $product_info['price'] * $product['quantity']; ?>$
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-2 col-lg-2 ">
-                    <p class="h6"><?php echo $product_info['price']; ?>$</p>
-                </div>
-                <div class="col-6 col-lg-2 ">
-                    <p>Quantity: <?php echo $product['quantity']; ?></p>
-                </div>
-                <div class="col-6 col-lg-2  text-end">
-                    <p>Total: <?php echo $product_info['price'] * $product['quantity']; ?>$</p>
-                </div>
-            </div>
-        </div>
-        <?php
+                <?php
             }
-        ?>
-    <?php endforeach; // End of the foreach loop for orders ?>
-</div>
+            ?>
+        <?php endforeach; // End of the foreach loop for orders ?>
+    </div>
 
 </body>
 

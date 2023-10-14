@@ -31,8 +31,9 @@ CREATE TABLE `orders` (
   `status` int NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `total_price` float NOT NULL,
+  `purchase_method` int NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +42,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,1,'Nguyễn Thành Long','0365814385','Hà Nội',0,'2023-10-13 17:38:39',16,0),(2,1,'Nguyễn Thành Long','0365814385','Hà Nội',0,'2023-10-13 17:39:05',42,0),(3,1,'Nguyễn Thành Long','0365814385','Hà Nội',0,'2023-10-14 03:45:54',32,0),(4,2,'Nguyễn Hằng Ly','0332395194','Ngõ Quỳnh',0,'2023-10-14 03:58:54',198,0),(5,2,'Nguyễn Hằng Ly','0332395194','Yên Sở',0,'2023-10-14 04:17:42',8,2);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-12  8:17:38
+-- Dump completed on 2023-10-14 11:26:36
