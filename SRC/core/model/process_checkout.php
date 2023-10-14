@@ -4,6 +4,7 @@ require './database.php';
 $name_receiver = $_POST['name_receiver'];
 $phone_receiver = $_POST['phone_receiver'];
 $address_receiver = $_POST['address_receiver'];
+$purchase_method = $_POST['purchase_method'];
 
 session_start();
 
@@ -25,8 +26,8 @@ foreach ($cart as $id => $quantity) {
     $status = 0;
     
     }
-$sql = "insert into orders (user_id, name_receiver, phone_receiver, address, status, total_price)
-    values ('$user_id', '$name_receiver', '$phone_receiver', '$address_receiver', '$status', '$total_price')";
+$sql = "insert into orders (user_id, name_receiver, phone_receiver, address, status, total_price, purchase_method)
+    values ('$user_id', '$name_receiver', '$phone_receiver', '$address_receiver', '$status', '$total_price', $purchase_method)";
 
 $connect->query($sql);
 
