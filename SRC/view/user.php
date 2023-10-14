@@ -30,96 +30,98 @@ $result = $connect->query($sql);
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
+    <?php foreach ($result as $order) : ?>
+        <!-- bây giờ a vứt mẹ cái <tr> chứa mấy cái thead 
+        đi và css cho e 1 dòng hiện thông tin t
+        head nhưng không phải là dùng table được k a, 
+        dùng thẻ div các thứ ý, vì nếu không nó bị lặp lại cả thead
+        a thử comment tr chứa thead là hiểu nhé -->
         <table class="table table-responsive">
             <tr>
                 <th>Created at</th>
                 <th>Orderer's information</th>
                 <th>Receiver's information</th>
                 <th>Status</th>
-                <th>Total amout</th>
+                <th>Total amount</th>
                 <th>View detail</th>
             </tr>
-            <?php foreach ($result as $each) : ?>
-                <tr>
-                    <td>
-                        <?php echo $each['created_at'] ?>
-                    </td>
-                    <td>
-                        <?php echo $each['full_name'] ?>
-                        <?php echo $each['phone'] ?>
-                        <?php echo $each['user_address'] ?>
-                    </td>
-
-
-                    <td>
-                        <?php echo $each['name_receiver'] ?>
-                        <?php echo $each['phone_receiver'] ?>
-                        <?php echo $each['receiver_address'] ?>
-                    </td>
-                    <td>
-                        <?php
-                        switch ($each['status']) {
-                            case 0:
-                                echo "Pending";
-                                break;
-                            case 1:
-                                echo "Order is being delivered";
-                                break;
-                            case 2:
-                                echo "Received";
-                                break;
-                        }
-                        ?>
-                    </td>
-                    <td>
-                        <?php echo $each['total_price'] ?>
-                    </td>
-                    <td>
-                        <!-- <a href="order_detail.php?order_id=<?php echo $each['order_id'] ?>">View detail</a> -->
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    <?php echo $order['created_at'] ?>
+                </td>
+                <td>
+                    <?php echo $order['full_name'] ?>
+                    <?php echo $order['phone'] ?>
+                    <?php echo $order['user_address'] ?>
+                </td>
+                <td>
+                    <?php echo $order['name_receiver'] ?>
+                    <?php echo $order['phone_receiver'] ?>
+                    <?php echo $order['receiver_address'] ?>
+                </td>
+                <td>
+                    <?php
+                    switch ($order['status']) {
+                        case 0:
+                            echo "Pending";
+                            break;
+                        case 1:
+                            echo "Order is being delivered";
+                            break;
+                        case 2:
+                            echo "Received";
+                            break;
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php echo $order['total_price'] ?>
+                </td>
+                <td>
+                    <!-- <a href="order_detail.php?order_id=<?php echo $order['order_id'] ?>">View detail</a> -->
+                </td>
+            </tr>
         </table>
 
         <?php
-                $order_id = $each['order_id'];
-                $sql = "select * from order_product
-    join products on products.product_id = order_product.product_id
-    where order_id = $order_id";
+            $order_id = $order['order_id'];
+            $sql = "select * from order_product
+                    join products on products.product_id = order_product.product_id
+                    where order_id = $order_id";
 
+            $product_result = $connect->query($sql);
+            foreach ($product_result as $product) {
+                $product_id = $product['product_id'];
+                $sql = "select * from products 
+                        join order_product 
+                        on products.product_id = order_product.product_id
+                        where products.product_id = $product_id";
                 $result = $connect->query($sql);
-                foreach ($result as $each) :
-                    $product_id = $each['product_id'];
-                    $sql = "select * from products 
-                join order_product 
-                on products.product_id = order_product.product_id
-                where products.product_id = $product_id";
-                    $result = $connect->query($sql);
-                    $each = mysqli_fetch_array($result);
+                $product_info = mysqli_fetch_array($result);
         ?>
-            <div class="container">
-                <div class="row py-2">
-                    <div class="col-10 col-lg-6 d-flex">
-                        <img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image" style="max-width: 50px;">
-                        <span class="px-2 h6"><?php echo $each['product_name']; ?></span>
-                    </div>
-                    <div class="col-2 col-lg-2 ">
-                        <p class="h6"><?php echo $each['price']; ?>$</p>
-                    </div>
-                    <div class="col-6 col-lg-2 ">
-                        <p>Quantity: <?php echo $each['quantity']; ?></p>
-                    </div>
-                    <div class="col-6 col-lg-2  text-end">
-                        <p>Total: <?php echo $each['price'] * $each['quantity']; ?>$</p>
-                    </div>
+        <div class="container">
+            <div class="row py-2">
+                <div class="col-10 col-lg-6 d-flex">
+                    <img src="../assets/img/<?php echo $product_info['image']; ?>" alt="Product Image" style="max-width: 50px;">
+                    <span class="px-2 h6"><?php echo $product_info['product_name']; ?></span>
+                </div>
+                <div class="col-2 col-lg-2 ">
+                    <p class="h6"><?php echo $product_info['price']; ?>$</p>
+                </div>
+                <div class="col-6 col-lg-2 ">
+                    <p>Quantity: <?php echo $product['quantity']; ?></p>
+                </div>
+                <div class="col-6 col-lg-2  text-end">
+                    <p>Total: <?php echo $product_info['price'] * $product['quantity']; ?>$</p>
                 </div>
             </div>
-
+        </div>
         <?php
-                endforeach;
+            }
         ?>
-    <?php endforeach ?>
-    </div>
+    <?php endforeach; // End of the foreach loop for orders ?>
+</div>
 
 </body>
 
