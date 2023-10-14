@@ -30,13 +30,8 @@ $result = $connect->query($sql);
 </head>
 
 <body>
-    <div class="container">
+    <div class="container border rounded-1 my-5">
         <?php foreach ($result as $order): ?>
-            <!-- bây giờ a vứt mẹ cái <tr> chứa mấy cái thead 
-        đi và css cho e 1 dòng hiện thông tin t
-        head nhưng không phải là dùng table được k a, 
-        dùng thẻ div các thứ ý, vì nếu không nó bị lặp lại cả thead
-        a thử comment tr chứa thead là hiểu nhé -->
             <table class="table table-responsive">
                 <tr>
                     <th>Created at</th>
@@ -111,24 +106,24 @@ $result = $connect->query($sql);
                 ?>
                 <div class="container">
                     <div class="row py-2">
-                        <div class="col-10 col-lg-6 d-flex">
+                        <div class="col-10 col-lg-3 d-flex">
                             <img src="../assets/img/<?php echo $product_info['image']; ?>" alt="Product Image"
                                 style="max-width: 50px;">
                             <span class="px-2 h6">
                                 <?php echo $product_info['product_name']; ?>
                             </span>
                         </div>
-                        <div class="col-2 col-lg-2 ">
+                        <div class="col-2 col-lg-1 ">
                             <p class="h6">
                                 <?php echo $product_info['price']; ?>$
                             </p>
                         </div>
-                        <div class="col-6 col-lg-2 ">
+                        <div class="col-6 col-lg-1 ">
                             <p>Quantity:
                                 <?php echo $product['quantity']; ?>
                             </p>
                         </div>
-                        <div class="col-6 col-lg-2  text-end">
+                        <div class="col-6 col-lg-1  text-end">
                             <p>Total:
                                 <?php echo $product_info['price'] * $product['quantity']; ?>$
                             </p>
@@ -140,7 +135,9 @@ $result = $connect->query($sql);
             ?>
         <?php endforeach; // End of the foreach loop for orders ?>
     </div>
-
+<?php 
+include('footer.php');
+?>
 </body>
 
 </html>
