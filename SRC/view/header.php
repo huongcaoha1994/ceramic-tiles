@@ -188,7 +188,7 @@
         }
         
         ?>
-        <button class=" btn btn-primary"  id="logout"><a style="text-decoration: none;" href="logout.php">Logout</a></button>
+        <button class=" btn btn-primary"  id="logout"><a style="text-decoration: none;" href="../core/controller/logout.php">Logout</a></button>
         
         </div>
         </div>
