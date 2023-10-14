@@ -50,7 +50,6 @@ $each = mysqli_fetch_array($result);
                     <div class="form-group">
                         <label for="address_receiver">Address</label>
                         <input type="text" class="form-control" name="address_receiver" value="<?php echo $each['address'] ?>">
-                        
                     </div>
                 
             </div>
@@ -99,6 +98,11 @@ $result = $connect->query($sql);
                 <h3 class="float-right">Total Amount: <?php echo isset($sum) ? $sum : 0; ?></h3>
             </div>
         </div>
+        <div class="float-right">Purchase method:
+                            <input type="radio" name="purchase_method" value="1" checked> Cash
+                            <input type="radio" name="purchase_method" value="2"> Bank Transfer 
+                </div>
+        <div class="row mt-4">
         <div class="row mt-4">
             <div class="col-6">
                 <a href="views_cart.php" class="btn btn-primary">Back to Cart</a>
