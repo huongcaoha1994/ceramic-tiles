@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="">
-        <title>Document</title>
+        <title>Admin</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -21,15 +21,15 @@
                         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                             <li>
                                 <a href="#submenu1" data-bs-toggle="collapse" class="nav-link link-dark px-0 align-middle">
-                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
                                 <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                                     <li class="w-100">
-                                        <a href="#" class="nav-link link-dark px-0"> <span class="d-none d-sm-inline">Sales Information</span></a>
+                                        <a href="#" class="nav-link link-dark px-0"><i class="fs-4 bi-speedometer2"></i><span class="d-none d-sm-inline">Sales Information</span></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="order.php" class="nav-link link-dark px-0 align-middle">
+                                <a href="../view/order.php" class="nav-link link-dark px-0 align-middle">
                                     <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Order Status</span></a>
                             </li>
                             
@@ -38,15 +38,15 @@
                                     <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
                                     <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                                     <li class="w-100">
-                                        <a href="createproduct.php" class="nav-link link-dark px-0"> <span class="d-none d-sm-inline">Add Product</span>1</a>
+                                        <a href="../view/createProduct.php" class="nav-link link-dark px-0"><i class="bi bi-bag-plus-fill"></i> <span class="d-none d-sm-inline">Add Product</span></a>
                                     </li>
                                     <li>
-                                        <a href="crud.php" class="nav-link link-dark px-0"> <span class="d-none d-sm-inline">CRUD</span>2</a>
+                                        <a href="../view/crud.php" class="nav-link link-dark px-0"><i class="bi bi-file-earmark-plus-fill"></i> <span class="d-none d-sm-inline">CRUD</span></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="member.php" class="nav-link link-dark px-0 align-middle">
+                                <a href="../view/member.php" class="nav-link link-dark px-0 align-middle">
                                     <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Contact</span> </a>
                             </li>
                         </ul>
@@ -73,7 +73,7 @@
                                 <i class="bi bi-bell"></i>
                             </button>
                             <div class="dropdown text-end">
-                                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">Admin
+                                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="../assets/img/homepage/a.png" alt="mdo" width="32" height="32" class="rounded-circle">
                                 </a>
                                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" >
@@ -220,12 +220,11 @@
                     <div class="row">
                         <footer class="bg-white text-center text-lg-start text-decoration-none ">
                             <div class="text-center p-3 ">
-                                © 2020 Copyright:<a class="text-dark text-decoration-none" href="#">MDBootstrap.com</a>
+                                © 2023 Ok Bro:<a class="text-dark text-decoration-none" href="#">Cera Tiles.com</a>
                             </div>
                         </footer>
                     </div>
                 </div>
-                
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
