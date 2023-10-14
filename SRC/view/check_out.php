@@ -76,7 +76,7 @@ $result = $connect->query($sql);
                         ?>
                                 <tr>
                                     <td>
-                                        <img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image" style="max-width: 100px;">
+                                        <img src="<?php echo $each['image']; ?>" alt="Product Image" style="max-width: 100px;">
                                         <?php echo $each['product_name']; ?>
                                     </td>
                                     <td><?php echo $each['price']; ?></td>

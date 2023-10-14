@@ -133,7 +133,7 @@ require '../core/model/database.php';
                         ?>
                         <tr>
                             <td><?php echo $each['product_id']; ?></td>
-                            <td><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image"
+                            <td><img src="<?php echo $each['image']; ?>" alt="Product Image"
                                     style="max-width: 100px;"></td>
                             <td><?php echo $each['product_name']; ?></td>
                             <td><?php echo $each['price']; ?></td>

@@ -124,7 +124,7 @@
             ?>
                     <div class="col-6 col-md-5">
                         <div class="card my-3">
-                            <img src="../assets/img/<?php echo $row['image']; ?>" alt="" class="product-img">
+                            <img src="<?php echo $row['image']; ?>" alt="" class="product-img">
                             <div class="card-body">
                                 <h3><?php echo $row['product_name']; ?></h3>
                                 <h4>Price : <?php echo $row['price']; ?></h4>
@@ -157,7 +157,7 @@
             ?>
                     <div class="col-6 col-md-5">
                         <div class="card my-3">
-                            <img src="../assets/img/<?php echo $row['image']; ?>" alt="" class="product-img">
+                            <img src="<?php echo $row['image']; ?>" alt="" class="product-img">
                             <div class="card-body">
                                 <h3><?php echo $row['product_name']; ?></h3>
                                 <h4>Price : <?php echo $row['price']; ?></h4>

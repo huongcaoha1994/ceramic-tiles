@@ -18,7 +18,7 @@ if (isset($_GET['product_id'])) {
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6 py-2 text-center">
-                    <img src="../assets/img/<?php echo $row['image']; ?>" alt="" width="300" height="300">
+                    <img src="<?php echo $row['image']; ?>" alt="" width="300" height="300">
                 </div>
                 <div class="col-12 col-lg-6 py-2 border-primary rounded-2">
                     <div class="d-flex justify-content-between">

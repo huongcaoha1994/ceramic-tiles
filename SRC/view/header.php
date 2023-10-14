@@ -134,7 +134,7 @@
                                 ?>
                                         <div class="container px-0 py-2 pe-2">
                                             <div class="row gx-3">
-                                                <div class="col-3"><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image" class="w-100"></div>
+                                                <div class="col-3"><img src="<?php echo $each['image']; ?>" alt="Product Image" class="w-100"></div>
                                                 <div class="col-9">
                                                     <div class="row gx-2">
                                                         <div class="col-8 text-start">

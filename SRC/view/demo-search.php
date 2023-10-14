@@ -9,7 +9,7 @@ if($result_product->num_rows > 0){
             array(
                 'id' => $row['product_id'],
                 'name' => $row['product_name'],
-                'image' => '../assets/img/'.$row['image'] ,
+                'image' => ''.$row['image'] ,
                 'size' => $row['size'] ,
                 'price' => $row['price'],
                 'color' => $row['color'] 
