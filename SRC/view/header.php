@@ -191,7 +191,10 @@
         }
 
         ?>
-        <button class=" btn btn-primary button-offcanvas d-none d-lg-block" id="logout"><a style="text-decoration: none;" href="logout.php">Logout</a></button>
+        <button class=" btn btn-primary"  id="logout"><a style="text-decoration: none;" href="../core/controller/logout.php">Logout</a></button>
+        
+        </div>
+        </div>
     </nav>
 
     <script src="../assets/js/headerscript.js"></script>
