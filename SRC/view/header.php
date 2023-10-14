@@ -83,22 +83,24 @@
             </div>
 
             <div class="row flex-nowrap">
-                <div class="col button-offcanvas d-none d-lg-block">
+                <div class="col-10 button-offcanvas d-none d-lg-flex justify-content-between">
                     <a href="./user.php" class="text-decoration-none">
                         <button class="btn btn-primary">
                             <i class="fas fa-user">
                             </i></button>
+                    </a>
+                    <div class="text-start">
                         <?php
                         if (isset($_SESSION['full_name'])) {
                             $fullname = $_SESSION['full_name'];
-                            echo "<h6>Xin chào $fullname </h6>";
+                            echo "<h6>Hello $fullname </h6>";
                         }
-
                         ?>
-                    </a>
+                        <a style="text-decoration: none;" href="../core/controller/logout.php" id="logout">Log out</a>
+                    </div>
                 </div>
-                <div class="col">
-                    <button class="btn btn-primary position-relative btn-cart">
+                <div class="col-2">
+                    <button class="btn btn-primary position-relative btn-cart" style="transform:translateX(-10px)">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             <?php
@@ -191,8 +193,7 @@
         }
 
         ?>
-        <button class=" btn btn-primary"  id="logout"><a style="text-decoration: none;" href="../core/controller/logout.php">Logout</a></button>
-        
+
         </div>
         </div>
     </nav>
