@@ -1,3 +1,8 @@
+<?php
+
+require '../core/model/database.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -87,6 +92,81 @@
                         </div>
                     </header>                   
                     <!--tạo table ở đây-->
+
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Color</th>
+                            <th>Catogory</th>
+                            <th>Brand</th>
+                            <th>Size</th>
+                            <th>Description</th>
+                            <th>Inventory</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <?php
+                        $results_per_page = 10;
+                        $sql = "select products.* from products";
+                            
+                        $result = $connect->query($sql);
+                        $number_of_result = $result->num_rows;
+                        $number_of_page = ceil($number_of_result / $results_per_page);
+                        if (!isset($_GET['page'])) {
+                            $page = 1;
+                        } else {
+                            $page = $_GET['page'];
+                        }
+                        $page_first_result = ($page - 1) * $results_per_page;
+                        $sql = "select 
+                                products.*
+                                , categorys.category_name as cate_name
+                            from products
+                            join categorys on products.category_id = categorys.category_id 
+                            LIMIT " . $page_first_result . ',' . $results_per_page;
+                            $result = $connect->query($sql);
+                        foreach ($result as $each) :
+                        ?>
+                        <tr>
+                            <td><?php echo $each['product_id']; ?></td>
+                            <td><img src="../assets/img/<?php echo $each['image']; ?>" alt="Product Image"
+                                    style="max-width: 100px;"></td>
+                            <td><?php echo $each['product_name']; ?></td>
+                            <td><?php echo $each['price']; ?></td>
+                            <td><?php echo $each['color']; ?></td>
+                            <td><?php echo $each['cate_name']; ?></td>
+                            <td><?php echo $each['brand']; ?></td>
+                            <td><?php echo $each['size']; ?></td>
+                            <td><?php echo $each['description']; ?></td>
+                            <td><?php echo $each['inventory']; ?></td>
+                            <td>
+                            <a class="text-decoration-none" href="../core/model/product_cart_delete.php?product_id=<?php echo $product_id ?>">
+                                    <button class="btn btn-primary">
+                                        <i class="fa-solid fa-trash-can"></i> Update
+                                    </button>
+                                </a>
+                                <a class="text-decoration-none" href="">
+                                    <button class="btn btn-danger">
+                                        <i class="fa-solid fa-trash-can"></i> Remove
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                        <?php
+                    endforeach;
+                    for ($page = 1; $page <= $number_of_page; $page++) {
+                        echo '<a href="crud.php?page=' . $page . '">' . $page . '</a>';
+                    }
+                    ?>
+                </table>
+                <table>
+
+                </table>
+
                     <div class="row">
                         <footer class="bg-white text-center text-lg-start text-decoration-none ">
                             <div class="text-center p-3 ">
