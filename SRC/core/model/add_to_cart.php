@@ -7,9 +7,7 @@ if (empty(($_SESSION['user_id']))) {
 }
 $product_id = $_GET['product_id'];
 
-if (isset($_GET['from_main'])) {
-    $from_main = $_GET['from_main'];
-}
+
 
 if (isset($_GET['from_shop'])) {
     $from_shop = $_GET['from_shop'];
@@ -51,17 +49,18 @@ if (isset($_POST['add_to_cart'])) {
             }
         }
     }
-    if (isset($from_main)) {
+
+    if (isset($_GET['from_main'])) {
         header("location: ../../view/main.php");
         exit();    
     } 
 
-    if (isset($from_shop)) {
+    if (isset($_GET['from_shop'])) {
         header("location: ../../view/shop.php");
         exit();   
 
     }
-    if (isset($from_product_detail)) {
+    if (isset($_GET['from_product_detail'])) {
         header("Location: ../../view/product-detail.php?product_id=" . $product_id);
         exit();    
     }
