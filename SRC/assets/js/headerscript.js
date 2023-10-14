@@ -22,19 +22,21 @@ for (let i = 0; i < menuLinks.length; i++) {
   if (menuLinks[i] == navLink) {
     menuLinks[i].classList.add("active");
   } else {
-    for(let k = 0; k<menuDropdown.length;k++){
-    for (let j = 0; j < dropdownMenuLinks.length; j++) {
-      if (dropdownMenuLinks[j] == navLink) {
-        dropdownMenuLinks[j].classList.add("active");
-        dropdownMenuLinks.closest('.nav-item').add('active');
+    for (let k = 0; k < menuDropdown.length; k++) {
+      for (let j = 0; j < dropdownMenuLinks.length; j++) {
+        if (dropdownMenuLinks[j] == navLink) {
+          dropdownMenuLinks[j].classList.add("active");
+          dropdownMenuLinks.closest(".nav-item").add("active");
+        }
       }
-    }}
+    }
   }
 }
 
-var toOffCanvasMenu = document.querySelectorAll('.button-offcanvas');
-var moveButtontoMenu = document.querySelector('#navbarsExampleDefault')
-
+var toOffCanvasMenu = document.querySelector(".button-offcanvas");
+var moveButtontoMenu = document.querySelector("#navbarsExampleDefault");
+var listMenuHeader = document.querySelector('.main-menu')
 if (window.innerWidth < 992) {
-  moveButtontoMenu.innerHTML = toOffCanvasMenu.innerHTML
-  }
+
+  moveButtontoMenu.innerHTML = moveButtontoMenu.innerHTML + toOffCanvasMenu.innerHTML
+}

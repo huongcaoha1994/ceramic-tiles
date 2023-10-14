@@ -104,7 +104,7 @@ $result = $connect->query($sql);
                 $result = $connect->query($sql);
                 $product_info = mysqli_fetch_array($result);
                 ?>
-                <div class="container">
+                <div class="container ms-3">
                     <div class="row py-2">
                         <div class="col-10 col-lg-3 d-flex">
                             <img src="<?php echo $product_info['image']; ?>" alt="Product Image"
