@@ -36,6 +36,7 @@ CREATE TABLE `order_product` (
 
 LOCK TABLES `order_product` WRITE;
 /*!40000 ALTER TABLE `order_product` DISABLE KEYS */;
+INSERT INTO `order_product` VALUES (1,1,1),(1,2,2),(1,7,1),(1,8,1),(2,87,1),(3,2,1),(4,4,1),(5,4,2),(6,2,1),(7,1,2),(7,3,1),(8,1,2),(8,2,3);
 /*!40000 ALTER TABLE `order_product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-12  8:17:38
+-- Dump completed on 2023-10-15  0:09:55

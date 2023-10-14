@@ -16,26 +16,26 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `categorys`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categorys`;
+DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `categorys` (
-  `category_id` int NOT NULL,
-  `category_name` varchar(50) NOT NULL
+CREATE TABLE `categories` (
+  `categories_id` int NOT NULL,
+  `categories_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `categorys`
+-- Dumping data for table `categories`
 --
 
-LOCK TABLES `categorys` WRITE;
-/*!40000 ALTER TABLE `categorys` DISABLE KEYS */;
-INSERT INTO `categorys` VALUES (11,'bathroom wall tiles'),(21,'bathroom floor tiles'),(12,'kitchen wall tiles'),(22,'kitchen floor tiles'),(13,'outdoor wall tiles'),(23,'outdoor floor tiles'),(14,'living room wall tiles'),(24,'living room floor tiles'),(15,'bedroom wall tiles'),(25,'bedroom floor tiles'),(16,'commercial spaces wall tiles'),(26,'commercial spaces floor tiles'),(17,'special germ free'),(27,'special tac'),(18,'special anti static'),(28,'special cool roof'),(19,'special wall tiles');
-/*!40000 ALTER TABLE `categorys` ENABLE KEYS */;
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (11,'bathroom wall tiles'),(21,'bathroom floor tiles'),(12,'kitchen wall tiles'),(22,'kitchen floor tiles'),(13,'outdoor wall tiles'),(23,'outdoor floor tiles'),(14,'living room wall tiles'),(24,'living room floor tiles'),(15,'bedroom wall tiles'),(25,'bedroom floor tiles'),(16,'commercial spaces wall tiles'),(26,'commercial spaces floor tiles'),(31,'special germ free'),(32,'special tac'),(33,'special anti static'),(34,'special cool roof');
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-12 18:08:44
+-- Dump completed on 2023-10-15  0:09:55
