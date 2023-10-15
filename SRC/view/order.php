@@ -195,7 +195,7 @@ $result = $connect->query($sql);
                             <div class="container">
                                 <div class="row py-2">
                                     <div class="col-10 col-lg-6 d-flex">
-                                        <img src="../assets/img/<?php echo $product_info['image']; ?>" alt="Product Image"
+                                        <img src="<?php echo $product_info['image']; ?>" alt="Product Image"
                                             style="max-width: 50px;">
                                         <span class="px-2 h6">
                                             <?php echo $product_info['product_name']; ?>

@@ -13,6 +13,11 @@ require '../core/model/database.php';
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <title>CRUD</title>
+       <style>
+        #pagination {
+            text-decoration: none;
+        }
+       </style>
     </head>
     <body>
         <div class="container-fluid">
@@ -124,9 +129,9 @@ require '../core/model/database.php';
                         $page_first_result = ($page - 1) * $results_per_page;
                         $sql = "select 
                                 products.*
-                                , categorys.category_name as cate_name
+                                , categories.categories_name as cate_name
                             from products
-                            join categorys on products.category_id = categorys.category_id 
+                            join categories on products.category_id = categories.categories_id 
                             LIMIT " . $page_first_result . ',' . $results_per_page;
                             $result = $connect->query($sql);
                         foreach ($result as $each) :
@@ -158,15 +163,17 @@ require '../core/model/database.php';
                         </tr>
                         <?php
                     endforeach;
-                    for ($page = 1; $page <= $number_of_page; $page++) {
-                        echo '<a href="crud.php?page=' . $page . '">' . $page . '</a>';
-                    }
+                  
                     ?>
                 </table>
                 <table>
 
                 </table>
-
+                        <?php 
+                          for ($page = 1; $page <= $number_of_page; $page++) {
+                            echo '<a href="crud.php?page=' . $page . '" id="pagination">page' . $page . '  | </a>';
+                        }
+                        ?>
                     <div class="row">
                         <footer class="bg-white text-center text-lg-start text-decoration-none ">
                             <div class="text-center p-3 ">
