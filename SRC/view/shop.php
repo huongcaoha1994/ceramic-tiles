@@ -1,4 +1,5 @@
 <?php
+  include("header.php");
 // session_start();
 if (isset($_GET['check_out_success'])) {
   ?>
@@ -71,7 +72,7 @@ if (isset($_GET['err_add'])) {
 
 <body>
   <?php
-  include("header.php");
+
   ?>
   <!-- breadcrumb -->
   <div class="container py-3 d-none d-lg-block">
@@ -207,14 +208,18 @@ if (isset($_GET['err_add'])) {
       <div class="col-12 col-lg-9">
         <div class="row" id="filter">
           <?php
-        if(isset($_SESSION['color']) || isset($_SESSION['brand']) || isset($_SESSION['size']) ){
+        // if(isset($_SESSION['color']) || isset($_SESSION['brand']) || isset($_SESSION['size']) ){
 
-          include("filter-color.php");
-        }
-        else {
-
+        //   include("filter-color.php");
+        // }
+        // else {
+          if(isset($_GET['page']) || isset($_GET['category'])){
+            unset($_SESSION['color']);
+            unset($_SESSION['brand']) ;
+            unset($_SESSION['size']) ;
+          }
           include("search.php");
-        }
+        // }
        
           
           ?>
