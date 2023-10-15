@@ -89,8 +89,8 @@ if (isset($_GET['category'])) {
 } else if (isset($_POST['search'])) {
     $rs_search = htmlspecialchars($_POST['rs_search']);
     $select_product = "SELECT * FROM products
-        JOIN categorys ON products.category_id = categorys.category_id
-        WHERE products.product_name LIKE '%$rs_search%' OR categorys.category_name LIKE '%$rs_search%'
+        JOIN categories ON products.category_id = categories.categories_id
+        WHERE products.product_name LIKE '%$rs_search%' OR categories.categories_name LIKE '%$rs_search%'
          OR products.color LIKE '%$rs_search%' OR products.price LIKE '%$rs_search%'
          OR products.brand LIKE '%$rs_search%' OR products.size LIKE '%$rs_search%'";
 } else {
