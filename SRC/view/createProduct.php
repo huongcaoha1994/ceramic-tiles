@@ -11,7 +11,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="#">
     <title>Document</title>
-  
+
 </head>
 
 <body>
@@ -108,41 +108,42 @@
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="row tm-edit-product-row">
                         <div class="col-xl-4 col-lg-6 col-md-12">
-                          
-                                <div class="form-group mb-3">
-                                    <label for="product_name">Product Name
-                                    </label>
-                                    <input id="product_name" name="product_name" type="text" class="form-control validate" required>
-                                </div>
-                                <!-- <div class="form-group mb-3"> -->
-                                    <label for="description">Description</label>
-                                   <textarea name="description" id="description" cols="30" rows="10"></textarea>
-                                <!-- </div> -->
-                                <div class="form-group mb-3">
-                                    <h3>Color</h3>
-                                    <br>
-                                    <input type="radio" name="color" value="white">
-                                    <label for="color">White</label>
-                                    </t>
-                                    <input type="radio" name="color" value="black">
-                                    <label for="color">Black</label>
-                                    </t>
-                                    <input type="radio" name="color" value="yellow">
-                                    <label for="color">Yellow</label>
-                                    </t>
-                                    <input type="radio" name="color" value="red">
-                                    <label for="color">Red</label>
-                                    </t>
-                                    <input type="radio" name="color" value="orange">
-                                    <label for="color">Orange</label>
-                                    </t>
-                                    <input type="radio" name="color" value="pink">
-                                    <label for="color">Pink</label>
-                                    </t>
-                                    <input type="radio" name="color" value="brown">
-                                    <label for="color">Brown</label>
-                                    <br>
-                                    <!-- <select class="form-control" id="color" name="color">
+
+                            <div class="form-group mb-3">
+                                <label for="product_name">Product Name
+                                </label>
+                                <input id="product_name" name="product_name" type="text" class="form-control validate"
+                                    required>
+                            </div>
+                            <!-- <div class="form-group mb-3"> -->
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                            <!-- </div> -->
+                            <div class="form-group mb-3">
+                                <h3>Color</h3>
+                                <br>
+                                <input type="radio" name="color" value="white">
+                                <label for="color">White</label>
+                                </t>
+                                <input type="radio" name="color" value="black">
+                                <label for="color">Black</label>
+                                </t>
+                                <input type="radio" name="color" value="yellow">
+                                <label for="color">Yellow</label>
+                                </t>
+                                <input type="radio" name="color" value="red">
+                                <label for="color">Red</label>
+                                </t>
+                                <input type="radio" name="color" value="orange">
+                                <label for="color">Orange</label>
+                                </t>
+                                <input type="radio" name="color" value="pink">
+                                <label for="color">Pink</label>
+                                </t>
+                                <input type="radio" name="color" value="brown">
+                                <label for="color">Brown</label>
+                                <br>
+                                <!-- <select class="form-control" id="color" name="color">
                                         <option value="white">White</option>
                                         <option value="black">Black</option>
                                         <option value="yellow">Yellow</option>
@@ -151,22 +152,22 @@
                                         <option value="pink">Pink</option>
                                         <option value="brown">Brown</option>
                                         </select>    -->
+                            </div>
+                            <div class="row">
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="price">Price
+                                    </label>
+                                    <input id="price" name="price" type="number"
+                                        class="form-control validate hasDatepicker">
                                 </div>
-                                <div class="row">
-                                    <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                        <label for="price">Price
-                                        </label>
-                                        <input id="price" name="price" type="number"
-                                            class="form-control validate hasDatepicker">
-                                    </div>
-                                    <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                        <label for="inventory">Inventory
-                                        </label>
-                                        <input id="inventory" name="inventory" type="number"
-                                            class="form-control validate" required="">
-                                    </div>
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="inventory">Inventory
+                                    </label>
+                                    <input id="inventory" name="inventory" type="number" class="form-control validate"
+                                        required="">
                                 </div>
-                           
+                            </div>
+
                         </div>
 
                         <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
@@ -222,28 +223,18 @@
                                 <br>
                             </div>
                             <!-- <div class="form-group mb-3"> -->
-                                <label for="parent_category">Select Parent Option:</label>
-                                <select id="parent_category" name="parent_category">
-                                    <option value="">-- Select --</option>
-                                    <option value="1">Wall tiles</option>
-                                    <option value="2">Floor tiles</option>
-                                    <option value="3">Special</option>
-                                </select>
+                            <label for="parent_category">Select Parent Option:</label>
+                            <select id="parent_category" name="parent_category">
+                                <option value="">-- Select --</option>
+                                <option value="1">Wall tiles</option>
+                                <option value="2">Floor tiles</option>
+                                <option value="3">Special</option>
+                            </select>
 
-                                <label for="child_category">Select Child Option:</label>
-                                <select id="child_category" name="child_category">
-                                    <option value="">-- Select --</option>
-                                    <option value="1">bathroom</option>
-                                    <option value="2">kitchen</option>
-                                    <option value="3">outdoor</option>
-                                    <option value="4">living room</option>
-                                    <option value="5">bedroom</option>
-                                    <option value="6">commercial space</option>
-                                    <option value="1">special gem free</option>
-                                    <option value="2">special tac</option>
-                                    <option value="3">special anti static</option>
-                                    <option value="4">special cool roof</option>
-                                </select>
+                            <label for="child_category">Select Child Option:</label>
+                            <select id="child_category" name="child_category">
+                                <option value="">-- Select --</option>
+                            </select>
                             <!-- </div> -->
 
 
@@ -252,15 +243,15 @@
                             </div>
                             <div class="custom-file mt-3 mb-3">
                                 <label for="image">Upload image</label>
-                               <input type="file" name="image">
-                              <br>
-                              <!-- <input type="submit" name="create_product" value="create product">
+                                <input type="file" name="image">
+                                <br>
+                                <!-- <input type="submit" name="create_product" value="create product">
                             </div> -->
+                            </div>
+                            <div class="col-12">
+                                <input type="submit" name="create_product" value="create_product">
+                            </div>
                         </div>
-                        <div class="col-12">
-                          <input type="submit" name="create_product" value="create_product">
-                        </div>
-                    </div>
                 </form>
                 <div class="row">
                     <footer
@@ -289,12 +280,20 @@
             $data = htmlspecialchars($data);
             return $data ;
         }
+        $parent_category = 0 ;
+        $child_category = 0 ;
         $product_name = clean_data($_POST['product_name']) ;
         $price = clean_data($_POST['price']) ;
         $color = clean_data($_POST['color']) ;
         $inventory = clean_data($_POST['inventory']) ;
-        $parent_category = clean_data($_POST['parent_category']);
-        $child_category = clean_data($_POST['child_category']);
+        if(isset($_POST['parent_category'])){
+
+            $parent_category = clean_data($_POST['parent_category']);
+        }
+        if(isset($_POST['child_category'])){
+
+            $child_category = clean_data($_POST['child_category']);
+        }
         $category = $parent_category.$child_category ;
         $brand = clean_data($_POST['brand']) ;
         $size = clean_data($_POST['size']) ;
@@ -354,5 +353,99 @@
     }
 ?>
 </body>
+<script>
+// Lấy các đối tượng select từ DOM
+var parentSelect = document.getElementById("parent_category");
+var childSelect = document.getElementById("child_category");
+
+// Định nghĩa các giá trị tương ứng của select option con
+var childOptions = {
+    "1": [{
+            display: "bathroom",
+            value: "1"
+        },
+        {
+            display: "kitchen",
+            value: "2"
+        },
+        {
+            display: "outdoor",
+            value: "3"
+        },
+        {
+            display: "living room",
+            value: "4"
+        },
+        {
+            display: "bedroom",
+            value: "5"
+        },
+        {
+            display: "commercial space",
+            value: "6"
+        }
+    ],
+    "2": [{
+            display: "bathroom",
+            value: "1"
+        },
+        {
+            display: "kitchen",
+            value: "2"
+        },
+        {
+            display: "outdoor",
+            value: "3"
+        },
+        {
+            display: "living room",
+            value: "4"
+        },
+        {
+            display: "bedroom",
+            value: "5"
+        },
+        {
+            display: "commercial space",
+            value: "6"
+        }
+    ],
+    "3": [{
+            display: "germ free",
+            value: "1"
+        },
+        {
+            display: "tac",
+            value: "2"
+        },
+        {
+            display: "anti static",
+            value: "3"
+        },
+        {
+            display: "cool roof",
+            value: "4"
+        }
+    ]
+};
+
+// Xử lý sự kiện onchange
+parentSelect.onchange = function() {
+    var selectedValue = parentSelect.value;
+    childSelect.innerHTML = ""; // Xóa tất cả các option cũ
+
+    if (selectedValue !== "") {
+        var options = childOptions[selectedValue];
+
+        // Tạo các option mới cho select option con
+        for (var i = 0; i < options.length; i++) {
+            var option = document.createElement("option");
+            option.text = options[i].display;
+            option.value = options[i].value;
+            childSelect.appendChild(option);
+        }
+    }
+};
+</script>
 
 </html>
