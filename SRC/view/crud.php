@@ -129,9 +129,9 @@ require '../core/model/database.php';
                         $page_first_result = ($page - 1) * $results_per_page;
                         $sql = "select 
                                 products.*
-                                , categories.categories_name as cate_name
+                                , categories.category_name as cate_name
                             from products
-                            join categories on products.category_id = categories.categories_id 
+                            join categories on products.category_id = categories.category_id 
                             LIMIT " . $page_first_result . ',' . $results_per_page;
                             $result = $connect->query($sql);
                         foreach ($result as $each) :
@@ -149,12 +149,12 @@ require '../core/model/database.php';
                             <td><?php echo $each['description']; ?></td>
                             <td><?php echo $each['inventory']; ?></td>
                             <td>
-                            <a class="text-decoration-none" href="../core/model/product_cart_delete.php?product_id=<?php echo $product_id ?>">
+                            <a class="text-decoration-none" href="./update_product_info.php?product_id=<?php echo $each['product_id']; ?>">
                                     <button class="btn btn-primary">
                                         <i class="fa-solid fa-trash-can"></i> Update
                                     </button>
                                 </a>
-                                <a class="text-decoration-none" href="">
+                                <a class="text-decoration-none" href="../core/model/delete_product_info.php?product_id=<?php echo $each['product_id']; ?>">
                                     <button class="btn btn-danger">
                                         <i class="fa-solid fa-trash-can"></i> Remove
                                     </button>
@@ -171,7 +171,7 @@ require '../core/model/database.php';
                 </table>
                         <?php 
                           for ($page = 1; $page <= $number_of_page; $page++) {
-                            echo '<a href="crud.php?page=' . $page . '" id="pagination">page' . $page . '  | </a>';
+                            echo '<a href="crud.php?page=' . $page . '" id="pagination">Page ' . $page . '  | </a>';
                         }
                         ?>
                     <div class="row">
