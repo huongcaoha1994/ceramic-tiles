@@ -1,15 +1,23 @@
 <?php
-session_start();
+require 'header.php';
 if (empty(($_SESSION['user_id']))) {
-    header('Location: ../core/model/login.php?error=You have to login');
+    ?>
+    <script>
+        window.location.href = '../core/model/login.php?error=You have to login';
+    </script>
+    <?php
     exit();
 }
-if(empty($_SESSION['cart'])) {
-    header('location: ./shop.php?err_add=Please add product to cart');
+if (empty($_SESSION['cart'])) {
+    ?>
+    <script>
+        window.location.href = './shop.php?err_add=Please add product to cart';
+    </script>
+    <?php
     exit();
 }
 
-require 'header.php';
+
 require '../core/model/database.php';
 $id = $_SESSION['user_id'];
 $sql = "select * from users where user_id = $id";
@@ -41,17 +49,20 @@ $each = mysqli_fetch_array($result);
                 <form action="../core/model/process_checkout.php" method="POST">
                     <div class="form-group">
                         <label for="name_receiver">Name</label>
-                        <input type="text" class="form-control" name="name_receiver" value="<?php echo $each['full_name'] ?>">
+                        <input type="text" class="form-control" name="name_receiver"
+                            value="<?php echo $each['full_name'] ?>">
                     </div>
                     <div class="form-group">
                         <label for="phone_receiver">Phone</label>
-                        <input type="text" class="form-control" name="phone_receiver" value="<?php echo $each['phone'] ?>">
+                        <input type="text" class="form-control" name="phone_receiver"
+                            value="<?php echo $each['phone'] ?>">
                     </div>
                     <div class="form-group">
                         <label for="address_receiver">Address</label>
-                        <input type="text" class="form-control" name="address_receiver" value="<?php echo $each['address'] ?>">
+                        <input type="text" class="form-control" name="address_receiver"
+                            value="<?php echo $each['address'] ?>">
                     </div>
-                
+
             </div>
             <div class="col-md-6">
                 <h3>Order Summary</h3>
@@ -71,16 +82,20 @@ $each = mysqli_fetch_array($result);
                             $sum = 0;
                             foreach ($cart as $product_id => $quantity) {
                                 $sql = "select * from products where product_id = $product_id";
-$result = $connect->query($sql);
+                                $result = $connect->query($sql);
                                 $each = mysqli_fetch_array($result);
-                        ?>
+                                ?>
                                 <tr>
                                     <td>
                                         <img src="<?php echo $each['image']; ?>" alt="Product Image" style="max-width: 100px;">
                                         <?php echo $each['product_name']; ?>
                                     </td>
-                                    <td><?php echo $each['price']; ?></td>
-                                    <td><?php echo $quantity; ?></td>
+                                    <td>
+                                        <?php echo $each['price']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $quantity; ?>
+                                    </td>
                                     <td>
                                         <?php
                                         $rs = $each['price'] * $quantity;
@@ -88,33 +103,35 @@ $result = $connect->query($sql);
                                         ?>
                                     </td>
                                 </tr>
-                        <?php
+                                <?php
                                 $sum += $rs;
                             }
                         }
                         ?>
                     </tbody>
                 </table>
-                <h3 class="float-right">Total Amount: <?php echo isset($sum) ? $sum : 0; ?></h3>
+                <h3 class="float-right">Total Amount:
+                    <?php echo isset($sum) ? $sum : 0; ?>
+                </h3>
             </div>
         </div>
         <div class="float-right">Purchase method:
-                            <input type="radio" name="purchase_method" value="1" checked> Cash
-                            <input type="radio" name="purchase_method" value="2"> Bank Transfer 
-                </div>
-        <div class="row mt-4">
-        <div class="row mt-4">
-            <div class="col-6">
-                <a href="views_cart.php" class="btn btn-primary">Back to Cart</a>
-            </div>
-            <div class="col-6">
-            <button type="submit" class="btn btn-primary float-right">Check Out</button>
-            </div>
+            <input type="radio" name="purchase_method" value="1" checked> Cash
+            <input type="radio" name="purchase_method" value="2"> Bank Transfer
         </div>
-        </form>
-    </div>
-    <div class="mt-4"></div>
-    <?php include 'footer.php'; ?>
+        <div class="row mt-4">
+            <div class="row mt-4">
+                <div class="col-6">
+                    <a href="views_cart.php" class="btn btn-primary">Back to Cart</a>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary float-right">Check Out</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="mt-4"></div>
+        <?php include 'footer.php'; ?>
 </body>
 
-</html> 
+</html>

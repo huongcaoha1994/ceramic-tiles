@@ -1,13 +1,25 @@
 <?php
-session_start();
 
+require '../core/model/database.php';
+
+if (isset($_GET['received']) && isset($_GET['order_id'])) {
+    $order_id = $_GET['order_id'];
+    
+    $sql = "UPDATE orders SET status = 2 WHERE order_id = $order_id";
+    $update_result = $connect->query($sql);
+    header('Location: ./user.php');
+    exit();
+}
+
+require './header.php';
+require '../core/model/database.php';
 if (empty(($_SESSION['user_id']))) {
     header('Location: ../core/model/login.php?error=You have to login');
     exit();
 }
-require './header.php';
 
-require '../core/model/database.php';
+$user_id = $_SESSION['user_id'];
+
 $sql = "select 
     orders.*,
     users.full_name,
@@ -16,7 +28,8 @@ $sql = "select
     orders.address aS receiver_address
     from orders 
     join users
-    on orders.user_id = users.user_id";
+    on orders.user_id = users.user_id
+    where orders.user_id = $user_id";
 $result = $connect->query($sql);
 ?>
 
@@ -78,6 +91,11 @@ $result = $connect->query($sql);
                                 break;
                             case 1:
                                 echo "Order is being delivered";
+                                ?>
+                                <br>
+                                <a class="btn btn-primary"
+                                    href="./user.php?order_id=<?php echo $order['order_id']; ?>&received">Received</a>
+                                <?php
                                 break;
                             case 2:
                                 echo "Received";
@@ -107,8 +125,7 @@ $result = $connect->query($sql);
                 <div class="container ms-3">
                     <div class="row py-2">
                         <div class="col-10 col-lg-3 d-flex">
-                            <img src="<?php echo $product_info['image']; ?>" alt="Product Image"
-                                style="max-width: 50px;">
+                            <img src="<?php echo $product_info['image']; ?>" alt="Product Image" style="max-width: 50px;">
                             <span class="px-2 h6">
                                 <?php echo $product_info['product_name']; ?>
                             </span>
@@ -135,9 +152,9 @@ $result = $connect->query($sql);
             ?>
         <?php endforeach; // End of the foreach loop for orders ?>
     </div>
-<?php 
-include('footer.php');
-?>
+    <?php
+    include('footer.php');
+    ?>
 </body>
 
 </html>
