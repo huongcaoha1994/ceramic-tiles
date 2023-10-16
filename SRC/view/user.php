@@ -14,7 +14,11 @@ if (isset($_GET['received']) && isset($_GET['order_id'])) {
 require './header.php';
 require '../core/model/database.php';
 if (empty(($_SESSION['user_id']))) {
-    header('Location: ../core/model/login.php?error=You have to login');
+    ?>
+    <script>
+        window.location.href = '../core/model/login.php?error=You have to login';
+    </script>   
+    <?php
     exit();
 }
 
