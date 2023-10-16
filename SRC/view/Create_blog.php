@@ -10,11 +10,13 @@
     <?php
         include("header.php");
     ?>
-    
-    <form action="" method="POST" enctype="multipart/form-data">
+    <div class="container">
+
+   
+    <form action="" method="POST" enctype="multipart/form-data" class="contac">
         <h2>Create Blog Post</h2>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">title :</label>
+            <label for="exampleFormControlInput1" class="form-label">Title :</label>
             <input type="text" name="title" required>
         </div>
         <div class="mb-3">
@@ -24,12 +26,12 @@
         <div class="mb-3">
             <input type="file" name="image">
         </div>
-        <div class="mb-3">
-            <input type="submit" name="create_blog" value="Create">
+        <div class="mb-3" style="text-align:end;">
+            <input class="Create" type="submit" name="create_blog" value="Create">
         </div>
         
     </form>
-
+ </div>
 
 
 
