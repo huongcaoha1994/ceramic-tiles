@@ -23,7 +23,7 @@
     </form>
 
     <?php 
-    include("database.php");
+    include("../core/model/database.php");
     if(isset($_POST['create_blog'])){
         function clean_data($data){
             $data = trim($data) ;
@@ -35,7 +35,7 @@
        $content = clean_data($_POST['content']) ;
         // xử lý hình ảnh và lưu ảnh vào foder
         if(isset($_FILES['image'])){
-            $file_save = "../assets/img/image/" ;
+            $file_save = "../assets/img/image/";
             $taget_file = $file_save.basename($_FILES['image']['name']) ;
             $style_file = strtolower(pathinfo($taget_file,PATHINFO_EXTENSION)) ;
             $upload_oke = true ;
@@ -82,5 +82,6 @@
 
     }
     ?>
+   
 </body>
 </html>
