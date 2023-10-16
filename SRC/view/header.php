@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,6 +81,9 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.php">Contact Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.canva.com/design/DAFxI2DMw7I/DOMNh-qwjVs0hjdxzmMR8Q/view?utm_content=DAFxI2DMw7I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview">E-Catalogue</a>
+                    </li>
                 </ul>
             </div>
 
@@ -96,7 +101,7 @@ session_start();
                             echo "<h6>Hello $fullname </h6>";
                         }
                         ?>
-                        <a style="text-decoration: none;" href="../core/controller/logout.php" id="logout">Log out</a>
+                        <a style="text-decoration: none;" href="../core/controller/logout.php" id="logout"><i class="fa-solid fa-right-from-bracket"></i>Log out</a>
                     </div>
                 </div>
                 <div class="col-2">
@@ -112,12 +117,16 @@ session_start();
                                 foreach ($carts as $value) {
                                     $number_product++;
                                 }
-                                echo $number_product;
-                            } else {
-                                echo "0";
+                                if($number_product > 0){
+
+                                    echo $number_product;
+                                }
+                                else {
+                                    echo 0 ;
+                                }
                             }
                             ?>
-                            <span class="visually-hidden">unread messages</span>
+                            <span class="visually-hidden position-unset">0</span>
                         </span>
                         <div class="header_cart position-absolute z-2 rounded-1 border">
                             <div class="header__cart-heading">

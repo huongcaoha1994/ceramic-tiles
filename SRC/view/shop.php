@@ -120,7 +120,7 @@ if (isset($_GET['err_add'])) {
   <!-- Heading -->
 
   <!-- Main content -->
-  <div class="container">
+  <div class="container py-3">
     <div class="row">
       <div class="d-none col-lg-3 d-lg-block border rounded-1 p-3 filter_offcanvas">
 

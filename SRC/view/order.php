@@ -13,6 +13,14 @@ $sql = "select
     on orders.user_id = users.user_id";
 $result = $connect->query($sql);
 
+if (isset($_GET['accept']) && isset($_GET['order_id'])) {
+    $order_id = $_GET['order_id'];
+    
+    $sql = "UPDATE orders SET status = 1 WHERE order_id = $order_id";
+    $update_result = $connect->query($sql);
+    header('Location: ./order.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -128,11 +136,6 @@ $result = $connect->query($sql);
 
                 <div class="container">
                     <?php foreach ($result as $order): ?>
-                        <!-- bây giờ a vứt mẹ cái <tr> chứa mấy cái thead 
-        đi và css cho e 1 dòng hiện thông tin t
-        head nhưng không phải là dùng table được k a, 
-        dùng thẻ div các thứ ý, vì nếu không nó bị lặp lại cả thead
-        a thử comment tr chứa thead là hiểu nhé -->
                         <table class="table table-responsive">
                             <tr>
                                 <th>Created at</th>
@@ -161,12 +164,47 @@ $result = $connect->query($sql);
                                 <td>
                                     <?php echo $order['total_price'] ?>
                                 </td>
-                                <td><?php echo $order['purchase_method'] ?></td>
                                 <td>
                                     <?php
+                                    switch ($order['purchase_method']) {
+                                        case 1:
+                                            echo "Cash";
+                                            break;
+                                        case 2:
+                                            echo "Bank transfer";
+                                            break;
+                                    }
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php                               
+                                    
                                     switch ($order['status']) {
                                         case 0:
                                             echo "Pending";
+                                            ?>
+                                            <a class="btn btn-primary" href="./order.php?order_id=<?php echo $order['order_id'];?>&accept">Accept</a>
+                                            <?php
+                                            $order_id = $order['order_id'];
+                                            $sql = "select 
+                                                    products.product_id as p_id,
+                                                    quantity,
+                                                    inventory
+                                                    from order_product
+                                                    join products on products.product_id = order_product.product_id
+                                                    where order_product.order_id = $order_id";
+                                            $inven = $connect->query($sql);
+                                        foreach ($inven as $each) { 
+                                            $qtt = $each['quantity'];
+                                            $inven_qtt = $each['inventory'];
+                                            $p_id = $each['p_id'];
+                                        
+                                            $sql = "update products
+                                                set inventory = inventory - $qtt
+                                                where product_id = $p_id";
+                                            $connect->query($sql);                                            
+                                        }
+
                                             break;
                                         case 1:
                                             echo "Order is being delivered";

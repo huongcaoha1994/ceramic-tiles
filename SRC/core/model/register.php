@@ -37,6 +37,9 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
         <?php
         session_start();
         include 'database.php';
+        if(isset($_GET['error'])){
+          echo "<script> alert('Account already exists')</script>";
+        }
         $usernameErr = $passwordErr = $full_nameErr = $emailErr = $addressErr = $phoneErr = "";
         $username = $password = $full_name = $email = $address = $phone = "";
         $hasErrors = false; // Biến để kiểm tra có lỗi hay không
@@ -52,7 +55,7 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 
           if (isset($_POST["btn"])) {
               $hasErrors = true; // Đã ấn nút "Đăng ký"
-          
+              
               $username = test_input($_POST['username']);
               $password = password_hash(test_input($_POST['password']), PASSWORD_DEFAULT);
               $full_name = test_input($_POST['full_name']);
@@ -60,6 +63,19 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
               $address = test_input($_POST['address']);
               $phone = test_input($_POST['phone']);
               $password_regex = "/^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/";
+              
+              $admin_name = "" ;
+              $select_admin = "select admin_name from admin limit 1 ;" ;
+              $result_admin = $connect->query($select_admin);
+              if($result_admin->num_rows > 0 ){
+                $row = $result_admin->fetch_assoc();
+                $admin_name = $row['admin_name'] ;
+              }
+              if($username === $admin_name){
+               
+                header("location: ../model/register.php?error=1");
+                exit;
+              }
 
               //validate dữ liệu nhập vào
               if (empty($username)) {

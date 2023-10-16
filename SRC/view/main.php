@@ -156,7 +156,7 @@ include("./header.php");
 <section class="container py-3 ">
   <div class="row">
     <div class="col-12 my-2 col-md-6 fade-in-left animation-element animate">
-      <a href="./shop.php">
+      <a href="https://www.canva.com/design/DAFxI2DMw7I/DOMNh-qwjVs0hjdxzmMR8Q/view?utm_content=DAFxI2DMw7I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview">
         <img src="../assets/img/homepage/small_banner1.jpg" alt="" class="rounded-2" width="100%" height="150px" style="object-fit: cover; object-position:center;">
       </a>
     </div>

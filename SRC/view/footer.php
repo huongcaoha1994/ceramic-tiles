@@ -49,11 +49,11 @@
         </footer>
     </div>
     <div class="cta z-3">
-        <a href="#" class="my-2 border">
+        <a href="tel:0333770111" class="my-2 border">
             <img src="../assets/img/homepage/phone.png" alt="" srcset="" class="shake-bottom">
 
         </a>
-        <a href="#" class="my-2 border">
+        <a href="https://www.facebook.com/kongotoiphaiko" class="my-2 border">
             <img src="../assets/img/homepage/messenger.png" alt="" srcset="">
 
         </a>

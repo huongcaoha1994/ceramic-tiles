@@ -2,7 +2,7 @@
 include("../core/model/database.php");
 
 
-$select_blog = "select * from blogs order by blog_id DESC LIMIT 4;";
+$select_blog = "select * from blogs order by blog_id DESC ;";
 $result_blog = $connect->query($select_blog);
 if ($result_blog->num_rows > 0) {
   while ($row = $result_blog->fetch_assoc()) {
