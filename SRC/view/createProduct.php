@@ -62,6 +62,10 @@
                             <a href="../view/member.php" class="nav-link link-dark px-0 align-middle">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Contact</span> </a>
                         </li>
+                        <li>
+                            <a href="../core/model/create_blog.php" class="nav-link link-dark px-0 align-middle">
+                                <i class="fs-4 bi-substack"></i> <span class="ms-1 d-none d-sm-inline">Create Blog</span> </a>
+                        </li>
                     </ul>
 
                 </div>
