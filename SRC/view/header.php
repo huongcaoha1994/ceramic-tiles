@@ -124,7 +124,7 @@ session_start();
                                 }
                             }
                             ?>
-                            <span class="visually-hidden">unread messages</span>
+                            <span class="visually-hidden position-unset">0</span>
                         </span>
                         <div class="header_cart position-absolute z-2 rounded-1 border">
                             <div class="header__cart-heading">

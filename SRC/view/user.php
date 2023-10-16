@@ -56,9 +56,9 @@ $result = $connect->query($sql);
                     <th>Receiver's information</th>
                     <th>Total amount</th>
                     <th>Purchase method</th>
-                    <th>Status</th>
+                    <th style="width: 125px">Status</th>
                 </tr>
-                <tr>
+                <tr class="align-middle">
                     <td>
                         <?php echo $order['created_at'] ?>
                     </td>
