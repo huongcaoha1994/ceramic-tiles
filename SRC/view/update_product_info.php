@@ -272,54 +272,19 @@ $each = mysqli_fetch_array($result);
                                 <br>
                             </div>
                             <!-- <div class="form-group mb-3"> -->
-                            <label for="nparent_category">Select Parent Option:</label>
-                                <select id="nparent_category" name="nparent_category">
-                                    <option value="">-- Select --</option>
-                                    <option value="1" <?php if ($each['pstr'] == "1") { ?> selected <?php }
-                                    ; ?>>Wall tiles
-                                    </option>
-                                    <option value="2" <?php if ($each['pstr'] == "2") { ?> selected <?php }
-                                    ; ?>>Floor
-                                        tiles</option>
-                                    <option value="3" <?php if ($each['pstr'] == "3") { ?> selected <?php }
-                                    ; ?>>Special
-                                    </option>
-                                </select>
+                           
+                                <label for="nparent_category">Select Parent Option:</label>
+                            <select id="nparent_category" name="nparent_category" value="<?php $each['pstr'];?>" required>
+                                <option value="">-- Select --</option>
+                                <option value="1" >Wall tiles</option>
+                                <option value="2">Floor tiles</option>
+                                <option value="3">Special</option>
+                            </select>
 
-                                <label for="nchild_category">Select Child Option:</label>
-                                <select id="nchild_category" name="nchild_category">
-                                    <option value="">-- Select --</option>
-                                    <option value="1" <?php if ($each['cstr'] == "1") { ?> selected <?php }
-                                    ; ?>>bathroom
-                                    </option>
-                                    <option value="2" <?php if ($each['cstr'] == "2") { ?> selected <?php }
-                                    ; ?>>kitchen
-                                    </option>
-                                    <option value="3" <?php if ($each['cstr'] == "3") { ?> selected <?php }
-                                    ; ?>>outdoor
-                                    </option>
-                                    <option value="4" <?php if ($each['cstr'] == "4") { ?> selected <?php }
-                                    ; ?>>living
-                                        room</option>
-                                    <option value="5" <?php if ($each['cstr'] == "5") { ?> selected <?php }
-                                    ; ?>>bedroom
-                                    </option>
-                                    <option value="6" <?php if ($each['cstr'] == "6") { ?> selected <?php }
-                                    ; ?>>commercial
-                                        space</option>
-                                    <option value="1" <?php if ($each['cstr'] == "7") { ?> selected <?php }
-                                    ; ?>>special
-                                        gem free</option>
-                                    <option value="2" <?php if ($each['cstr'] == "8") { ?> selected <?php }
-                                    ; ?>>special
-                                        tac</option>
-                                    <option value="3" <?php if ($each['cstr'] == "9") { ?> selected <?php }
-                                    ; ?>>special
-                                        anti static</option>
-                                    <option value="4" <?php if ($each['cstr'] == "10") { ?> selected <?php }
-                                    ; ?>>special
-                                        cool roof</option>
-                                </select>
+                            <label for="nchild_category">Select Child Option:</label>
+                            <select id="nchild_category" name="nchild_category" value="<?php $each['cstr'];?>" required>
+                                <option value="">-- Select --</option>
+                            </select>
                                 <!-- </div> -->
 
                                 <br>
@@ -338,7 +303,10 @@ $each = mysqli_fetch_array($result);
                                 </div>
                                 <div class="col-12">
                                     <input type="submit" name="save_changes" value="Save changes">
+                                    
+                                    <button><a href="../view/crud.php" style="text-decoration: none;">Cancel</a></button>
                                 </div>
+                              
                         </div>
                 </form>
                 <div class="row">
@@ -358,7 +326,101 @@ $each = mysqli_fetch_array($result);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
         </script>
-
+   
 </body>
+<script>
+// Lấy các đối tượng select từ DOM
+var parentSelect = document.getElementById("nparent_category");
+var childSelect = document.getElementById("nchild_category");
+
+// Định nghĩa các giá trị tương ứng của select option con
+var childOptions = {
+    "1": [{
+            display: "bathroom",
+            value: "1"
+        },
+        {
+            display: "kitchen",
+            value: "2"
+        },
+        {
+            display: "outdoor",
+            value: "3"
+        },
+        {
+            display: "living room",
+            value: "4"
+        },
+        {
+            display: "bedroom",
+            value: "5"
+        },
+        {
+            display: "commercial space",
+            value: "6"
+        }
+    ],
+    "2": [{
+            display: "bathroom",
+            value: "1"
+        },
+        {
+            display: "kitchen",
+            value: "2"
+        },
+        {
+            display: "outdoor",
+            value: "3"
+        },
+        {
+            display: "living room",
+            value: "4"
+        },
+        {
+            display: "bedroom",
+            value: "5"
+        },
+        {
+            display: "commercial space",
+            value: "6"
+        }
+    ],
+    "3": [{
+            display: "germ free",
+            value: "1"
+        },
+        {
+            display: "tac",
+            value: "2"
+        },
+        {
+            display: "anti static",
+            value: "3"
+        },
+        {
+            display: "cool roof",
+            value: "4"
+        }
+    ]
+};
+
+// Xử lý sự kiện onchange
+parentSelect.onchange = function() {
+    var selectedValue = parentSelect.value;
+    childSelect.innerHTML = ""; // Xóa tất cả các option cũ
+
+    if (selectedValue !== "") {
+        var options = childOptions[selectedValue];
+
+        // Tạo các option mới cho select option con
+        for (var i = 0; i < options.length; i++) {
+            var option = document.createElement("option");
+            option.text = options[i].display;
+            option.value = options[i].value;
+            childSelect.appendChild(option);
+        }
+    }
+};
+</script>
 
 </html>

@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/Create_blog.css">
+    <title>Create_blog</title>
 </head>
 <body>
-    
-    <form action="" method="POST" enctype="multipart/form-data">
+    <?php
+        include("header.php");
+    ?>
+    <div class="container">
+
+   
+    <form action="" method="POST" enctype="multipart/form-data" class="contac">
         <h2>Create Blog Post</h2>
-        <br>
-        <label for="title">Title : </label>
-        <input type="text" name="title" required>
-        <br>
-        <label for="content">Content : </label>
-        <textarea name="content" id="content" cols="60" rows="20"></textarea>
-        <br>
-        <label for="image">Image : </label>
-        <input type="file" name="image">
-        <br>
-        <input type="submit" name="create_blog" value="Create">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title :</label>
+            <input type="text" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content :</label>
+            <textarea class="form-control" name="content" id="content" cols="60" rows="10"></textarea>
+        </div>
+        <div class="mb-3">
+            <input type="file" name="image">
+        </div>
+        <div class="mb-3" style="text-align:end;">
+            <input class="Create" type="submit" name="create_blog" value="Create">
+        </div>
+        
     </form>
+ </div>
+
+
 
     <?php 
     include("../core/model/database.php");
@@ -82,6 +95,8 @@
 
     }
     ?>
-   
+    <?php
+        include("footer.php");
+    ?>
 </body>
 </html>

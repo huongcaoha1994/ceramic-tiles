@@ -116,8 +116,6 @@ session_start();
                                     $number_product++;
                                 }
                                 echo $number_product;
-                            } else {
-                                echo "0";
                             }
                             ?>
                             <span class="visually-hidden">unread messages</span>

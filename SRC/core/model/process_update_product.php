@@ -1,7 +1,7 @@
 <!-- xử lý dữ liệu từ form gửi đến -->
 <?php
 include("database.php");
-
+global $product_id ;
 $product_id = $_GET['product_id'];
 
 function clean_data($data)
@@ -16,6 +16,11 @@ $ncolor = clean_data($_POST['ncolor']);
 $ninventory = clean_data($_POST['ninventory']);
 $nparent_category = clean_data($_POST['nparent_category']);
 $nchild_category = clean_data($_POST['nchild_category']);
+if($nparent_category === "" || $nchild_category === ""){
+    // echo "<script> alert('you need selected category !')</script>" ;
+    header("location: ../../view/update_product_info.php?product_id=$product_id ");
+    exit ;
+}
 $ncategory = $nparent_category . $nchild_category;
 $nbrand = clean_data($_POST['nbrand']);
 $nsize = clean_data($_POST['nsize']);
