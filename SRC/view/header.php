@@ -115,7 +115,13 @@ session_start();
                                 foreach ($carts as $value) {
                                     $number_product++;
                                 }
-                                echo $number_product;
+                                if($number_product > 0){
+
+                                    echo $number_product;
+                                }
+                                else {
+                                    echo 0 ;
+                                }
                             }
                             ?>
                             <span class="visually-hidden">unread messages</span>
