@@ -35,7 +35,7 @@
             </div>
         </div>
         
-        <a href="https://www.canva.com/design/DAFxI2DMw7I/DOMNh-qwjVs0hjdxzmMR8Q/view?utm_content=DAFxI2DMw7I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview">e-catalogue </a>
+   
         <div class="bg-white py-5">
             <div class="container py-5">
                 <div class="row align-items-center mb-5">
