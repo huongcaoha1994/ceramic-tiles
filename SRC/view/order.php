@@ -181,6 +181,26 @@ if (isset($_GET['accept']) && isset($_GET['order_id'])) {
                                             ?>
                                             <a class="btn btn-primary" href="./order.php?order_id=<?php echo $order['order_id'];?>&accept">Accept</a>
                                             <?php
+                                            $order_id = $order['order_id'];
+                                            $sql = "select 
+                                                    products.product_id as p_id,
+                                                    quantity,
+                                                    inventory
+                                                    from order_product
+                                                    join products on products.product_id = order_product.product_id
+                                                    where order_product.order_id = $order_id";
+                                            $inven = $connect->query($sql);
+                                        foreach ($inven as $each) { 
+                                            $qtt = $each['quantity'];
+                                            $inven_qtt = $each['inventory'];
+                                            $p_id = $each['p_id'];
+                                        
+                                            $sql = "update products
+                                                set inventory = inventory - $qtt
+                                                where product_id = $p_id";
+                                            $connect->query($sql);                                            
+                                        }
+
                                             break;
                                         case 1:
                                             echo "Order is being delivered";
