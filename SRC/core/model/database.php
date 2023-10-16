@@ -1,7 +1,7 @@
 <?php 
-$servername = "localhost:3307" ;
+$servername = "localhost" ;
 $username = "root" ;
-$password = "12345678" ;
+$password = "khongcopass123" ;
 $dbname = "project_mytiles" ;
 $connect = new mysqli($servername,$username,$password,$dbname) ;
 if(!$connect){
