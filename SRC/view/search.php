@@ -23,8 +23,10 @@
 include("../core/model/database.php");
 
 $select_product = "";
-
-if (isset($_GET['category'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST"){
+    include("../view/filter-color.php");
+}
+else if (isset($_GET['category'])) {
     $category = $_GET['category'];
     // if ($category == "wall") {
     //     $select_product = "SELECT * FROM products WHERE category_id = 1";
@@ -94,6 +96,7 @@ if (isset($_GET['category'])) {
          OR products.color LIKE '%$rs_search%' OR products.price LIKE '%$rs_search%'
          OR products.brand LIKE '%$rs_search%' OR products.size LIKE '%$rs_search%'";
 } else {
+ 
     $select_product = "SELECT * FROM products";
 }
 $item_per_page = 6 ;

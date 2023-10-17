@@ -34,7 +34,6 @@
  </div>
 
 
- 
 
     <?php 
     include("../core/model/database.php");

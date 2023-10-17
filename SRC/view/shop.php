@@ -23,6 +23,7 @@ if (isset($_GET['err_add'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Document</title>
   <script>
         function filterColor(color,brand,size) {
@@ -213,15 +214,15 @@ if (isset($_GET['err_add'])) {
         //   include("filter-color.php");
         // }
         // else {
-          if(isset($_GET['page']) || isset($_GET['category'])){
+          if(isset($_GET['page']) || isset($_GET['category']) || isset($_GET['search'])){
             unset($_SESSION['color']);
             unset($_SESSION['brand']) ;
             unset($_SESSION['size']) ;
           }
+          
           include("search.php");
         // }
-       
-          
+      
           ?>
         </div>
       </div>
