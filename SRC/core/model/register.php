@@ -178,7 +178,6 @@ $mail = new PHPMailer(true); // Passing `true` enables exceptions
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
               <li><a href="../../view/main.php" class="nav-link px-2 link-dark">Home</a></li>
-              <li><a href="../../view/admin.php" class="nav-link px-2 link-dark">Admin</a></li>
               <li><a href="../../view/shop.php" class="nav-link px-2 link-dark">Shop</a></li>
               <li><a href="../../view/home.php" class="nav-link px-2 link-dark">View</a></li>
               <li><a href="../../view/best_sale.php" class="nav-link px-2 link-dark">Sale</a></li>

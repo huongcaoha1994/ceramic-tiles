@@ -107,10 +107,9 @@ else {
                           <h6>Inventory : <?php echo $row['inventory']; ?></h6>
                           <h6>Brand : <?php echo $row['brand']; ?></h6>
                           <h6>Size : <?php echo $row['size']; ?></h6>
-                          <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id']; ?>" method="POST">
+                          <form action="../core/model/add_to_cart.php?product_id=<?php echo $row['product_id']; ?>&from_shop" method="POST">
                            
-                            <label for="quantity">Quantity :</label>
-                            <input type="number" name="quantity">
+                            
                            
                             <button class="btn btn-primary" type="submit" name="add_to_cart">Add to cart</button>
                         </form>
