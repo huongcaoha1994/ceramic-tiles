@@ -77,7 +77,7 @@ $each = mysqli_fetch_array($result);
                                 <li>
                                     <a href="../view/crud.php" class="nav-link link-dark px-0"><i
                                             class="bi bi-file-earmark-plus-fill"></i> <span
-                                            class="d-none d-sm-inline">CRUD</span></a>
+                                            class="d-none d-sm-inline">List of Products</span></a>
                                 </li>
                             </ul>
                         </li>

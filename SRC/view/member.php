@@ -8,6 +8,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <title>Member</title>
+        <style>
+            table,tr,td,th {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
     </head>
     <body>
         <div class="container-fluid">
@@ -40,7 +46,7 @@
                                         <a href="../view/createProduct.php" class="nav-link link-dark px-0"><i class="bi bi-bag-plus-fill"></i> <span class="d-none d-sm-inline">Add Product</span></a>
                                     </li>
                                     <li>
-                                        <a href="../view/crud.php" class="nav-link link-dark px-0"><i class="bi bi-file-earmark-plus-fill"></i><span class="d-none d-sm-inline">CRUD</span></a>
+                                        <a href="../view/crud.php" class="nav-link link-dark px-0"><i class="bi bi-file-earmark-plus-fill"></i><span class="d-none d-sm-inline">List of Products</span></a>
                                     </li>
                                 </ul>
                             </li>
@@ -85,13 +91,49 @@
                                     <li><a class="dropdown-item" href="#">Settings</a></li>
                                     <li><a class="dropdown-item" href="#">Profile</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
+                                    <li><a class="dropdown-item" href="../core/model/login.php">Sign out</a></li>
                                 </ul>
                             </div>
                         </div>
                         </div>
-                    </header>                   
-                    <!--tạo table ở đây-->
+                    </header>    
+                    <br>
+                    <h1>List Users</h1>
+                    <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                        </tr>
+                       
+                    <?php 
+                    include("../core/model/database.php");
+                    $stt = 1 ;
+                    $select_user = "select * from users ;";
+                    $result_user = $connect->query($select_user);
+                    if($result_user->num_rows > 0){
+                        while($row = $result_user->fetch_assoc()){
+
+                            ?>
+                            <tr>
+                                <td><?php echo $stt ; ?></td>
+                                <td><?php echo $row['username'] ; ?></td>
+                                <td><?php echo $row['password'] ; ?></td>
+                                <td><?php echo $row['full_name'] ; ?></td>
+                                <td><?php echo $row['email'] ; ?></td>
+                                <td><?php echo $row['address'] ; ?></td>
+                                <td><?php echo $row['phone'] ; ?></td>
+                            </tr>
+                            <?php
+                            $stt++ ;
+                        }
+                    }
+                    ?>
+                    </table>               
                     <div class="row">
                         <footer class="bg-white text-center text-lg-start text-decoration-none ">
                             <div class="text-center p-3 ">

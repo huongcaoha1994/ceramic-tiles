@@ -50,7 +50,7 @@ require '../core/model/database.php';
                                         <a href="../view/createProduct.php" class="nav-link link-dark px-0"><i class="bi bi-bag-plus-fill"></i> <span class="d-none d-sm-inline">Add Product</span></a>
                                     </li>
                                     <li>
-                                        <a href="../view/crud.php" class="nav-link link-dark px-0"><i class="bi bi-file-earmark-plus-fill"></i><span class="d-none d-sm-inline">CRUD</span></a>
+                                        <a href="../view/crud.php" class="nav-link link-dark px-0"><i class="bi bi-file-earmark-plus-fill"></i><span class="d-none d-sm-inline">List of Products</span></a>
                                     </li>
                                 </ul>
                             </li>
