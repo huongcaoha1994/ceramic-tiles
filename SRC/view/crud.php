@@ -120,7 +120,7 @@ require '../core/model/database.php';
                     </thead>
                     <?php
                         $results_per_page = 10;
-                        $sql = "select products.* from products";
+                        $sql = "select * from products";
                             
                         $result = $connect->query($sql);
                         $number_of_result = $result->num_rows;
