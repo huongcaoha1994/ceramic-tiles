@@ -8,6 +8,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <title>Member</title>
+        <style>
+            table,tr,td,th {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
     </head>
     <body>
         <div class="container-fluid">
@@ -91,7 +97,45 @@
                         </div>
                         </div>
                     </header>                   
-                    <!--tạo table ở đây-->
+                    <br>
+                    <h1>List User</h1>
+                    <br>
+
+                    <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                        </tr>
+                       
+                    <?php 
+                    include("../core/model/database.php");
+                    $stt = 1 ;
+                    $select_user = "select * from users ;";
+                    $result_user = $connect->query($select_user);
+                    if($result_user->num_rows > 0){
+                        while($row = $result_user->fetch_assoc()){
+
+                            ?>
+                            <tr>
+                                <td><?php echo $stt ; ?></td>
+                                <td><?php echo $row['username'] ; ?></td>
+                                <td><?php echo $row['password'] ; ?></td>
+                                <td><?php echo $row['full_name'] ; ?></td>
+                                <td><?php echo $row['email'] ; ?></td>
+                                <td><?php echo $row['address'] ; ?></td>
+                                <td><?php echo $row['phone'] ; ?></td>
+                            </tr>
+                            <?php
+                            $stt++ ;
+                        }
+                    }
+                    ?>
+                    </table>        
                     <div class="row">
                         <footer class="bg-white text-center text-lg-start text-decoration-none ">
                             <div class="text-center p-3 ">
