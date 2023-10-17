@@ -23,10 +23,10 @@
 include("../core/model/database.php");
 
 $select_product = "";
-if ($_SERVER["REQUEST_METHOD"] === "POST"){
-    include("../view/filter-color.php");
-}
-else if (isset($_GET['category'])) {
+// if ($_SERVER["REQUEST_METHOD"] === "POST"){
+//     include("../view/filter-color.php");
+// }
+ if (isset($_GET['category'])) {
     $category = $_GET['category'];
     // if ($category == "wall") {
     //     $select_product = "SELECT * FROM products WHERE category_id = 1";
@@ -85,9 +85,9 @@ else if (isset($_GET['category'])) {
     else if ($category == "allfloor") {
         $select_product = "SELECT * FROM products WHERE category_id IN (21,22,23,24,25,26)";
     }
-    else if ($category == "allspecial") {
-        $select_product = "SELECT * FROM products WHERE category_id = 19 ";
-    }
+    // else if ($category == "allspecial") {
+    //     $select_product = "SELECT * FROM products WHERE category_id = 19 ";
+    // }
 } else if (isset($_POST['search'])) {
     $rs_search = htmlspecialchars($_POST['rs_search']);
     $select_product = "SELECT * FROM products
