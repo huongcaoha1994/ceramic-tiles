@@ -16,13 +16,6 @@ if($result_inventory->num_rows > 0 )  {
     $inventory = $row['inventory'] ;
 }
 
-if (isset($_GET['from_shop'])) {
-    $from_shop = $_GET['from_shop'];
-}
-
-if (isset($_GET['from_product_detail'])) {
-    $from_product_detail = $_GET['from_product_detail'];
-}
 
 include ("database.php");
 if (isset($_POST['add_to_cart'])) {
@@ -51,8 +44,8 @@ if (isset($_POST['add_to_cart'])) {
             
 
         } else {
-            $total_quantity = $_SESSION['cart'][$product_id] + 1 ;
-            if($quantity > $inventory){
+            
+            if(1 > $inventory){
                 echo "Insufficient inventory" ;
                 header("location: ../../view/product-detail.php?product_id=$product_id");
                 exit("Insufficient inventory");

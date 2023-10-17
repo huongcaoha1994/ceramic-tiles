@@ -104,6 +104,9 @@ $result = $connect->query($sql);
                             case 2:
                                 echo "Received";
                                 break;
+                            case 3:
+                                echo "Order has been cancelled";
+                                break;
                         }
                         ?>
                     </td>

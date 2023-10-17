@@ -21,6 +21,15 @@ if (isset($_GET['accept']) && isset($_GET['order_id'])) {
     header('Location: ./order.php');
     exit();
 }
+
+if (isset($_GET['deny']) && isset($_GET['order_id'])) {
+    $order_id = $_GET['order_id'];
+    
+    $sql = "UPDATE orders SET status = 3 WHERE order_id = $order_id";
+    $update_result = $connect->query($sql);
+    header('Location: ./order.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,7 +143,7 @@ if (isset($_GET['accept']) && isset($_GET['order_id'])) {
                 </header>
                 <!--tạo table ở đây-->
 
-                <div class="container">
+                <div class="container border rounded-1 my-5">
                     <?php foreach ($result as $order): ?>
                         <table class="table table-responsive">
                             <tr>
@@ -145,9 +154,9 @@ if (isset($_GET['accept']) && isset($_GET['order_id'])) {
                                 <th>Receiver's information</th>
                                 <th>Total amount</th>
                                 <th>Purchase method</th>
-                                <th>Status</th>
+                                <th style="width: 125px">Status</th>
                             </tr>
-                            <tr>
+                            <tr class="align-middle">
                                 <td><?php echo $order['created_at'] ?></td>
                                 <td><?php echo $order['order_id'] ?></td>
                                 <td><?php echo $order['user_id'] ?></td>
@@ -184,7 +193,11 @@ if (isset($_GET['accept']) && isset($_GET['order_id'])) {
                                             echo "Pending";
                                             ?>
                                             <a class="btn btn-primary" href="./order.php?order_id=<?php echo $order['order_id'];?>&accept">Accept</a>
-                                            <?php
+                                            <a class="btn btn-danger " href="./order.php?order_id=<?php echo $order['order_id'];?>&deny">Deny</a>
+                                            <?php                                        
+                                            break;
+                                        case 1:
+                                            echo "Order is being delivered";
                                             $order_id = $order['order_id'];
                                             $sql = "select 
                                                     products.product_id as p_id,
@@ -204,13 +217,12 @@ if (isset($_GET['accept']) && isset($_GET['order_id'])) {
                                                 where product_id = $p_id";
                                             $connect->query($sql);                                            
                                         }
-
-                                            break;
-                                        case 1:
-                                            echo "Order is being delivered";
                                             break;
                                         case 2:
                                             echo "Received";
+                                            break;
+                                        case 3:
+                                            echo "Order has been cancelled";
                                             break;
                                     }
                                     ?>
