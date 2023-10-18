@@ -9,7 +9,7 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="../assets/css/createproduct.css">
     <title>Document</title>
 
 </head>
@@ -116,162 +116,164 @@ session_start();
                         </div>
                     </div>
                 </header>
-                <form action="" method="POST" enctype="multipart/form-data">
-                    <div class="row tm-edit-product-row">
-                        <div class="col-xl-4 col-lg-6 col-md-12">
-
-                            <div class="form-group mb-3">
-                                <label for="product_name">Product Name
-                                </label>
-                                <input id="product_name" name="product_name" type="text" class="form-control validate"
-                                    required>
-                            </div>
-                            <!-- <div class="form-group mb-3"> -->
-                            <label for="description">Description</label>
-                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
-                            <!-- </div> -->
-                            <div class="form-group mb-3">
-                                <h3>Color</h3>
-                                <br>
-                                <input type="radio" name="color" value="white">
-                                <label for="color">White</label>
-                                </t>
-                                <input type="radio" name="color" value="black">
-                                <label for="color">Black</label>
-                                </t>
-                                <input type="radio" name="color" value="yellow">
-                                <label for="color">Yellow</label>
-                                </t>
-                                <input type="radio" name="color" value="red">
-                                <label for="color">Red</label>
-                                </t>
-                                <input type="radio" name="color" value="orange">
-                                <label for="color">Orange</label>
-                                </t>
-                                <input type="radio" name="color" value="pink">
-                                <label for="color">Pink</label>
-                                </t>
-                                <input type="radio" name="color" value="brown">
-                                <label for="color">Brown</label>
-                                <br>
-                                <!-- <select class="form-control" id="color" name="color">
-                                        <option value="white">White</option>
-                                        <option value="black">Black</option>
-                                        <option value="yellow">Yellow</option>
-                                        <option value="red">Red</option>
-                                        <option value="orange">Orange</option>
-                                        <option value="pink">Pink</option>
-                                        <option value="brown">Brown</option>
-                                        </select>    -->
-                            </div>
-                            <div class="row">
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="price">Price
+                <h1>Add Product</h1>
+                <div class="form-control">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="row tm-edit-product-row">
+                            <div class="col-xl-4 col-lg-6 col-md-12">
+                                <div class="form-group mb-3">
+                                    <label for="product_name">Product Name
                                     </label>
-                                    <input id="price" name="price" type="number"
-                                        class="form-control validate hasDatepicker">
+                                    <input id="product_name" name="product_name" type="text" class="form-control validate"
+                                        required>
+                                </div>
+                                <!-- <div class="form-group mb-3"> -->
+                                <label for="description">Description</label>
+                                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                                <!-- </div> -->
+                                <div class="form-group mb-3">
+                                    <h3>Color</h3>
+                                    <br>
+                                    <input type="radio" name="color" value="white">
+                                    <label for="color">White</label>
+                                    </t>
+                                    <input type="radio" name="color" value="black">
+                                    <label for="color">Black</label>
+                                    </t>
+                                    <input type="radio" name="color" value="yellow">
+                                    <label for="color">Yellow</label>
+                                    </t>
+                                    <input type="radio" name="color" value="red">
+                                    <label for="color">Red</label>
+                                    </t>
+                                    <input type="radio" name="color" value="orange">
+                                    <label for="color">Orange</label>
+                                    </t>
+                                    <input type="radio" name="color" value="pink">
+                                    <label for="color">Pink</label>
+                                    </t>
+                                    <input type="radio" name="color" value="brown">
+                                    <label for="color">Brown</label>
+                                    <br>
+                                    <!-- <select class="form-control" id="color" name="color">
+                                            <option value="white">White</option>
+                                            <option value="black">Black</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="red">Red</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="pink">Pink</option>
+                                            <option value="brown">Brown</option>
+                                            </select>    -->
+                                </div>
+                                <div class="row">
+                                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                        <label for="price">Price
+                                        </label>
+                                        <input id="price" name="price" type="number"
+                                            class="form-control validate hasDatepicker">
+                                    </div>
+                                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                        <label for="inventory">Inventory
+                                        </label>
+                                        <input id="inventory" name="inventory" type="number" class="form-control validate"
+                                            required="">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <h3>Brand</h3>
+                                    <br>
+                                    <input id="brand" name="brand" type="radio" value="Viglacera">
+                                    <label for="brand">Viglacera</label>
+                                    </t>
+                                    <input id="brand" name="brand" type="radio" value="Viglacera Platinum">
+                                    <label for="brand">Viglacera Platinum</label>
+                                    </t>
+                                    <input id="brand" name="brand" type="radio" value="Chinese Tiles">
+                                    <label for="brand">Chinese Tiles</label>
+                                    <br>
+                                    <input id="brand" name="brand" type="radio" value="Bach Ma Tiles">
+                                    <label for="brand">Bach Ma Tiles</label>
+                                    </t>
+                                    <input id="brand" name="brand" type="radio" value="Dong Tam Brick">
+                                    <label for="brand">Dong Tam Brick</label>
+                                    </t>
+                                    <input id="brand" name="brand" type="radio" value="Eurotile">
+                                    <label for="brand">Eurotile</label>
+                                    <br>
+
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="inventory">Inventory
-                                    </label>
-                                    <input id="inventory" name="inventory" type="number" class="form-control validate"
-                                        required="">
+                                    <h3>Size</h3>
+                                    <br>
+                                    <input type="radio" name="size" value="80x80">
+                                    <label for="size">80x80</label>
+                                    </t>
+                                    <input type="radio" name="size" value="60x60">
+                                    <label for="size">60x60</label>
+                                    </t>
+                                    <input type="radio" name="size" value="45x45">
+                                    <label for="size">45x45</label>
+                                    </t>
+                                    <input type="radio" name="size" value="30x90">
+                                    <label for="size">30x90</label>
+                                    <br>
+                                    <input type="radio" name="size" value="40x40">
+                                    <label for="size">40x40</label>
+                                    </t>
+                                    <input type="radio" name="size" value="30x60">
+                                    <label for="size">30x60</label>
+                                    </t>
+                                    <input type="radio" name="size" value="25x40">
+                                    <label for="size">25x40</label>
+                                    </t>
+                                    <input type="radio" name="size" value="40x80">
+                                    <label for="size">40x80</label>
+                                    <br>
+                                </div>
+                                <!-- <div class="form-group mb-3"> -->
+                                <label for="parent_category">Select Parent Option:</label>
+                                <select id="parent_category" name="parent_category">
+                                    <option value="">-- Select --</option>
+                                    <option value="1">Wall tiles</option>
+                                    <option value="2">Floor tiles</option>
+                                    <option value="3">Special</option>
+                                </select>
+
+                                <label for="child_category">Select Child Option:</label>
+                                <select id="child_category" name="child_category">
+                                    <option value="">-- Select --</option>
+                                </select>
+                                <!-- </div> -->
+
+
+                                <div class="tm-product-img-dummy mx-auto">
+                                    <!-- <i class="" onclick="document.getElementById('fileInput').click();"></i> -->
+                                </div>
+                                <div class="custom-file mt-3 mb-3">
+                                    <label for="image">Upload image</label>
+                                    <input type="file" name="image">
+                                    <br>
+                                    <!-- <input type="submit" name="create_product" value="create product">
+                                </div> -->
+                                </div>
+                                <div class="col-12">
+                                    <input type="submit" name="create_product" value="create_product">
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                            <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                <h3>Brand</h3>
-                                <br>
-                                <input id="brand" name="brand" type="radio" value="Viglacera">
-                                <label for="brand">Viglacera</label>
-                                </t>
-                                <input id="brand" name="brand" type="radio" value="Viglacera Platinum">
-                                <label for="brand">Viglacera Platinum</label>
-                                </t>
-                                <input id="brand" name="brand" type="radio" value="Chinese Tiles">
-                                <label for="brand">Chinese Tiles</label>
-                                <br>
-                                <input id="brand" name="brand" type="radio" value="Bach Ma Tiles">
-                                <label for="brand">Bach Ma Tiles</label>
-                                </t>
-                                <input id="brand" name="brand" type="radio" value="Dong Tam Brick">
-                                <label for="brand">Dong Tam Brick</label>
-                                </t>
-                                <input id="brand" name="brand" type="radio" value="Eurotile">
-                                <label for="brand">Eurotile</label>
-                                <br>
-
-                            </div>
-                            <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                <h3>Size</h3>
-                                <br>
-                                <input type="radio" name="size" value="80x80">
-                                <label for="size">80x80</label>
-                                </t>
-                                <input type="radio" name="size" value="60x60">
-                                <label for="size">60x60</label>
-                                </t>
-                                <input type="radio" name="size" value="45x45">
-                                <label for="size">45x45</label>
-                                </t>
-                                <input type="radio" name="size" value="30x90">
-                                <label for="size">30x90</label>
-                                <br>
-                                <input type="radio" name="size" value="40x40">
-                                <label for="size">40x40</label>
-                                </t>
-                                <input type="radio" name="size" value="30x60">
-                                <label for="size">30x60</label>
-                                </t>
-                                <input type="radio" name="size" value="25x40">
-                                <label for="size">25x40</label>
-                                </t>
-                                <input type="radio" name="size" value="40x80">
-                                <label for="size">40x80</label>
-                                <br>
-                            </div>
-                            <!-- <div class="form-group mb-3"> -->
-                            <label for="parent_category">Select Parent Option:</label>
-                            <select id="parent_category" name="parent_category">
-                                <option value="">-- Select --</option>
-                                <option value="1">Wall tiles</option>
-                                <option value="2">Floor tiles</option>
-                                <option value="3">Special</option>
-                            </select>
-
-                            <label for="child_category">Select Child Option:</label>
-                            <select id="child_category" name="child_category">
-                                <option value="">-- Select --</option>
-                            </select>
-                            <!-- </div> -->
-
-
-                            <div class="tm-product-img-dummy mx-auto">
-                                <!-- <i class="" onclick="document.getElementById('fileInput').click();"></i> -->
-                            </div>
-                            <div class="custom-file mt-3 mb-3">
-                                <label for="image">Upload image</label>
-                                <input type="file" name="image">
-                                <br>
-                                <!-- <input type="submit" name="create_product" value="create product">
-                            </div> -->
-                            </div>
-                            <div class="col-12">
-                                <input type="submit" name="create_product" value="create_product">
-                            </div>
-                        </div>
-                </form>
-                <div class="row">
-                    <footer
-                        class="bg-white text-center text-lg-start text-decoration-none justify-content-around !important ">
-                        <div class="text-center p-3 ">
-                            © 2023 Ok Bro:<a class="text-dark text-decoration-none" href="#">Cera Tiles.com</a>
-                        </div>
-                    </footer>
+                    </form>
                 </div>
+            </div>      
+            <div class="row">
+                <footer
+                    class="bg-white text-center text-lg-start text-decoration-none justify-content-around !important ">
+                    <div class="text-center p-3 ">
+                        © 2023 Ok Bro:<a class="text-dark text-decoration-none" href="#">Cera Tiles.com</a>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
