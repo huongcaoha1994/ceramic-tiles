@@ -12,12 +12,15 @@ require '../core/model/database.php';
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/css/crud.css">
         <title>CRUD</title>
-       <style>
-        #pagination {
-            text-decoration: none;
-        }
-       </style>
+        <style>
+            .pagination {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+        </style>
     </head>
     <body>
     <?php 
@@ -108,21 +111,20 @@ require '../core/model/database.php';
                         </div>
                     </header>                   
                     <!--tạo table ở đây-->
-
-                    <table>
+                    <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Product ID</th>
-                            <th>Image</th>
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Color</th>
-                            <th>Catogory</th>
-                            <th>Brand</th>
-                            <th>Size</th>
-                            <th>Description</th>
-                            <th>Inventory</th>
-                            <th>Action</th>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Catogory</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Inventory</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <?php
@@ -147,44 +149,48 @@ require '../core/model/database.php';
                             $result = $connect->query($sql);
                         foreach ($result as $each) :
                         ?>
-                        <tr>
-                            <td><?php echo $each['product_id']; ?></td>
-                            <td><img src="<?php echo $each['image']; ?>" alt="Product Image"
-                                    style="max-width: 100px;"></td>
-                            <td><?php echo $each['product_name']; ?></td>
-                            <td><?php echo $each['price']; ?></td>
-                            <td><?php echo $each['color']; ?></td>
-                            <td><?php echo $each['cate_name']; ?></td>
-                            <td><?php echo $each['brand']; ?></td>
-                            <td><?php echo $each['size']; ?></td>
-                            <td><?php echo $each['description']; ?></td>
-                            <td><?php echo $each['inventory']; ?></td>
-                            <td>
-                            <a class="text-decoration-none" href="./update_product_info.php?product_id=<?php echo $each['product_id']; ?>">
-                                    <button class="btn btn-primary">
-                                        <i class="fa-solid fa-trash-can"></i> Update
-                                    </button>
-                                </a>
-                                <a class="text-decoration-none" href="../core/model/delete_product_info.php?product_id=<?php echo $each['product_id']; ?>">
-                                    <button class="btn btn-danger">
-                                        <i class="fa-solid fa-trash-can"></i> Remove
-                                    </button>
-                                </a>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td scope="row"><?php echo $each['product_id']; ?></td>
+                                <td><img src="<?php echo $each['image']; ?>" alt="Product Image"
+                                        style="max-width: 100px;"></td>
+                                <td><?php echo $each['product_name']; ?></td>
+                                <td><?php echo $each['price']; ?></td>
+                                <td><?php echo $each['color']; ?></td>
+                                <td><?php echo $each['cate_name']; ?></td>
+                                <td><?php echo $each['brand']; ?></td>
+                                <td><?php echo $each['size']; ?></td>
+                                <td><?php echo $each['description']; ?></td>
+                                <td><?php echo $each['inventory']; ?></td>
+                                <td>
+                                <a class="text-decoration-none" href="./update_product_info.php?product_id=<?php echo $each['product_id']; ?>">
+                                        <button class="btn btn-primary">
+                                            <i class="fa-solid fa-trash-can"></i> Update
+                                        </button>
+                                    </a>
+                                    <a class="text-decoration-none" href="../core/model/delete_product_info.php?product_id=<?php echo $each['product_id']; ?>">
+                                        <button class="btn btn-danger">
+                                            <i class="fa-solid fa-trash-can"></i> Remove
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        
                         <?php
                     endforeach;
-                  
                     ?>
                 </table>
-                <table>
-
-                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
                         <?php 
-                          for ($page = 1; $page <= $number_of_page; $page++) {
-                            echo '<a href="crud.php?page=' . $page . '" id="pagination">Page ' . $page . '  | </a>';
+                        for ($page = 1; $page <= $number_of_page; $page++) {
+                            echo '<li class="page-item"><a class="page-link" href="crud.php?page=' . $page . '">' . $page . '</a></li>';
                         }
                         ?>
+                    </ul>
+                </nav>
+                    
                     <div class="row">
                         <footer class="bg-white text-center text-lg-start text-decoration-none ">
                             <div class="text-center p-3 ">
