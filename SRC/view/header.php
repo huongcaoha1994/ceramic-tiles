@@ -104,8 +104,8 @@
                         <a style="text-decoration: none;" href="../core/controller/logout.php" id="logout"><i class="fa-solid fa-right-from-bracket"></i>Log out</a>
                     </div>
                 </div>
-                <div class="col-2">
-                    <button class="btn btn-primary position-relative btn-cart" style="transform:translateX(-10px)">
+                <div class="col-2 transform-before-login">
+                    <button class="btn btn-primary position-relative btn-cart">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             <?php
@@ -120,10 +120,12 @@
                                 if($number_product > 0){
 
                                     echo $number_product;
-                                }
+                                } 
                                 else {
                                     echo 0 ;
                                 }
+                            } else {
+                                echo 0;
                             }
                             ?>
                             <span class="position-unset"></span>
