@@ -154,6 +154,7 @@ $result = $connect->query($sql);
                         </div>
                     </div>
                 </div>
+                <br><br>
                 <?php
             }
             ?>
