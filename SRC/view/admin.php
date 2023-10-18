@@ -90,7 +90,7 @@
                                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" >
                                     <li><a class="dropdown-item" href="../view/update_admin.php">Change Password</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
+                                    <li><a class="dropdown-item" href="../core/controller/logout.php">Sign out</a></li>
                                 </ul>
                             </div>
                         </div>
