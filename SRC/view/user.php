@@ -47,16 +47,16 @@ $result = $connect->query($sql);
 </head>
 
 <body>
-    <div class="container border rounded-1 my-5">
+    <div class="container border rounded-1 my-5 p-0">
         <?php foreach ($result as $order): ?>
             <table class="table table-responsive">
                 <tr>
-                    <th>Created at</th>
-                    <th>Orderer's information</th>
-                    <th>Receiver's information</th>
-                    <th>Total amount</th>
-                    <th>Purchase method</th>
-                    <th style="width: 125px">Status</th>
+                    <th class="bg-secondary text-light">Created at</th>
+                    <th class="bg-secondary text-light" class="bg-secondary text-light">Orderer's information</th>
+                    <th class="bg-secondary text-light">Receiver's information</th>
+                    <th class="bg-secondary text-light">Total amount</th>
+                    <th class="bg-secondary text-light">Purchase method</th>
+                    <th class="bg-secondary text-light" style="width: 125px">Status</th>
                 </tr>
                 <tr class="align-middle">
                     <td>

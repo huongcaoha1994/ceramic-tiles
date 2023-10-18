@@ -53,7 +53,7 @@
 </head>
 
 <body>
-    <header class="bg-dark-subtle fixed-top ">
+    <header class="bg-light fixed-top border-bottom">
         <div class="container ">
             <header class="d-flex flex-wrap justify-content-center py-2 border-bottom">
                 <a href="./main.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -77,7 +77,7 @@
         </div>
     </header>
     <!-- Form tìm kiếm sản phẩm -->
-    <div id="compare" class="justify-content-around">
+    <div id="compare" class="container justify-content-around">
 
         <form>
             <label for="search1994">Chọn sản phẩm 1 :</label>
@@ -91,11 +91,11 @@
 
     <!-- Kết quả tìm kiếm -->
 
-    <div id="search-results1994" class="container border rounded-1">
+    <div id="search-results1994" class="container">
 
     </div>
 
-    <div id="search-results1995" class="container border rounded-1">
+    <div id="search-results1995" class="container">
 
     </div>
 
@@ -113,7 +113,7 @@
     ?>
 
     <div id="container1994" class="container justify-content-around">
-        <div class="row g-0">
+        <div class="row g-0 justify-content-center ">
             <?php
             if (isset($_SESSION['sp1']) && $_SESSION['sp1'] > 0) {
                 $sp1 = $_SESSION['sp1'];
@@ -122,7 +122,7 @@
                 if ($result_sp1->num_rows > 0) {
                     $row = $result_sp1->fetch_assoc();
             ?>
-                    <div class="col-6 col-md-5">
+                    <div class="col-6 col-md-5 col-lg-3">
                         <div class="card my-3">
                             <img src="<?php echo $row['image']; ?>" alt="" class="product-img">
                             <div class="card-body">
@@ -143,7 +143,7 @@
                 }
             }
             ?>
-            <div class="d-none d-md-block col-md-2 position-relative">
+            <div class="d-none d-lg-block col-lg-2 position-relative">
                 <p class="h1 position-absolute top-50 start-50 translate-middle">VS</p>
             </div>
             <?php
@@ -155,7 +155,7 @@
                 if ($result_sp2->num_rows > 0) {
                     $row = $result_sp2->fetch_assoc();
             ?>
-                    <div class="col-6 col-md-5">
+                    <div class="col-6 col-md-5 col-lg-3">
                         <div class="card my-3">
                             <img src="<?php echo $row['image']; ?>" alt="" class="product-img">
                             <div class="card-body">

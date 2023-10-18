@@ -334,3 +334,14 @@
 .position-unset {
   position: unset;
 }
+
+
+.transform-before-login {
+  transform: translateX(-20px);
+}
+
+@media (max-width: 576px) {
+  .transform-before-login {
+    transform: translateX(0px);
+  }
+}
