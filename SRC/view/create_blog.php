@@ -7,6 +7,9 @@
     <title>Create_blog</title>
 </head>
 <body>
+
+
+  
     <?php
         include("header.php");
     ?>

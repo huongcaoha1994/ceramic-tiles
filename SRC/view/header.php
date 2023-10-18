@@ -126,7 +126,7 @@
                                 }
                             }
                             ?>
-                            <span class="position-unset">0</span>
+                            <span class="position-unset"></span>
                         </span>
                         <div class="header_cart position-absolute z-2 rounded-1 border">
                             <div class="header__cart-heading">

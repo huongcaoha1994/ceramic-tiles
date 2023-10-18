@@ -39,6 +39,7 @@ $result_admin = $connect->query($select_admin);
 if($result_admin->num_rows > 0){
   $row = $result_admin->fetch_assoc();
   if ($username === $row['admin_name'] && $password === $row['password']){
+    $_SESSION['admin'] = true ;
     header("location: ../../view/admin.php");
     exit ;
   }

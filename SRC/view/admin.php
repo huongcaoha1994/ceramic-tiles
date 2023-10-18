@@ -11,6 +11,13 @@
         <title>Admin</title>
     </head>
     <body>
+        <?php 
+        session_start();
+        if(!isset($_SESSION['admin']) && $_SESSION['admin'] !== true){
+            header("location: ../core/model/login.php");
+            exit;
+        }
+        ?>
         <div class="container-fluid">
             <div class="row flex-nowrap">
                 <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-warning">
