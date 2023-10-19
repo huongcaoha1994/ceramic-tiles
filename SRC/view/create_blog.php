@@ -164,8 +164,8 @@
                 }
             }
 
-                for($i = 1 ; $i < $total_page ; $i++){
-                echo "<a href='expertcorner.php?page=$i'> $i </a>" ;
+                for($i = 1 ; $i <= $total_page ; $i++){
+                echo "<a href='Create_blog.php?page=$i'> $i </a>" ;
             }
             ?>
             
