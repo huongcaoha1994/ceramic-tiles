@@ -103,7 +103,7 @@
 
     session_start();
     // unset($_SESSION['sp1']);
-    // unset($_SESSION['sp2']) ;
+    unset($_SESSION['sp2']) ;
     include("../core/model/database.php");
     if (isset($_GET['sp1'])) {
         $_SESSION['sp1'] = $_GET['sp1'];
