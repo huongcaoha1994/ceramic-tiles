@@ -143,18 +143,18 @@ if (isset($_GET['deny']) && isset($_GET['order_id'])) {
                 </header>
                 <!--tạo table ở đây-->
 
-                <div class="container border rounded-1 my-5">
+                <div class="container border rounded-1 my-5 p-0">
                     <?php foreach ($result as $order): ?>
                         <table class="table table-responsive">
-                            <tr>
-                                <th>Created at</th>
-                                <th>Order ID</th>
-                                <th>User ID</th>
-                                <th>Orderer's information</th>
-                                <th>Receiver's information</th>
-                                <th>Total amount</th>
-                                <th>Purchase method</th>
-                                <th style="width: 125px">Status</th>
+                            <tr >
+                                <th class="bg-secondary text-light">Created at</th>
+                                <th class="bg-secondary text-light">Order ID</th>
+                                <th class="bg-secondary text-light">User ID</th>
+                                <th class="bg-secondary text-light">Orderer's information</th>
+                                <th class="bg-secondary text-light">Receiver's information</th>
+                                <th class="bg-secondary text-light">Total amount</th>
+                                <th class="bg-secondary text-light">Purchase method</th>
+                                <th class="bg-secondary text-light" style="width: 245px">Status</th>
                             </tr>
                             <tr class="align-middle">
                                 <td><?php echo $order['created_at'] ?></td>
