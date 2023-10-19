@@ -50,7 +50,7 @@ $result = $connect->query($sql);
     <div class="container border rounded-1 my-5 p-0">
         <?php foreach ($result as $order): ?>
             <table class="table table-responsive">
-                <tr>
+                <tr class="overflow-x-scroll">
                     <th class="bg-secondary text-light">Created at</th>
                     <th class="bg-secondary text-light" class="bg-secondary text-light">Orderer's information</th>
                     <th class="bg-secondary text-light">Receiver's information</th>

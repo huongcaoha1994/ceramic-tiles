@@ -335,7 +335,6 @@
   position: unset;
 }
 
-
 .transform-before-login {
   transform: translateX(-20px);
 }
@@ -344,4 +343,9 @@
   .transform-before-login {
     transform: translateX(0px);
   }
+}
+
+/* Fix scroll user  */
+body .overflow-x-scroll {
+  overflow-x: scroll !important;
 }
