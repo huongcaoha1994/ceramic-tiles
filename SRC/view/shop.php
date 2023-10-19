@@ -1,6 +1,9 @@
 <?php
   include("header.php");
 // session_start();
+unset($_SESSION['color']);
+unset($_SESSION['brand']) ;
+unset($_SESSION['size']) ;
 if (isset($_GET['check_out_success'])) {
   ?>
   <span>
@@ -125,8 +128,8 @@ if (isset($_GET['err_add'])) {
     <div class="row">
       <div class="d-none col-lg-3 d-lg-block border rounded-1 p-3 filter_offcanvas">
 
-        <h4>Bộ lọc sản phẩm</h4>
-        <h2>Color</h2>
+        <h2>Product Filter</h2>
+        <h4>Color</h4>
         <!-- <input type="radio" name="color" value="" onclick="filter_color('')">
         <label for="color">All</label>
         <br> -->
@@ -155,7 +158,7 @@ if (isset($_GET['err_add'])) {
         <label for="color">All</label>
         <br>
 
-        <h2>Brand</h2>
+        <h4>Brand</h4>
         <input type="radio" name="brand" value="Viglacera" onclick="filter_brand('Viglacera')">
         <label for="brand">Viglacera</label>
         <br>
@@ -175,7 +178,7 @@ if (isset($_GET['err_add'])) {
         <label for="brand">All</label>
         <br>
 
-        <h2>Size</h2>
+        <h4>Size</h4>
         <input type="radio" name="size" value="60x60" onclick="filter_size('60x60')">
         <label for="size">60x60</label>
         <br>
@@ -214,11 +217,7 @@ if (isset($_GET['err_add'])) {
         //   include("filter-color.php");
         // }
         // else {
-          if(isset($_GET['page']) || isset($_GET['category']) || isset($_GET['search'])){
-            unset($_SESSION['color']);
-            unset($_SESSION['brand']) ;
-            unset($_SESSION['size']) ;
-          }
+         
           
           include("search.php");
         // }
