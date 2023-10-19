@@ -132,7 +132,7 @@
                                 <h4>Color : <?php echo $row['color']; ?></h4>
                                 <h4>Size : <?php echo $row['size']; ?></h4>
                                 <p>Description : <?php echo $row['description']; ?></p>
-                                <form action="sosanh.php" method="POST">
+                                <form action="delete_compare.php" method="POST">
                                     <input type="submit" name="delete1" value="Delete" class="btn btn-danger">
                                 </form>
                             </div>
@@ -165,7 +165,7 @@
                                 <h4>Color : <?php echo $row['color']; ?></h4>
                                 <h4>Size : <?php echo $row['size']; ?></h4>
                                 <p>Description : <?php echo $row['description']; ?></p>
-                                <form action="sosanh.php" method="POST">
+                                <form action="delete_compare.php" method="POST">
                                     <input type="submit" name="delete2" value="Delete" class="btn btn-danger">
                                 </form>
                             </div>
@@ -178,19 +178,7 @@
         </div>
     </div>
 
-    <?php
-
-    if (isset($_POST['delete1'])) {
-        $_SESSION['sp1'] = 0;
-        // header("location: sosanh.php");
-
-
-    } else if (isset($_POST['delete2'])) {
-        $_SESSION['sp2'] = 0;
-        // header("location: sosanh.php");
-
-    }
-    ?>
+  
 
     <?php
     include("footer.php");
