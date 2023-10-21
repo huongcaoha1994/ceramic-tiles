@@ -99,7 +99,7 @@
                             <tr>
                                 <th scope="col">STT</th>
                                 <th scope="col">Username</th>
-                                <th scope="col">Password</th>
+                              
                                 <th scope="col">Full Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Address</th>
@@ -120,7 +120,7 @@
                             <tr>
                                 <td><?php echo $stt ; ?></td>
                                 <td><?php echo $row['username'] ; ?></td>
-                                <td><?php echo $row['password'] ; ?></td>
+                               
                                 <td><?php echo $row['full_name'] ; ?></td>
                                 <td><?php echo $row['email'] ; ?></td>
                                 <td><?php echo $row['address'] ; ?></td>
