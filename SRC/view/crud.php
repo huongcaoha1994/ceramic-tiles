@@ -104,6 +104,85 @@ require '../core/model/database.php';
                         </div>
                     </header>                   
                     <!--tạo table ở đây-->
+                    <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Catogory</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Inventory</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <?php
+                        $results_per_page = 10;
+                        $sql = "select * from products";
+                            
+                        $result = $connect->query($sql);
+                        $number_of_result = $result->num_rows;
+                        $number_of_page = ceil($number_of_result / $results_per_page);
+                        if (!isset($_GET['page'])) {
+                            $page = 1;
+                        } else {
+                            $page = $_GET['page'];
+                        }
+                        $page_first_result = ($page - 1) * $results_per_page;
+                        $sql = "select 
+                                products.*
+                                , categories.category_name as cate_name
+                            from products
+                            join categories on products.category_id = categories.category_id 
+                            LIMIT " . $page_first_result . ',' . $results_per_page;
+                            $result = $connect->query($sql);
+                        foreach ($result as $each) :
+                        ?>
+                        <tbody>
+                            <tr>
+                                <td scope="row"><?php echo $each['product_id']; ?></td>
+                                <td><img src="<?php echo $each['image']; ?>" alt="Product Image"
+                                        style="max-width: 100px;"></td>
+                                <td><?php echo $each['product_name']; ?></td>
+                                <td><?php echo $each['price']; ?></td>
+                                <td><?php echo $each['color']; ?></td>
+                                <td><?php echo $each['cate_name']; ?></td>
+                                <td><?php echo $each['brand']; ?></td>
+                                <td><?php echo $each['size']; ?></td>
+                                <td><?php echo $each['description']; ?></td>
+                                <td><?php echo $each['inventory']; ?></td>
+                                <td>
+                                <a class="text-decoration-none" href="./update_product_info.php?product_id=<?php echo $each['product_id']; ?>">
+                                        <button class="btn btn-primary">
+                                            <i class="fa-solid fa-trash-can"></i> Update
+                                        </button>
+                                    </a>
+                                    <a class="text-decoration-none" href="../core/model/delete_product_info.php?product_id=<?php echo $each['product_id']; ?>">
+                                        <button class="btn btn-danger">
+                                            <i class="fa-solid fa-trash-can"></i> Remove
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                        <?php
+                    endforeach;
+                    ?>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <?php 
+                        for ($page = 1; $page <= $number_of_page; $page++) {
+                            echo '<li class="page-item"><a class="page-link" href="crud.php?page=' . $page . '">' . $page . '</a></li>';
+                        }
+                        ?>
+                    </ul>
+                </nav>
                     <div class="row">
                         <footer class="bg-white text-center text-lg-start text-decoration-none ">
                             <div class="text-center p-3 ">
