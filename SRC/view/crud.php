@@ -59,7 +59,7 @@ require '../core/model/database.php';
                             </li>
                             <li>
                                 <a href="../view/member.php" class="nav-link link-dark px-0 align-middle">
-                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Contact</span> </a>
+                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">List User</span> </a>
                             </li>
                             <li>
                                 <a href="../view/create_blog.php" class="nav-link link-dark px-0 align-middle">
